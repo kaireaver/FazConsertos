@@ -7,7 +7,6 @@ public class TelaInicial extends JFrame implements ActionListener {
     final private JLabel lDescription;
     final private JButton bTecnicos;
     final private JButton bClientes;
-    private JFrame fClientes;
 
     public TelaInicial() {
         super("Bem-vindo ao sistema FazConsertos v1.0!");
@@ -21,13 +20,11 @@ public class TelaInicial extends JFrame implements ActionListener {
         bClientes.addActionListener(this);
 
         pInicial = new JPanel();
-
         pInicial.add(lDescription);
         pInicial.add(bTecnicos);
         pInicial.add(bClientes);
 
         getContentPane().add(pInicial);
-
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setSize(500,70);
         setResizable(false);
@@ -36,11 +33,12 @@ public class TelaInicial extends JFrame implements ActionListener {
 
     public void actionPerformed(ActionEvent event) {
         if(event.getSource() == bTecnicos) {
-            // ABRIR TELA TECNICOS
+            JFrame fTecnico;
+            fTecnico = new TelaTecnico();
         }
 
         else if(event.getSource() == bClientes) {
-            // ABRIR TELA CLIENTES
+            JFrame fClientes;
             fClientes = new TelaCliente();
         }
     }
