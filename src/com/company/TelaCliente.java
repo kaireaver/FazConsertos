@@ -74,6 +74,10 @@ public class TelaCliente extends JFrame implements ActionListener, WindowListene
         boCadastro.add(boCPF);
         boCadastro.add(boTelefone);
 
+        pClientes.add(boCadastro);
+        pClientes.add(bOk);
+        pClientes.add(bCancel);
+        fClientes.add(pClientes);
 
         atualizaCadastro(132);
     }
@@ -100,13 +104,13 @@ public class TelaCliente extends JFrame implements ActionListener, WindowListene
             boRG.add(tRG);
 
         boEmail = Box.createHorizontalBox();
-            tEmail = new JTextField(40);
+            tEmail = new JTextField();
             lEmail = new JLabel("E-mail: ");
             boEmail.add(lEmail);
             boEmail.add(tEmail);
 
         boEndereco = Box.createHorizontalBox();
-            tEndereco = new JTextField(40);
+            tEndereco = new JTextField();
             lEndereco = new JLabel("Endereço: ");
             boEndereco.add(lEndereco);
             boEndereco.add(tEndereco);
@@ -128,19 +132,12 @@ public class TelaCliente extends JFrame implements ActionListener, WindowListene
         boCadastro.add(boEndereco);
         boCadastro.add(boDataNascimento);
 
-        this.atualizaCadastro( 200);
+        pClientes.add(boCadastro, 0);
+        atualizaCadastro(212);
     }
 
     public void atualizaCadastro(int tam)
     {
-        pClientes.remove(boCadastro);
-          pClientes.add(boCadastro);
-        pClientes.remove(bOk);
-            pClientes.add(bOk);
-        pClientes.remove(bCancel);
-            pClientes.add(bCancel);
-        fClientes.add(pClientes);
-
         this.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         this.setSize(500, tam);
         this.setResizable(false);
