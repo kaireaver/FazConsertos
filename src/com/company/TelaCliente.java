@@ -90,8 +90,7 @@ public class TelaCliente extends JFrame implements ActionListener, WindowListene
         }
 
         else if(event.getSource() == bCancel) {
-            // ABRIR TELA CLIENTES
-            System.out.print("OK então");
+            this.dispose();
         }
     }
 
