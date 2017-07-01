@@ -9,7 +9,7 @@ import java.sql.*;
  */
 public class Database {
 
-    private static final String URL = "jdbc:h2:~/test";
+    private static final String URL = "jdbc:h2:~/test;AUTO_SERVER=TRUE";
     private static final String USERNAME = "sa";
     private static final String PASSWORD = "sa";
 

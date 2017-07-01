@@ -28,7 +28,7 @@ public class TelaInicial extends JFrame implements ActionListener {
         getContentPane().add(pInicial);
 
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setSize(500,500);
+        setSize(500,70);
         setResizable(false);
         setVisible(true);
     }
