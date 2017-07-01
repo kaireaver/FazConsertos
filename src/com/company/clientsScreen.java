@@ -3,9 +3,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 
-/**
- * Created by Deivison Silva on 01/07/2017.
- */
 public class clientsScreen extends JFrame {
     private Container pTela;
     final private JLabel lNome;
