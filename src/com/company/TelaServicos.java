@@ -1,14 +1,12 @@
 package com.company;
 
-import javafx.collections.transformation.SortedList;
-
 import javax.swing.*;
 import java.awt.*;
 
 /**
- * Created by kings on 12/06/2017.
+ * Created by edvil on 01/07/2017.
  */
-public class TelaOrdem extends JFrame {
+public class TelaServicos {
 
     private JButton[] buttons;
     private String[] nomebotao;
