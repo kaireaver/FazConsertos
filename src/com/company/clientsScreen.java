@@ -1,6 +1,7 @@
 package com.company;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 
 /**
  * Created by Deivison Silva on 01/07/2017.
@@ -50,5 +51,20 @@ public class clientsScreen extends JFrame {
         pTela.add(bOk);
         pTela.add(bCancel);
 
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setSize(500,70);
+        setResizable(false);
+        setVisible(true);
+
+    }
+
+    public void actionPerformed(ActionEvent event) {
+        if(event.getSource() == bOk) {
+            // ABRIR TELA TECNICOS
+        }
+
+        else if(event.getSource() == bCancel) {
+            // ABRIR TELA CLIENTES
+        }
     }
 }
