@@ -7,6 +7,7 @@ public class TelaInicial extends JFrame implements ActionListener {
     final private JLabel lDescription;
     final private JButton bTecnicos;
     final private JButton bClientes;
+    private JFrame fClientes;
 
     public TelaInicial() {
         super("Bem-vindo ao sistema FazConsertos v1.0!");
@@ -40,6 +41,7 @@ public class TelaInicial extends JFrame implements ActionListener {
 
         else if(event.getSource() == bClientes) {
             // ABRIR TELA CLIENTES
+            fClientes = new clientsScreen();
         }
     }
 

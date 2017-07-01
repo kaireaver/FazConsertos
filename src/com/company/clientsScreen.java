@@ -4,7 +4,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 
 public class clientsScreen extends JFrame {
-    private Container pTela;
+    private Container fClientes;
+    private JPanel pClientes;
     final private JLabel lNome;
     final private JLabel lCPF;
     final private JLabel lTelefone;
@@ -19,7 +20,8 @@ public class clientsScreen extends JFrame {
 
     public clientsScreen()
     {
-        pTela = this.getContentPane();
+        fClientes = this.getContentPane();
+        pClientes = new JPanel();
 
         boNome = Box.createHorizontalBox();
             tNome = new JTextField(40);
@@ -42,12 +44,13 @@ public class clientsScreen extends JFrame {
         bOk = new JButton("OK");
         bCancel = new JButton("Cancelar");
 
-        pTela.add(boNome);
-        pTela.add(boCPF);
-        pTela.add(boTelefone);
-        pTela.add(bOk);
-        pTela.add(bCancel);
+        pClientes.add(boNome);
+        pClientes.add(boCPF);
+        pClientes.add(boTelefone);
+        pClientes.add(bOk);
+        pClientes.add(bCancel);
 
+        fClientes.add(pClientes);
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         this.setSize(500,70);
         this.setResizable(false);
