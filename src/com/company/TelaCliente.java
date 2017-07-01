@@ -62,12 +62,15 @@ public class TelaCliente extends JFrame implements ActionListener {
 
 
         bOk = new JButton("OK");
+        bOk.addActionListener(this);
         bCancel = new JButton("Cancelar");
+        bCancel.addActionListener(this);
 
         boCadastro = Box.createVerticalBox();
         boCadastro.add(boNome);
         boCadastro.add(boCPF);
         boCadastro.add(boTelefone);
+
 
         atualizaCadastro(132);
     }
@@ -81,6 +84,7 @@ public class TelaCliente extends JFrame implements ActionListener {
 
         else if(event.getSource() == bCancel) {
             // ABRIR TELA CLIENTES
+            System.out.print("OK então");
         }
     }
 
