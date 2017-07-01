@@ -169,6 +169,7 @@ public class TelaCliente extends JFrame implements ActionListener, WindowListene
 
     public void windowClosed(WindowEvent event) {
         TelaInicial.setBotaoClientes(true);
+        TelaInicial.setBotaoTecnicos(true);
     }
 
     public void windowDeiconified(WindowEvent event) {}
