@@ -16,7 +16,7 @@ public class TelaServicos {
     private JFrame[] nome_campos;
     private JTextField[] campos;
 
-    public TelaOrdem(){
+    public TelaServicos(){
         super("Ordem de Serviços");
         this.layout = new BorderLayout(5,5);
         Container container = getContentPane();
