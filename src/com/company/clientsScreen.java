@@ -5,8 +5,7 @@ import java.awt.*;
 /**
  * Created by Deivison Silva on 01/07/2017.
  */
-public class clientsScreen {
-    private JFrame fClients;
+public class clientsScreen extends JFrame {
     final private JLabel lNome = new JLabel("Nome:");
     final private JLabel lCPF = new JLabel("CPF - apenas números:");
     final private JLabel lTelefone = new JLabel("Telefone + DDD:");
@@ -17,12 +16,14 @@ public class clientsScreen {
     private JTextField tCPF;
     private JTextField tTelefone;
 
-
-
     public clientsScreen()
     {
         tNome = new JTextField(40);
-        tCPF = new JTextField(11);;
-        tTelefone = new JTextField(12);;
+        tCPF = new JTextField(11);
+        tTelefone = new JTextField(12);
+
+        Box containerCaixa = Box.createHorizontalBox();
+        containerCaixa.add(lNome);
+        containerCaixa.add(tNome);
     }
 }

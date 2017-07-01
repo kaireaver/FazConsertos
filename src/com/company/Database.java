@@ -17,7 +17,7 @@ public class Database {
         try {
             Class.forName("org.h2.Driver");
             conn = DriverManager.getConnection(URL, USERNAME, PASSWORD);
-            String query  = "SELECT * FROM TBL";
+            String query  = "SELECT * FROM DATABASE TBL";
             PreparedStatement pps = conn.prepareStatement(query);
             ResultSet rs = pps.executeQuery();
 
