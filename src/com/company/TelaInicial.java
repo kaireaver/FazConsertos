@@ -1,7 +1,8 @@
 package com.company;
 import javax.swing.*;
+import java.awt.event.*;
 
-public class TelaInicial extends JFrame {
+public class TelaInicial extends JFrame implements ActionListener {
     private JPanel pInicial;
     final private JLabel lDescription;
     private JButton bTecnicos;
@@ -23,6 +24,10 @@ public class TelaInicial extends JFrame {
 
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setVisible(true);
+    }
+
+    public void actionPerformed(ActionEvent e) {
+
     }
 
 }
