@@ -17,8 +17,9 @@ public class MainTecnico extends JFrame implements ActionListener {
 
     private int numMatricula;
 
-    public MainTecnico() {
+    public MainTecnico(String numMatricula) {
         super("Bem-vindo! Selecione a opção desejada:");
+        this.numMatricula = Integer.parseInt(numMatricula);
 
         bAlteraDados = new JButton("Alterar dados de usuário");
         bConsultaServico = new JButton("Consultar serviço");
