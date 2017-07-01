@@ -48,10 +48,10 @@ public class clientsScreen extends JFrame {
         pTela.add(bOk);
         pTela.add(bCancel);
 
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setSize(500,70);
-        setResizable(false);
-        setVisible(true);
+        this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        this.setSize(500,70);
+        this.setResizable(false);
+        this.setVisible(true);
 
     }
 

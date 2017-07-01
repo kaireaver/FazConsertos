@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48d4db42-c530-4046-bdc2-3405940f09ba" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FazConsertos/com/company/Database.class" afterPath="$PROJECT_DIR$/out/production/FazConsertos/com/company/Database.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/FazConsertos/com/company/Main.class" afterPath="$PROJECT_DIR$/out/production/FazConsertos/com/company/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/clientsScreen.java" afterPath="$PROJECT_DIR$/src/com/company/clientsScreen.java" />
     </list>
@@ -116,8 +114,8 @@
       <file leaf-file-name="clientsScreen.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/clientsScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <state relative-caret-position="493">
+              <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -796,7 +794,7 @@
       <workItem from="1497660414362" duration="1702000" />
       <workItem from="1498931028978" duration="151000" />
       <workItem from="1498933179914" duration="592000" />
-      <workItem from="1498936971426" duration="2216000" />
+      <workItem from="1498936971426" duration="2294000" />
     </task>
     <task id="LOCAL-00001" summary="LINDÕES">
       <created>1498933264831</created>
@@ -868,11 +866,18 @@
       <option name="project" value="LOCAL" />
       <updated>1498939103370</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="bora que o maluco tá doente">
+      <created>1498939192764</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1498939192764</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16953000" />
+    <option name="totallyTimeSpent" value="17031000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1324,8 +1329,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/clientsScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state relative-caret-position="493">
+          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding />
         </state>
       </provider>
