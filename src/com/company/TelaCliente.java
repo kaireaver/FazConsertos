@@ -3,8 +3,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 
-public class TelaCliente extends JFrame implements ActionListener {
+public class TelaCliente extends JFrame implements ActionListener, WindowListener {
 
     private Container fClientes;
     private JPanel pClientes;
@@ -65,6 +67,7 @@ public class TelaCliente extends JFrame implements ActionListener {
         bOk.addActionListener(this);
         bCancel = new JButton("Cancelar");
         bCancel.addActionListener(this);
+        addWindowListener(this);
 
         boCadastro = Box.createVerticalBox();
         boCadastro.add(boNome);
@@ -143,4 +146,15 @@ public class TelaCliente extends JFrame implements ActionListener {
         this.setResizable(false);
         this.setVisible(true);
     }
+
+    public void windowClosed(WindowEvent event) {
+        TelaInicial.setBotaoClientes(true);
+    }
+
+    public void windowDeiconified(WindowEvent event) {}
+    public void windowOpened(WindowEvent event) {}
+    public void windowClosing(WindowEvent event) {}
+    public void windowDeactivated(WindowEvent event) {}
+    public void windowIconified(WindowEvent event) {}
+    public void windowActivated(WindowEvent event) {}
 }
