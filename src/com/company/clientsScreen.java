@@ -6,16 +6,18 @@ import java.awt.*;
  * Created by Deivison Silva on 01/07/2017.
  */
 public class clientsScreen {
-    private JLabel lNome = new JLabel("Nome:");
-    private JLabel lCPF = new JLabel("CPF - apenas números:");
-    private JLabel lTelefone = new JLabel("Telefone + DDD:");
+    private JFrame fClients;
+    final private JLabel lNome = new JLabel("Nome:");
+    final private JLabel lCPF = new JLabel("CPF - apenas números:");
+    final private JLabel lTelefone = new JLabel("Telefone + DDD:");
+    final private JButton bOk = new JButton("OK");
+    final private JButton bCancel = new JButton("Cancelar");
 
     private JTextField tNome;
     private JTextField tCPF;
     private JTextField tTelefone;
 
-    private JButton bOk = new JButton("OK");
-    private JButton bCancel = new JButton("Cancelar");
+
 
     public clientsScreen()
     {
