@@ -42,6 +42,7 @@ public class TelaTecnico extends JFrame implements ActionListener, WindowListene
 
     public void windowClosed(WindowEvent event) {
         TelaInicial.setBotaoTecnicos(true);
+        TelaInicial.setBotaoClientes(true);
     }
 
     public void windowDeiconified(WindowEvent event) {}

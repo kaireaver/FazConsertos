@@ -35,10 +35,12 @@ public class TelaInicial extends JFrame implements ActionListener {
         if(event.getSource() == bTecnicos) {
             JFrame fTecnico = new TelaTecnico();
             setBotaoTecnicos(false);
+            setBotaoClientes(false);
         }
 
         else if(event.getSource() == bClientes) {
             JFrame fClientes = new TelaCliente();
+            setBotaoTecnicos(false);
             setBotaoClientes(false);
         }
     }
