@@ -17,6 +17,7 @@ public class clientsScreen extends JFrame {
     Box boNome;
     Box boCPF;
     Box boTelefone;
+    Box boCadastro;
 
     public clientsScreen()
     {
@@ -25,37 +26,39 @@ public class clientsScreen extends JFrame {
 
         boNome = Box.createHorizontalBox();
             tNome = new JTextField(40);
-            lNome = new JLabel("Nome:");
+            lNome = new JLabel("Nome: ");
             boNome.add(lNome);
             boNome.add(tNome);
 
         boCPF = Box.createHorizontalBox();
             tCPF = new JTextField(11);
-            lCPF = new JLabel("CPF - apenas números:");
+            lCPF = new JLabel("CPF - apenas números: ");
             boCPF.add(lCPF);
             boCPF.add(tCPF);
 
         boTelefone = Box.createHorizontalBox();
             tTelefone = new JTextField(12);
-            lTelefone = new JLabel("Telefone + DDD:");
+            lTelefone = new JLabel("Telefone + DDD: ");
             boTelefone.add(lTelefone);
             boTelefone.add(tTelefone);
 
         bOk = new JButton("OK");
         bCancel = new JButton("Cancelar");
 
-        pClientes.add(boNome);
-        pClientes.add(boCPF);
-        pClientes.add(boTelefone);
+        boCadastro = Box.createVerticalBox();
+            boCadastro.add(boNome);
+            boCadastro.add(boCPF);
+            boCadastro.add(boTelefone);
+
+        pClientes.add(boCadastro);
         pClientes.add(bOk);
         pClientes.add(bCancel);
-
         fClientes.add(pClientes);
-        this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        this.setSize(500,70);
+
+        this.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        this.setSize(500,132);
         this.setResizable(false);
         this.setVisible(true);
-
     }
 
     public void actionPerformed(ActionEvent event) {
