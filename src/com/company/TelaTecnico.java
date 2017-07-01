@@ -4,8 +4,8 @@ import java.awt.event.*;
 
 public class TelaTecnico extends JFrame implements ActionListener, WindowListener {
     private JPanel pTecnicos;
-    final private JButton bNovoTecnico;
-    final private JButton bLogaTecnico;
+    private static JButton bNovoTecnico;
+    private static JButton bLogaTecnico;
 
     public TelaTecnico() {
         super("Selecione sua opção:");
@@ -31,11 +31,12 @@ public class TelaTecnico extends JFrame implements ActionListener, WindowListene
 
     public void actionPerformed(ActionEvent event) {
         if(event.getSource() == bNovoTecnico) {
-
+            // IMPLEMENTAR!!
         }
 
         else if(event.getSource() == bLogaTecnico) {
-
+            JFrame fLoginTecnico = new LogaTecnico();
+            this.dispose();
         }
     }
 
