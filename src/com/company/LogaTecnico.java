@@ -5,7 +5,8 @@ import java.awt.event.*;
 public class LogaTecnico extends JFrame implements ActionListener {
     private JPanel pLoginTecnico;
     private static JButton bLogin;
-    final private JLabel lDescription = new JLabel("Número de Matrícula:");
+    final private static JLabel lDescription = new JLabel("Número de Matrícula:");
+    final private static JLabel lNotFound = new JLabel("Número de matrícula não encontrado!");
     private JTextField txtMatricula;
 
     public LogaTecnico() {
@@ -20,7 +21,9 @@ public class LogaTecnico extends JFrame implements ActionListener {
         pLoginTecnico.add(lDescription);
         pLoginTecnico.add(txtMatricula);
         pLoginTecnico.add(bLogin);
+        pLoginTecnico.add(lNotFound);
 
+        lNotFound.setVisible(false);
         getContentPane().add(pLoginTecnico);
 
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
@@ -32,7 +35,13 @@ public class LogaTecnico extends JFrame implements ActionListener {
 
     public void actionPerformed(ActionEvent event) {
         if(event.getSource() == bLogin){
-            // IMPLEMENTAR!
+            // CHECAR SE EXISTE MATRÍCULA!
+            if(true) {
+                JFrame fMainTecnico = new MainTecnico();
+                this.dispose();
+            } else {
+                lNotFound.setVisible(true);
+            }
         }
     }
 
