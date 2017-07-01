@@ -47,7 +47,8 @@ public class clientsScreen extends JFrame {
         pTela.add(boNome);
         pTela.add(boCPF);
         pTela.add(boTelefone);
-
+        pTela.add(bOk);
+        pTela.add(bCancel);
 
     }
 }
