@@ -41,7 +41,7 @@ public class TelaInicial extends JFrame implements ActionListener {
 
         else if(event.getSource() == bClientes) {
             // ABRIR TELA CLIENTES
-            fClientes = new clientsScreen();
+            fClientes = new TelaCliente();
         }
     }
 
