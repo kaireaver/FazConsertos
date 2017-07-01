@@ -1,23 +1,27 @@
 package com.company;
 
 import javax.swing.*;
+import java.awt.*;
 
 /**
  * Created by kings on 12/06/2017.
  */
-public class TelaOrdem {
+public class TelaOrdem extends JFrame {
 
-    JWindow window;
+    private JButton[] buttons;
+    private String[] nomebotao;
+
+
+    private BorderLayout layout;
+
+    private JFrame[] nome_campos;
+    private JTextField[] campos;
 
     public TelaOrdem(){
-        window = new JWindow();
-        window.getContentPane().add(new JLabel("",new ImageIcon("C:\\Users\\kings\\IdeaProjects\\FazConsertos\\src\\com\\company\\logo.png"),SwingConstants.CENTER));
-        window.setBounds(450,300,400,300);
-        window.setVisible(true);
-        try{
-            Thread.sleep(3000);
-        }
-        catch(InterruptedException e){}
-        window.dispose();
+        super("Ordem de Serviços")
+        this.layout = new BorderLayout(5,5);
+        Container container = getContentPane();
+        container.setLayout(this.layout);
+
     }
 }

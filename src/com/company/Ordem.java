@@ -16,16 +16,19 @@ public class Ordem {
     private String[] materiais;
     private int[] material_valor;
 
+    private String descricao;
     private boolean validade; //Para determinar se já se passaram os 90 dias
     private String status; //O Status do orçamento
 
     private static int i = 0;
     private int id; //id do Orçamento
 
-    public Ordem(Cliente cliente) {
+    public Ordem(Cliente cliente, String descricao) {
         this.cliente = cliente;
         this.validade = true;
         this.status = "Cadastrada";
+        this.descricao = descricao;
+
         this.id = i;
         this.id++;
     }
