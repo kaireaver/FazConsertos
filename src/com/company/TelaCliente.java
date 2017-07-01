@@ -1,10 +1,17 @@
 package com.company;
+import javafx.collections.transformation.SortedList;
+import javafx.scene.input.DataFormat;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Date;
+import java.util.Set;
 
 public class TelaCliente extends JFrame implements ActionListener, WindowListener {
 
@@ -83,10 +90,27 @@ public class TelaCliente extends JFrame implements ActionListener, WindowListene
     }
 
     public void actionPerformed(ActionEvent event) {
+        Cliente cliente = null;
         if(event.getSource() == bOk) {
-            System.out.print("OK então");
-            //Cliente cliente = new Cliente(tNome.getText(), Long.parseLong(tCPF.getText()), Integer.parseInt(tTelefone.getText()));
-            cadastraNovoCliente();
+            if(bOk.getText() == "OK"){
+                cliente = new Cliente(tNome.getText(), Long.parseLong(tCPF.getText()), tTelefone.getText());
+                if(false)//(listaClientes.contains(cliente))
+                {
+
+                }
+                else
+                {
+                    cadastraNovoCliente();
+                    bOk.setText("CADASTRAR");
+                }
+            }
+            else
+            {
+                if(cliente!= null)
+                {
+                    cliente.ConfirmaCliente(tRG.getText(), tEmail.getText(), tEndereco.getText(), new Date(Integer.parseInt(tAno.getText()), Integer.parseInt(tAno.getText()), Integer.parseInt(tDia.getText())));
+                }
+            }
         }
 
         else if(event.getSource() == bCancel) {
