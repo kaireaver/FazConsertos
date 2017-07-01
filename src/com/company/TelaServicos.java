@@ -16,11 +16,11 @@ public class TelaServicos {
     private JFrame[] nome_campos;
     private JTextField[] campos;
 
-    public TelaOrdem(){
-        super("Ordem de Serviços");
+    public TelaServicos(){
+        //super("Ordem de Serviços");
         this.layout = new BorderLayout(5,5);
-        Container container = getContentPane();
-        container.setLayout(this.layout);
+        //Container container = getContentPane();
+        //container.setLayout(this.layout);
 
     }
 }
