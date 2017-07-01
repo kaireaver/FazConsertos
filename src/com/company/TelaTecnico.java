@@ -2,11 +2,10 @@ package com.company;
 import javax.swing.*;
 import java.awt.event.*;
 
-public class TelaTecnico extends JFrame implements ActionListener {
+public class TelaTecnico extends JFrame implements ActionListener, WindowListener {
     private JPanel pTecnicos;
     final private JButton bNovoTecnico;
     final private JButton bLogaTecnico;
-
 
     public TelaTecnico() {
         super("Selecione sua opção:");
@@ -22,6 +21,8 @@ public class TelaTecnico extends JFrame implements ActionListener {
         pTecnicos.add(bLogaTecnico);
 
         getContentPane().add(pTecnicos);
+        addWindowListener(this);
+
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         setSize(500,70);
         setResizable(false);
@@ -38,4 +39,14 @@ public class TelaTecnico extends JFrame implements ActionListener {
         }
     }
 
+    public void windowClosed(WindowEvent event) {
+        TelaInicial.setBotaoTecnicos(true);
+    }
+
+    public void windowDeiconified(WindowEvent event) {}
+    public void windowOpened(WindowEvent event) {}
+    public void windowClosing(WindowEvent event) {}
+    public void windowDeactivated(WindowEvent event) {}
+    public void windowIconified(WindowEvent event) {}
+    public void windowActivated(WindowEvent event) {}
 }
