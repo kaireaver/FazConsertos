@@ -3,11 +3,11 @@ import javafx.collections.transformation.SortedList;
 import javafx.scene.input.DataFormat;
 
 import javax.swing.*;
+import javax.swing.text.MaskFormatter;
+import javax.swing.text.NumberFormatter;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.WindowEvent;
-import java.awt.event.WindowListener;
+import java.awt.event.*;
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
@@ -15,34 +15,34 @@ import java.util.Set;
 
 public class TelaCliente extends JFrame implements ActionListener, WindowListener {
 
-    private Container fClientes;
-    private JPanel pClientes;
+    protected Container fClientes;
+    protected JPanel pClientes;
 
     Box boCadastro;
         Box boNome;
-            final private JLabel lNome;
-            private JTextField tNome;
+            final protected JLabel lNome;
+            protected JTextField tNome;
         Box boCPF;
-            final private JLabel lCPF;
-            private JTextField tCPF;
+            final protected JLabel lCPF;
+            protected JTextField tCPF;
         Box boTelefone;
-            final private JLabel lTelefone;
-            private JTextField tTelefone;
-        final private JButton bOk;
-        final private JButton bCancel;
+            final protected JLabel lTelefone;
+            protected JTextField tTelefone;
+        final protected JButton bOk;
+        final protected JButton bCancel;
 
         Box boRG;
-            private JTextField tRG;
-            private JLabel lRG;
+            protected JTextField tRG;
+            protected JLabel lRG;
         Box boEmail;
-            private JTextField tEmail;
-            private JLabel lEmail;
+            protected JTextField tEmail;
+            protected JLabel lEmail;
         Box boEndereco;
-            private JTextField tEndereco;
-            private JLabel lEndereco;
+            protected JTextField tEndereco;
+            protected JLabel lEndereco;
         Box boDataNascimento;
-            private JTextField tDia, tMes, tAno;
-            private JLabel lDataNascimento;
+            protected JTextField tDia, tMes, tAno;
+            protected JLabel lDataNascimento;
 
 
     public TelaCliente()
@@ -57,13 +57,20 @@ public class TelaCliente extends JFrame implements ActionListener, WindowListene
             boNome.add(tNome);
 
         boCPF = Box.createHorizontalBox();
-            tCPF = new JTextField(11);
+            //tCPF = new JFormattedTextField(FormatoNumerico(0,0));
+            try{
+                javax.swing.text.MaskFormatter format_textField4 = new javax.swing.text.MaskFormatter("###.###.###-##");
+                tCPF = new JFormattedTextField(format_textField4);
+            }catch (Exception e){}
             lCPF = new JLabel("CPF - apenas números: ");
             boCPF.add(lCPF);
             boCPF.add(tCPF);
+            //boCPF.add(new JLabel("                                                                                     "));
+
+
 
         boTelefone = Box.createHorizontalBox();
-            tTelefone = new JTextField(12);
+            tTelefone = new JFormattedTextField(FormatoNumerico(0,0));
             lTelefone = new JLabel("Telefone + DDD: ");
             boTelefone.add(lTelefone);
             boTelefone.add(tTelefone);
@@ -93,7 +100,11 @@ public class TelaCliente extends JFrame implements ActionListener, WindowListene
         Cliente cliente = null;
         if(event.getSource() == bOk) {
             if(bOk.getText() == "OK"){
-                cliente = new Cliente(tNome.getText(), Long.parseLong(tCPF.getText()), tTelefone.getText());
+                String sCPF = tCPF.getText();
+                sCPF = sCPF.replace("-", "");
+                sCPF = sCPF.replace(".", "");
+                System.out.println(sCPF);
+                cliente = new Cliente(tNome.getText(), (Long.parseLong(sCPF)), tTelefone.getText());
                 if(false)//(listaClientes.contains(cliente))
                 {
 
@@ -108,18 +119,23 @@ public class TelaCliente extends JFrame implements ActionListener, WindowListene
             {
                 if(cliente!= null)
                 {
-                    cliente.ConfirmaCliente(tRG.getText(), tEmail.getText(), tEndereco.getText(), new Date(Integer.parseInt(tAno.getText()), Integer.parseInt(tAno.getText()), Integer.parseInt(tDia.getText())));
+                    cliente.ConfirmaCliente(tRG.getText(), tEmail.getText(), tEndereco.getText(), new Data(Integer.parseInt(tDia.getText()), Integer.parseInt(tMes.getText()), Integer.parseInt(tAno.getText())));
                 }
+                TelaCliente ConfirmaCliente = new TelaCliente();
             }
         }
 
         else if(event.getSource() == bCancel) {
             this.dispose();
         }
+
     }
 
     public void cadastraNovoCliente()
     {
+        tNome.setEditable(false);
+        tCPF.setEditable(false);
+        tTelefone.setEditable(false);
         boRG = Box.createHorizontalBox();
             tRG= new JTextField(12);
             lRG = new JLabel("Registro Geral: ");
@@ -139,10 +155,16 @@ public class TelaCliente extends JFrame implements ActionListener, WindowListene
             boEndereco.add(tEndereco);
 
         boDataNascimento = Box.createHorizontalBox();
-            tDia = new JTextField(2);
-            tMes = new JTextField(2);
-            tAno = new JTextField(2);
-            lDataNascimento = new JLabel("Registro Geral: ");
+            //tDia = new JTextField(2);
+
+
+            tDia = new JFormattedTextField(FormatoNumerico(2, 2));
+            tDia.setText("01");
+            tMes = new JFormattedTextField(FormatoNumerico(2, 2));
+            tMes.setText("01");
+            tAno = new JFormattedTextField(FormatoNumerico(4, 4));
+            tAno.setText("1800");
+            lDataNascimento = new JLabel("Data de Nascimento: ");
             boDataNascimento.add(lDataNascimento);
             boDataNascimento.add(tDia);
             boDataNascimento.add(new JLabel("/"));
@@ -178,4 +200,20 @@ public class TelaCliente extends JFrame implements ActionListener, WindowListene
     public void windowDeactivated(WindowEvent event) {}
     public void windowIconified(WindowEvent event) {}
     public void windowActivated(WindowEvent event) {}
+
+    public NumberFormatter FormatoNumerico(int max, int min)
+    {
+        NumberFormat format = NumberFormat.getInstance();
+        format.setGroupingUsed(false);
+        if(max!=0)
+            format.setMaximumIntegerDigits(max);
+        if(min!=0)
+            format.setMinimumIntegerDigits(min);
+        NumberFormatter formatter = new NumberFormatter(format);
+        formatter.setValueClass(Long.class);
+        formatter.setAllowsInvalid(false);
+        return formatter;
+    }
+
 }
+

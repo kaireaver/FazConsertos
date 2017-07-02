@@ -15,7 +15,7 @@ public class Cliente {
     String RG;
     String Endereco;
     String Email;
-    Date DataNascimento;
+    Data DataNascimento;
 
     public Cliente(String Nome, long CPF, String Telefone)
     {
@@ -24,7 +24,7 @@ public class Cliente {
         this.Telefone = Telefone;
 
     }
-    public void ConfirmaCliente(String RG, String Endereco, String Email, Date DataNascimento)
+    public void ConfirmaCliente(String RG, String Endereco, String Email, Data DataNascimento)
     {
         this.RG = RG;
         this.Endereco = Endereco;
