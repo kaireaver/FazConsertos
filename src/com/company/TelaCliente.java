@@ -21,7 +21,7 @@ public class TelaCliente extends JFrame implements ActionListener, WindowListene
     private JPanel pClientes;
     private Cliente cliente = null;
 
-    Box boCadastro;
+    Box boFormulario;
         Box boNome;
             final private JLabel lNome;
             private JTextField tNome;
@@ -31,8 +31,9 @@ public class TelaCliente extends JFrame implements ActionListener, WindowListene
         Box boTelefone;
             final private JLabel lTelefone;
             private JTextField tTelefone;
-        final private JButton bOk;
-        final private JButton bCancel;
+        Box boBotoes;
+            final private JButton bOk;
+            final private JButton bCancel;
 
         Box boRG;
             private JTextField tRG;
@@ -50,7 +51,7 @@ public class TelaCliente extends JFrame implements ActionListener, WindowListene
 
     public TelaCliente()
     {
-        this.setTitle("INSIRA SEUS DADOS CADASTRAIS:");
+        this.setTitle("INSIRA SEUS DADOS:");
         fClientes = this.getContentPane();
         pClientes = new JPanel();
 
@@ -83,22 +84,24 @@ public class TelaCliente extends JFrame implements ActionListener, WindowListene
 
 
 
-        bOk = new JButton("OK");
-        bOk.addActionListener(this);
-        bCancel = new JButton("CANCELAR");
-        bCancel.addActionListener(this);
-        addWindowListener(this);
+        boBotoes = Box.createHorizontalBox();
+            bOk = new JButton("OK");
+            bOk.addActionListener(this);
+            bCancel = new JButton("CANCELAR");
+            bCancel.addActionListener(this);
+            boBotoes.add(bOk);
+            boBotoes.add(bCancel);
 
-        boCadastro = Box.createVerticalBox();
-        boCadastro.add(boNome);
-        boCadastro.add(boCPF);
-        boCadastro.add(boTelefone);
+        boFormulario = Box.createVerticalBox();
+            boFormulario.add(boNome);
+            boFormulario.add(boCPF);
+            boFormulario.add(boTelefone);
+            boFormulario.add(boBotoes);
 
-        pClientes.add(boCadastro);
-        pClientes.add(bOk);
-        pClientes.add(bCancel);
+        pClientes.add(boFormulario);
+
         fClientes.add(pClientes);
-
+        addWindowListener(this);
         atualizaCadastro(132);
     }
 
@@ -159,7 +162,7 @@ public class TelaCliente extends JFrame implements ActionListener, WindowListene
     private void logaCliente()
     {
         //listaClientes.add(cliente);
-        //JFrame TelaDeSolicitacoes = new TelaServicos
+        JFrame TelaDeSolicitacoes = new MainCliente(cliente);
         this.dispose();
     }
 
@@ -180,7 +183,7 @@ public class TelaCliente extends JFrame implements ActionListener, WindowListene
     }
     private void editaCliente()
     {
-        this.setTitle("INSIRA SEUS DADOS CADASTRAIS:");
+        this.setTitle("INSIRA SEUS DADOS:");
         tRG.setEditable(true);
         tEmail.setEditable(true);
         tEndereco.setEditable(true);
@@ -195,6 +198,7 @@ public class TelaCliente extends JFrame implements ActionListener, WindowListene
     public void confirmaClienteExistente()
     {
         cadastraNovoCliente();
+        this.setTitle("CONFIRME SEUS DADOS CADASTRAIS:");
         tRG.setText(cliente.RG);
         tRG.setEditable(false);
         tEmail.setText(cliente.Email);
@@ -253,12 +257,12 @@ public class TelaCliente extends JFrame implements ActionListener, WindowListene
             boDataNascimento.add(new JLabel("/"));
             boDataNascimento.add(tAno);
 
-        boCadastro.add(boRG);
-        boCadastro.add(boEmail);
-        boCadastro.add(boEndereco);
-        boCadastro.add(boDataNascimento);
+        boFormulario.add(boRG, 3);
+        boFormulario.add(boEmail, 4);
+        boFormulario.add(boEndereco, 5);
+        boFormulario.add(boDataNascimento, 6);
 
-        pClientes.add(boCadastro, 0);
+        pClientes.add(boFormulario, 0);
         bOk.setText("CADASTRAR");
         atualizaCadastro(212);
     }
