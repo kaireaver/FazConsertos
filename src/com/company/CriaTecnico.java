@@ -6,9 +6,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.ImageObserver;
 
-/**
- * Created by edvil on 01/07/2017.
- */
 public class CriaTecnico extends JFrame implements ActionListener{
     private JLabel[] jlCampos;
     private  JTextField[] tCampos;
@@ -16,8 +13,6 @@ public class CriaTecnico extends JFrame implements ActionListener{
 
     private Container[] boxCampos;
     private  Container boxSuper;
-
-    private BorderLayout layout;
 
     private JComboBox cbHabilidades;
     private String[] cbsHabilidades = {"Técnico", "Mecânico", "Garota de Programa", "Cozinheiro"};
@@ -37,7 +32,6 @@ public class CriaTecnico extends JFrame implements ActionListener{
         boxSuper = Box.createVerticalBox();
         Container container = getContentPane();
 
-        layout = new BorderLayout(25,25);
         container.add(this.boxSuper);
 
         for(int i = 0; i< jlsCampos.length-1;i++){
@@ -66,6 +60,7 @@ public class CriaTecnico extends JFrame implements ActionListener{
             boxCampos[4].add(bCriaTecnico[i]);
         }
 
+        bCriaTecnico[0].addActionListener(this);
         bCriaTecnico[1].addActionListener(this);
 
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
@@ -75,7 +70,32 @@ public class CriaTecnico extends JFrame implements ActionListener{
     }
 
     public void actionPerformed(ActionEvent event){
-        if(event.getSource() == bCriaTecnico[1])
-            this.dispose();
+        if(event.getSource() == bCriaTecnico[1]) {
+            if(bCriaTecnico[1].getText() == "Cancelar") {
+                this.dispose();
+            }
+            else if(bCriaTecnico[1].getText() == "Recusar") {
+                bCriaTecnico[0].setText(bsCriaTecnico[0]);
+                bCriaTecnico[1].setText(bsCriaTecnico[1]);
+
+                for(int i = 0; i < tCampos.length; i++)
+                    tCampos[i].setEditable(true);
+                cbHabilidades.setEnabled(true);
+            }
+        }
+        else if(event.getSource() == bCriaTecnico[0]) {
+            if(bCriaTecnico[0].getText() == "Criar") {
+                bCriaTecnico[0].setText("Confirmar");
+                bCriaTecnico[1].setText("Recusar");
+
+                for(int i = 0; i < tCampos.length; i++)
+                    tCampos[i].setEditable(false);
+                cbHabilidades.setEnabled(false);
+            }
+            else if(bCriaTecnico[0].getText() == "Confirmar") {
+                // INSERIR NO BANCO DE DADOS!
+                this.dispose();
+            }
+        }
     }
 }
