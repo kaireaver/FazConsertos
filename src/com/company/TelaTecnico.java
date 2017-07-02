@@ -11,7 +11,7 @@ public class TelaTecnico extends JFrame implements ActionListener, WindowListene
     public TelaTecnico() {
         super("Selecione sua opção:");
 
-        bNovoTecnico = new JButton("Criar técnico");
+        bNovoTecnico = new JButton("Novo Técnico");
         bLogaTecnico = new JButton("Entrar no sistema");
         bCancela = new JButton("Cancelar");
 
