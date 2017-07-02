@@ -6,19 +6,23 @@ public class TelaTecnico extends JFrame implements ActionListener, WindowListene
     private JPanel pTecnicos;
     private static JButton bNovoTecnico;
     private static JButton bLogaTecnico;
+    private static JButton bCancela;
 
     public TelaTecnico() {
         super("Selecione sua opção:");
 
         bNovoTecnico = new JButton("Criar técnico");
         bLogaTecnico = new JButton("Entrar no sistema");
+        bCancela = new JButton("Cancelar");
 
         bNovoTecnico.addActionListener(this);
         bLogaTecnico.addActionListener(this);
+        bCancela.addActionListener(this);
 
         pTecnicos = new JPanel();
         pTecnicos.add(bNovoTecnico);
         pTecnicos.add(bLogaTecnico);
+        pTecnicos.add(bCancela);
 
         getContentPane().add(pTecnicos);
         addWindowListener(this);
@@ -37,6 +41,10 @@ public class TelaTecnico extends JFrame implements ActionListener, WindowListene
 
         else if(event.getSource() == bLogaTecnico) {
             JFrame fLoginTecnico = new LogaTecnico();
+            this.dispose();
+        }
+
+        else if(event.getSource() == bCancela) {
             this.dispose();
         }
     }
