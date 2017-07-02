@@ -12,7 +12,7 @@ import java.awt.image.ImageObserver;
 public class CriaTecnico extends JFrame implements ActionListener{
     private JLabel[] jlCampos;
     private  JTextField[] tCampos;
-    private String[] jlsCampos = {"Nome", "Email", "Telefone","Habilidade"};
+    private String[] jlsCampos = {"Nome: ", "E-mail: ", "Telefone: ","Habilidade: "};
 
     private Container[] boxCampos;
     private  Container boxSuper;
@@ -20,7 +20,7 @@ public class CriaTecnico extends JFrame implements ActionListener{
     private BorderLayout layout;
 
     private JComboBox cbHabilidades;
-    private String[] cbsHabilidades = {"Tecnico", "Mecanico", "Garota de Programa", "Cozinheiro"};
+    private String[] cbsHabilidades = {"Técnico", "Mecânico", "Garota de Programa", "Cozinheiro"};
 
     private JButton[] bCriaTecnico;
     private String[] bsCriaTecnico = {"Criar", "Cancelar"};
