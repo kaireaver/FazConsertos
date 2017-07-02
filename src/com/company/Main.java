@@ -9,6 +9,5 @@ public class Main{
         //Database Data = new Database();
         //Data.Connection();
         TelaInicial telaInicio = new TelaInicial();
-        //TelaOrdem orders = new TelaOrdem();
     }
 }
