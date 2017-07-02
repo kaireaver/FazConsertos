@@ -1,13 +1,15 @@
 package com.company;
 import javax.swing.*;
+import javax.swing.text.NumberFormatter;
 import java.awt.event.*;
+import java.text.NumberFormat;
 
 public class LogaTecnico extends JFrame implements ActionListener {
     private JPanel pLoginTecnico;
     private static JButton bLogin;
     final private static JLabel lDescription = new JLabel("Número de Matrícula:");
     final private static JLabel lNotFound = new JLabel("Número de matrícula não encontrado!");
-    private JTextField txtMatricula;
+    private JFormattedTextField txtMatricula;
 
     public LogaTecnico() {
         super("Digite seus dados de usuário:");
@@ -15,7 +17,14 @@ public class LogaTecnico extends JFrame implements ActionListener {
         bLogin = new JButton("Entrar");
         bLogin.addActionListener(this);
 
-        txtMatricula = new JTextField("Digite o seu número de matrícula.");
+        NumberFormat format = NumberFormat.getInstance();
+        format.setGroupingUsed(false);
+        NumberFormatter formatter = new NumberFormatter(format);
+        formatter.setValueClass(Integer.class);
+        formatter.setMinimum(0);
+        formatter.setAllowsInvalid(false);
+        txtMatricula = new JFormattedTextField(formatter);
+        txtMatricula.setColumns(15);
 
         pLoginTecnico = new JPanel();
         pLoginTecnico.add(lDescription);
@@ -37,7 +46,7 @@ public class LogaTecnico extends JFrame implements ActionListener {
         if(event.getSource() == bLogin){
             // CHECAR SE EXISTE MATRÍCULA!
             if(true) {
-                JFrame fMainTecnico = new MainTecnico();
+                JFrame fMainTecnico = new MainTecnico(txtMatricula.getText());
                 this.dispose();
             } else {
                 lNotFound.setVisible(true);

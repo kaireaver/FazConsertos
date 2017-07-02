@@ -11,7 +11,7 @@ public class TelaInicial extends JFrame implements ActionListener {
     public TelaInicial() {
         super("Bem-vindo ao sistema FazConsertos v1.0!");
 
-        lDescription = new JLabel("Selecione a opção desejada:");
+        lDescription = new JLabel("Selecione o tipo de usuário:");
 
         bTecnicos = new JButton("Técnicos");
         bClientes = new JButton("Clientes");
