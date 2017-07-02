@@ -26,7 +26,6 @@ public class Database {
         } catch (Exception e) {
             System.out.println(e);
         }
-        closeConnection();
     }
     public static void closeConnection(){
         try{
