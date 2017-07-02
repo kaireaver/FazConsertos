@@ -11,6 +11,7 @@ public class Database {
     private static final String USERNAME = "clini357_databas";
     private static final String PASSWORD = "database";
     private static Connection conn;
+    ClientsDatabase clDB;
 
 
     public static void Connection () throws SQLException {
