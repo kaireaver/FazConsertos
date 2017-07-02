@@ -19,7 +19,7 @@ public class TelaOrdem extends JFrame {
     private JTextField[] campos;
 
     public TelaOrdem(){
-        super("Ordem de Serviços");
+        super("Ordem de Orçamento");
         this.layout = new BorderLayout(5,5);
         Container container = getContentPane();
         container.setLayout(this.layout);

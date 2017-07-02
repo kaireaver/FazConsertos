@@ -1,5 +1,6 @@
 package com.company;
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -9,9 +10,10 @@ public class MainTecnico extends JFrame implements ActionListener {
     private static JButton bExcluirTecnico;
 
     private JPanel pTecnicoPrincipal;
-    private Box container;
-    private Box pConfirma;
-    final private static JLabel lTemCerteza = new JLabel("Tem certeza que deseja excluir o técnico?");
+    private BorderLayout layout;
+
+    private Box boxContainer;
+    final private static JLabel lTemCerteza = new JLabel("Tem certeza?");
     private static JButton bConfirma;
     private static JButton bRecusa;
 
@@ -21,32 +23,45 @@ public class MainTecnico extends JFrame implements ActionListener {
         super("Bem-vindo! Selecione a opção desejada:");
         this.numMatricula = Integer.parseInt(numMatricula);
 
-        bAlteraDados = new JButton("Alterar dados de usuário");
+        bAlteraDados = new JButton("Alterar dados");
         bConsultaServico = new JButton("Consultar serviço");
         bExcluirTecnico = new JButton("Excluir usuário");
 
+        bAlteraDados.addActionListener(this);
+        bConsultaServico.addActionListener(this);
+        bExcluirTecnico.addActionListener(this);
+
+        Box boxButtons = Box.createVerticalBox();
+        boxButtons.add(bAlteraDados);
+        boxButtons.add(bConsultaServico);
+        boxButtons.add(bExcluirTecnico);
+
         pTecnicoPrincipal = new JPanel();
-        pTecnicoPrincipal.add(bAlteraDados);
-        pTecnicoPrincipal.add(bConsultaServico);
-        pTecnicoPrincipal.add(bExcluirTecnico);
+        layout = new BorderLayout(350, 125);
+        pTecnicoPrincipal.setLayout(layout);
+        pTecnicoPrincipal.add(boxButtons, BorderLayout.LINE_START);
 
         bConfirma = new JButton("Prosseguir");
         bRecusa = new JButton("Cancelar");
 
-        pConfirma = Box.createHorizontalBox();
-        pConfirma.add(bConfirma);
-        pConfirma.add(bRecusa);
+        bConfirma.addActionListener(this);
+        bRecusa.addActionListener(this);
 
-        container = Box.createVerticalBox();
-        container.add(lTemCerteza);
-        container.add(pConfirma);
-        pTecnicoPrincipal.add(container);
+        Box boxConfirma;
+        boxConfirma = Box.createHorizontalBox();
+        boxConfirma.add(bConfirma);
+        boxConfirma.add(bRecusa);
 
-        container.setVisible(false);
+        boxContainer = Box.createVerticalBox();
+        boxContainer.add(lTemCerteza);
+        boxContainer.add(boxConfirma);
+
+        pTecnicoPrincipal.add(boxContainer, BorderLayout.LINE_END);
+        boxContainer.setVisible(false);
         getContentPane().add(pTecnicoPrincipal);
 
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        setSize(500,100);
+        setSize(350,125);
         setResizable(false);
         setVisible(true);
 
@@ -62,7 +77,15 @@ public class MainTecnico extends JFrame implements ActionListener {
         }
 
         else if(event.getSource() == bExcluirTecnico) {
-            container.setVisible(true);
+            boxContainer.setVisible(true);
+        }
+
+        else if(event.getSource() == bConfirma) {
+            this.dispose();
+        }
+
+        else if(event.getSource() == bRecusa) {
+            boxContainer.setVisible(false);
         }
     }
 }

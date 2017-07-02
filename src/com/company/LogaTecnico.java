@@ -7,6 +7,7 @@ import java.text.NumberFormat;
 public class LogaTecnico extends JFrame implements ActionListener {
     private JPanel pLoginTecnico;
     private static JButton bLogin;
+    private static JButton bCancela;
     final private static JLabel lDescription = new JLabel("Número de Matrícula:");
     final private static JLabel lNotFound = new JLabel("Número de matrícula não encontrado!");
     private JFormattedTextField txtMatricula;
@@ -15,7 +16,9 @@ public class LogaTecnico extends JFrame implements ActionListener {
         super("Digite seus dados de usuário:");
 
         bLogin = new JButton("Entrar");
+        bCancela = new JButton("Cancelar");
         bLogin.addActionListener(this);
+        bCancela.addActionListener(this);
 
         NumberFormat format = NumberFormat.getInstance();
         format.setGroupingUsed(false);
@@ -30,6 +33,7 @@ public class LogaTecnico extends JFrame implements ActionListener {
         pLoginTecnico.add(lDescription);
         pLoginTecnico.add(txtMatricula);
         pLoginTecnico.add(bLogin);
+        pLoginTecnico.add(bCancela);
         pLoginTecnico.add(lNotFound);
 
         lNotFound.setVisible(false);
@@ -51,6 +55,10 @@ public class LogaTecnico extends JFrame implements ActionListener {
             } else {
                 lNotFound.setVisible(true);
             }
+        }
+
+        else if(event.getSource() == bCancela) {
+            this.dispose();
         }
     }
 
