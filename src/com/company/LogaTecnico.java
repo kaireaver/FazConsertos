@@ -42,6 +42,7 @@ public class LogaTecnico extends JFrame implements ActionListener {
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         setSize(500,70);
         setResizable(false);
+        pack();
         setVisible(true);
 
     }

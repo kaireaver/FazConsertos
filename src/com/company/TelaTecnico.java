@@ -30,6 +30,7 @@ public class TelaTecnico extends JFrame implements ActionListener, WindowListene
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         setSize(500,70);
         setResizable(false);
+        pack();
         setVisible(true);
     }
 

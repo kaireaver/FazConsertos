@@ -268,6 +268,7 @@ public class TelaCliente extends JFrame implements ActionListener, WindowListene
         this.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         this.setSize(500, tam);
         this.setResizable(false);
+        this.pack();
         this.setVisible(true);
     }
 
