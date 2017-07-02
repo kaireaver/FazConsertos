@@ -62,7 +62,7 @@ public class TelaCliente extends JFrame implements ActionListener, WindowListene
 
         boCPF = Box.createHorizontalBox();
             try{
-                javax.swing.text.MaskFormatter format_textFieldCPF = new javax.swing.text.MaskFormatter("##.###.###-##");
+                javax.swing.text.MaskFormatter format_textFieldCPF = new javax.swing.text.MaskFormatter("##.###.####-##");
                 tCPF = new JFormattedTextField(format_textFieldCPF);
             }catch (Exception e){}
             lCPF = new JLabel("CPF - apenas números:   ");

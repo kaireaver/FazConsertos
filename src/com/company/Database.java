@@ -17,13 +17,11 @@ public class Database {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             conn = DriverManager.getConnection(URL, USERNAME, PASSWORD);
-            String query  = "Create table IF NOT EXISTS TBL(USERID INT,first VARCHAR(30) )";
+            String query  = "Create table IF NOT EXISTS Tecnico(ID int NOT NULL AUTO_INCREMENT," +
+                    "nome VARCHAR(30), email varchar(50),habilidade varchar(200),numMatricula int," +
+                    " PRIMARY KEY(ID))";
             PreparedStatement pps = conn.prepareStatement(query);
             pps.execute();
-            //ResultSet rs = pps.executeQuery();
-           /* while(rs.next()){
-                System.out.println(rs.getInt(1) + " " + rs.getString(2));
-            }*/
         } catch (Exception e) {
             System.out.println(e);
         }
