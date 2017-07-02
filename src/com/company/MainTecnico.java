@@ -1,5 +1,6 @@
 package com.company;
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -8,11 +9,11 @@ public class MainTecnico extends JFrame implements ActionListener {
     private static JButton bAlteraDados;
     private static JButton bConsultaServico;
     private static JButton bExcluirTecnico;
+    private static JButton bSair;
 
     private JPanel pTecnicoPrincipal;
-    private BorderLayout layout;
 
-    private Box boxContainer;
+    private Box boxConfirma;
     final private static JLabel lTemCerteza = new JLabel("Tem certeza?");
     private static JButton bConfirma;
     private static JButton bRecusa;
@@ -26,19 +27,21 @@ public class MainTecnico extends JFrame implements ActionListener {
         bAlteraDados = new JButton("Alterar dados");
         bConsultaServico = new JButton("Consultar serviço");
         bExcluirTecnico = new JButton("Excluir usuário");
+        bSair = new JButton("Sair");
 
         bAlteraDados.addActionListener(this);
         bConsultaServico.addActionListener(this);
         bExcluirTecnico.addActionListener(this);
+        bSair.addActionListener(this);
 
         Box boxButtons = Box.createVerticalBox();
         boxButtons.add(bAlteraDados);
         boxButtons.add(bConsultaServico);
         boxButtons.add(bExcluirTecnico);
+        boxButtons.add(bSair);
 
         pTecnicoPrincipal = new JPanel();
-        layout = new BorderLayout(350, 125);
-        pTecnicoPrincipal.setLayout(layout);
+        pTecnicoPrincipal.setLayout(new BorderLayout(600,300));
         pTecnicoPrincipal.add(boxButtons, BorderLayout.LINE_START);
 
         bConfirma = new JButton("Prosseguir");
@@ -47,21 +50,21 @@ public class MainTecnico extends JFrame implements ActionListener {
         bConfirma.addActionListener(this);
         bRecusa.addActionListener(this);
 
-        Box boxConfirma;
         boxConfirma = Box.createHorizontalBox();
+        boxConfirma.add(lTemCerteza);
         boxConfirma.add(bConfirma);
         boxConfirma.add(bRecusa);
 
-        boxContainer = Box.createVerticalBox();
-        boxContainer.add(lTemCerteza);
-        boxContainer.add(boxConfirma);
+        Container contAuxiliar = new Container();
+        contAuxiliar.setLayout(new BorderLayout(300,300));
+        contAuxiliar.add(boxConfirma, BorderLayout.CENTER);
 
-        pTecnicoPrincipal.add(boxContainer, BorderLayout.LINE_END);
-        boxContainer.setVisible(false);
+        pTecnicoPrincipal.add(contAuxiliar, BorderLayout.LINE_END);
+        boxConfirma.setVisible(false);
         getContentPane().add(pTecnicoPrincipal);
 
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        setSize(350,125);
+        setSize(600,300);
         setResizable(false);
         setVisible(true);
 
@@ -77,7 +80,7 @@ public class MainTecnico extends JFrame implements ActionListener {
         }
 
         else if(event.getSource() == bExcluirTecnico) {
-            boxContainer.setVisible(true);
+            boxConfirma.setVisible(true);
         }
 
         else if(event.getSource() == bConfirma) {
@@ -85,7 +88,7 @@ public class MainTecnico extends JFrame implements ActionListener {
         }
 
         else if(event.getSource() == bRecusa) {
-            boxContainer.setVisible(false);
+            boxConfirma.setVisible(false);
         }
     }
 }
