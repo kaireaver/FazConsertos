@@ -10,10 +10,11 @@ public class Database {
     private static final String URL = "jdbc:mysql://50.116.87.79:3306/clini357_poo";
     private static final String USERNAME = "clini357_databas";
     private static final String PASSWORD = "database";
+    private static Connection conn;
 
 
     public static void Connection () throws SQLException {
-        Connection conn = null;
+        conn = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
             conn = DriverManager.getConnection(URL, USERNAME, PASSWORD);
@@ -25,6 +26,14 @@ public class Database {
         } catch (Exception e) {
             System.out.println(e);
         }
-        conn.close();
+        closeConnection();
+    }
+    public static void closeConnection(){
+        try{
+            conn.close();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
     }
 }
