@@ -24,7 +24,7 @@ public class Cliente {
         this.Telefone = Telefone;
 
     }
-    public void ConfirmaCliente(String RG, String Endereco, String Email, Data DataNascimento)
+    public void preencheCliente(String RG, String Endereco, String Email, Data DataNascimento)
     {
         this.RG = RG;
         this.Endereco = Endereco;
