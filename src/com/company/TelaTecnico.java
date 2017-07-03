@@ -37,7 +37,8 @@ public class TelaTecnico extends JFrame implements ActionListener, WindowListene
     public void actionPerformed(ActionEvent event) {
         if(event.getSource() == bNovoTecnico) {
             //JFrame fCriaTecnico = new CriaTecnico();
-                JFrame TelaOrdem = new TelaOrdemCliente();
+            //JFrame TelaOrdem = new TelaOrdemCliente();
+            JFrame TelaOrdem = new TelaOrdemTecnicoInicial();
             this.dispose();
         }
 
