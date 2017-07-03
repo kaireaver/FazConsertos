@@ -90,5 +90,9 @@ public class MainTecnico extends JFrame implements ActionListener {
         else if(event.getSource() == bRecusa) {
             boxConfirma.setVisible(false);
         }
+
+        else if(event.getSource() == bSair) {
+            this.dispose();
+        }
     }
 }

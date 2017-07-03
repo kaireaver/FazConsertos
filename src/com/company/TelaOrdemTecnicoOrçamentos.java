@@ -13,7 +13,7 @@ public class TelaOrdemTecnicoOrçamentos extends JFrame {
 
     private Container boxSuper;
 
-    public TelaOrdemTecnicoOrçamentos{
+    public TelaOrdemTecnicoOrçamentos() {
         super("Suas Ordens");
         Container container = getContentPane();
 

@@ -19,7 +19,7 @@ public class TelaOrdemCliente extends JFrame {
     private JTextField tDescricao;
 
     private JComboBox cbHabilidades;
-    private String[] cbsHabilidades = {"Técnico", "Mecânico", "Garota de Programa", "Cozinheiro"};
+    private String[] cbsHabilidades = {"Técnico", "Mecânico", "Programador", "Cozinheiro"};
 
     private Container boxCampos[];
     private Container boxSuper;
