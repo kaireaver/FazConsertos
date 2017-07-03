@@ -24,7 +24,7 @@ public class TelaOrdemTecnicoInicial extends JFrame{
         }
         container.add(boxSuper);
 
-        setSize(500,150);
+        setSize(315,75);
         setVisible(true);
         setResizable(false);
     }
