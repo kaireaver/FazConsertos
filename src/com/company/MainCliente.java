@@ -41,7 +41,7 @@ public class MainCliente extends JFrame implements ActionListener
     public void actionPerformed(ActionEvent event)
     {
         if(event.getSource() == bNovaSolicitacao) {
-            //JFrame fNovaSolicitacao = new ;
+            JFrame fNovaSolicitacao = new TelaOrdemCliente();
             setBotao(bNovaSolicitacao, false);
             setBotao(bConsultarSolicitacao, false);
         }
