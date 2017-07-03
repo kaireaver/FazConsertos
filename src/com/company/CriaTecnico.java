@@ -15,7 +15,7 @@ public class CriaTecnico extends JFrame implements ActionListener{
     private  Container boxSuper;
 
     private JComboBox cbHabilidades;
-    private String[] cbsHabilidades = {"Técnico", "Mecânico", "Garota de Programa", "Cozinheiro"};
+    private String[] cbsHabilidades = {"Técnico", "Mecânico", "Programador", "Cozinheiro"};
 
     private JButton[] bCriaTecnico;
     private String[] bsCriaTecnico = {"Criar", "Cancelar"};
