@@ -9,5 +9,6 @@ public class Main{
         Database Data = new Database();
         Data.Connection();
         TelaInicial telaInicio = new TelaInicial();
+        Data.closeConnection();
     }
 }
