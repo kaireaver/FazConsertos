@@ -3,13 +3,10 @@ package com.company;
 import javax.swing.*;
 import java.awt.*;
 
-/**
- * Created by edvil on 03/07/2017.
- */
 public class TelaOrdemTecnicoOrçamentos extends JFrame {
     private JComboBox cbOrdens;
 
-    private JLabel[] jlCampos = {"Cliente"};
+    private JLabel[] jlCampos = {};
 
     private Container boxSuper;
 
