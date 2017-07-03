@@ -10,11 +10,13 @@ public class MainCliente extends JFrame implements ActionListener
     final private JLabel lDescription;
     private static JButton bNovaSolicitacao;
     private static JButton bConsultarSolicitacao;
+    private Cliente cliente;
 
     public MainCliente(Cliente cliente)
     {
-        super("Bem-vindo ao sistema FazConsertos v1.0 - "+ cliente.Nome);
 
+        super("Bem-vindo ao sistema FazConsertos v1.0 - "+ cliente.Nome);
+        this.cliente = cliente;
         lDescription = new JLabel("SOLICITAÇÕES: ");
 
         bNovaSolicitacao = new JButton("      NOVA       ");
@@ -39,7 +41,7 @@ public class MainCliente extends JFrame implements ActionListener
     public void actionPerformed(ActionEvent event)
     {
         if(event.getSource() == bNovaSolicitacao) {
-            //JFrame fNovaSolicitacao = new ;
+            JFrame fNovaSolicitacao = new TelaOrdemCliente();
             setBotao(bNovaSolicitacao, false);
             setBotao(bConsultarSolicitacao, false);
         }
