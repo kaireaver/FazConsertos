@@ -11,15 +11,11 @@ public class TelaInicial extends Tela implements ActionListener {
     final private JLabel lDescription;
     private static JButton bTecnicos;
     private static JButton bClientes;
-    private Database data;
-    private ArrayList cList;
-    private ArrayList tList;
-    private ArrayList oList;
 
     public TelaInicial() {
         super("Bem-vindo ao sistema FazConsertos v1.0!", 500, 70);
 
-        Database data = new Database();
+        data = new Database();
         try{
             Connection conn = data.Connection();
             if (conn != null) {
@@ -63,6 +59,7 @@ public class TelaInicial extends Tela implements ActionListener {
 
         getContentPane().add(pInicial);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
         setVisible(true);
     }
 

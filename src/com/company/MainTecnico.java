@@ -62,7 +62,6 @@ public class MainTecnico extends Tela implements ActionListener {
         getContentPane().add(pTecnicoPrincipal);
 
         setVisible(true);
-
     }
 
     public void actionPerformed(ActionEvent event) {
