@@ -44,9 +44,9 @@ public class LogaTecnico extends Tela {
 
         @Override
     public void actionPerformed(ActionEvent event) {
-        if(event.getSource() == bLogin){
-            if(true) {
-                // Integer.parseInt(txtMatricula.getText()) <= Tecnico.getNumTecnicos()
+        if(event.getSource() == bLogin) {
+            if(Integer.parseInt(txtMatricula.getText()) <= Tecnico.getNumTecnicos()
+                    && Integer.parseInt(txtMatricula.getText()) != 0) {
                 JFrame fMainTecnico = new MainTecnico(txtMatricula.getText());
                 fechaTela(false);
             } else {

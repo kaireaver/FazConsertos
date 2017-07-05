@@ -94,7 +94,9 @@ public class CriaTecnico extends Tela {
                 cbHabilidades.setEnabled(false);
             }
             else if(bCriaTecnico[0].getText() == "Confirmar") {
-                // INSERIR NO BANCO DE DADOS!
+                String str = (String)cbHabilidades.getSelectedItem();
+                Tecnico t = new Tecnico(tCampos[0].getText(), tCampos[1].getText(), tCampos[2].getText(), str);
+                tList.add(t);
                 fechaTela(true);
             }
         }
