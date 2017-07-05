@@ -129,7 +129,6 @@ public class TelaCliente extends Tela {
         String sCPF = tCPF.getText();
         sCPF = sCPF.replace("-", "");
         sCPF = sCPF.replace(".", "");
-        System.out.println(sCPF);
         this.cliente = new Cliente(tNome.getText(), (Long.parseLong(sCPF)), tTelefone.getText());
     }
 
