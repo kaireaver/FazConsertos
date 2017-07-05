@@ -25,7 +25,16 @@ public abstract class Tela extends JFrame {
         }
     }
 
-    public JTextField novaMascara(String str)
+    public void tamanhoTela(int tam)
+    {
+        this.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        this.setSize(500, tam);
+        this.setResizable(false);
+        this.pack();
+        this.setVisible(true);
+    }
+
+    public JTextField novoJTextFieldMascarado(String str)
     {
         try{
             MaskFormatter format_textField4 = new MaskFormatter(str);
@@ -63,4 +72,12 @@ public abstract class Tela extends JFrame {
         return isEmailIdValid;
     }
 
+    public Box novoBoxHorizontal(JLabel label, Component textField)
+    {
+        Box b = Box.createHorizontalBox();
+        b.add(label);
+        //aa
+        b.add(textField);
+        return b;
+    }
 }
