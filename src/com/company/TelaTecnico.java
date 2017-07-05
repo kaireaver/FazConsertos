@@ -3,7 +3,7 @@ import javax.swing.*;
 import java.awt.event.*;
 import java.util.ArrayList;
 
-public class TelaTecnico extends Tela implements ActionListener, WindowListener {
+public class TelaTecnico extends Tela implements ActionListener {
     private JPanel pTecnicos;
     private static JButton bNovoTecnico;
     private static JButton bLogaTecnico;
@@ -40,28 +40,16 @@ public class TelaTecnico extends Tela implements ActionListener, WindowListener 
     public void actionPerformed(ActionEvent event) {
         if(event.getSource() == bNovoTecnico) {
             JFrame fCriaTecnico = new CriaTecnico();
-            this.dispose();
+            fechaTela(false);
         }
 
         else if(event.getSource() == bLogaTecnico) {
             JFrame fLoginTecnico = new LogaTecnico();
-            this.checaDispose = true;
-            this.dispose();
+            fechaTela(false);
         }
 
         else if(event.getSource() == bCancela) {
-            this.dispose();
+            fechaTela(true);
         }
     }
-
-    public void windowClosed(WindowEvent event) {
-        this.checaDispose();
-    }
-
-    public void windowDeiconified(WindowEvent event) {}
-    public void windowOpened(WindowEvent event) {}
-    public void windowClosing(WindowEvent event) {}
-    public void windowDeactivated(WindowEvent event) {}
-    public void windowIconified(WindowEvent event) {}
-    public void windowActivated(WindowEvent event) {}
 }

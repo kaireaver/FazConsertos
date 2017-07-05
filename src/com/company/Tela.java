@@ -8,28 +8,35 @@ import java.text.NumberFormat;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public abstract class Tela extends JFrame {
+public class Tela extends JFrame implements WindowListener {
     protected boolean checaDispose = false;
 
     Tela(String str) {
         super(str);
     }
 
+    // Enviar true se for para setar os botões da tela inicial.
+    public void fechaTela(boolean disposeStatus) {
+        this.checaDispose = disposeStatus;
+        checaDispose();
+        this.dispose();
+    }
+
     public void checaDispose() {
         if (checaDispose) {
-            TelaInicial.setBotaoTecnicos(false);
-            TelaInicial.setBotaoClientes(false);
-        } else {
             TelaInicial.setBotaoTecnicos(true);
             TelaInicial.setBotaoClientes(true);
+        } else {
+            TelaInicial.setBotaoTecnicos(false);
+            TelaInicial.setBotaoClientes(false);
         }
     }
 
     public JTextField novaMascara(String str)
     {
         try{
-            MaskFormatter format_textField4 = new MaskFormatter(str);
-            return new JFormattedTextField(format_textField4);
+            MaskFormatter format_textField = new MaskFormatter(str);
+            return new JFormattedTextField(format_textField);
         }catch (Exception e){
             return null;
         }
@@ -62,5 +69,16 @@ public abstract class Tela extends JFrame {
         }
         return isEmailIdValid;
     }
+
+    public void windowClosing(WindowEvent event) {
+        this.fechaTela(true);
+    }
+
+    public void windowDeiconified(WindowEvent event) {}
+    public void windowOpened(WindowEvent event) {}
+    public void windowClosed(WindowEvent event) {}
+    public void windowDeactivated(WindowEvent event) {}
+    public void windowIconified(WindowEvent event) {}
+    public void windowActivated(WindowEvent event) {}
 
 }

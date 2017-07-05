@@ -4,9 +4,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowListener;
 import java.awt.image.ImageObserver;
 
-public class CriaTecnico extends JFrame implements ActionListener{
+public class CriaTecnico extends Tela implements ActionListener {
     private JLabel[] jlCampos;
     private  JTextField[] tCampos;
     private String[] jlsCampos = {"Nome: ", "E-mail: ", "Telefone: ","Habilidade: "};

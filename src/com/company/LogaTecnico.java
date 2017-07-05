@@ -4,7 +4,7 @@ import javax.swing.text.NumberFormatter;
 import java.awt.event.*;
 import java.text.NumberFormat;
 
-public class LogaTecnico extends Tela implements ActionListener, WindowListener {
+public class LogaTecnico extends Tela implements ActionListener {
     private JPanel pLoginTecnico;
     private static JButton bLogin;
     private static JButton bCancela;
@@ -51,26 +51,15 @@ public class LogaTecnico extends Tela implements ActionListener, WindowListener 
             if(true) {
                 // Integer.parseInt(txtMatricula.getText()) <= Tecnico.getNumTecnicos()
                 JFrame fMainTecnico = new MainTecnico(txtMatricula.getText());
-                this.dispose();
+                fechaTela(false);
             } else {
                 lNotFound.setVisible(true);
             }
         }
 
         else if(event.getSource() == bCancela) {
-            this.dispose();
+            fechaTela(true);
         }
     }
-
-    public void windowClosed(WindowEvent event) {
-        this.checaDispose();
-    }
-
-    public void windowDeiconified(WindowEvent event) {}
-    public void windowOpened(WindowEvent event) {}
-    public void windowClosing(WindowEvent event) {}
-    public void windowDeactivated(WindowEvent event) {}
-    public void windowIconified(WindowEvent event) {}
-    public void windowActivated(WindowEvent event) {}
 
 }
