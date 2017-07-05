@@ -3,7 +3,9 @@ import javax.swing.*;
 import java.awt.event.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Set;
 
 public class TelaInicial extends Tela {
@@ -22,21 +24,31 @@ public class TelaInicial extends Tela {
                 cList = new ArrayList(); //Clients List.
                 tList = new ArrayList(); //Technicians List.
                 oList = new ArrayList(); //Orders List.
-                String query  = "Create table IF NOT EXISTS Tecnico(ID int NOT NULL AUTO_INCREMENT," +
-                        "nome VARCHAR(30), email varchar(50),habilidade varchar(200),numMatricula int," +
-                        " PRIMARY KEY(ID))";
+                String query  = "SELECT * FROM Clientes";
                 PreparedStatement pps = conn.prepareStatement(query);
-                pps.execute();
-                query  = "Create table IF NOT EXISTS Tecnico(ID int NOT NULL AUTO_INCREMENT," +
-                        "nome VARCHAR(30), email varchar(50),habilidade varchar(200),numMatricula int," +
-                        " PRIMARY KEY(ID))";
+                ResultSet rs = pps.executeQuery();
+                while(rs.next()){
+                    cList.add(new Cliente(rs.getString("nome"),rs.getInt("cpf"),rs.getString("telefone")));
+                }
+                query  = "SELECT * FROM Tecnicos";
                 pps = conn.prepareStatement(query);
-                pps.execute();
-                query  = "Create table IF NOT EXISTS Tecnico(ID int NOT NULL AUTO_INCREMENT," +
-                        "nome VARCHAR(30), email varchar(50),habilidade varchar(200),numMatricula int," +
-                        " PRIMARY KEY(ID))";
+                rs = pps.executeQuery();
+                while(rs.next()){
+                    tList.add(new Tecnico(rs.getString("nome"),rs.getString("email"),rs.getString("telefone"),rs.getString("habilidade")));
+                }
+                query  = "SELECT * FROM Orders";
                 pps = conn.prepareStatement(query);
-                pps.execute();
+                rs = pps.executeQuery();
+                Cliente client = null;
+                while(rs.next()){
+                    for(Cliente c : cList){
+                        if(c.getCPF()==rs.getInt("cpf")){
+                            client = c;
+                            break;
+                        }
+                    }
+                    oList.add(new Ordem(client,rs.getString("descricao")));
+                }
             }
         }
         catch(Exception e){

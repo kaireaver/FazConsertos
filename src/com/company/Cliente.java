@@ -32,5 +32,8 @@ public class Cliente {
         this.DataNascimento = DataNascimento;
     }
 
+    public long getCPF() {
+        return CPF;
+    }
 }
 
