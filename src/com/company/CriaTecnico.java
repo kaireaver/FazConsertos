@@ -15,7 +15,6 @@ public class CriaTecnico extends Tela {
     private  Container boxSuper;
 
     private JComboBox cbHabilidades;
-    private String[] cbsHabilidades = {"Técnico", "Mecânico", "Programador", "Cozinheiro"};
 
     private JButton[] bCriaTecnico;
     private String[] bsCriaTecnico = {"Criar", "Cancelar"};
@@ -26,7 +25,7 @@ public class CriaTecnico extends Tela {
         jlCampos = new JLabel[jlsCampos.length];
         tCampos = new JTextField[jlsCampos.length-1];
         boxCampos = new Container[jlsCampos.length+1];
-        cbHabilidades = new JComboBox(cbsHabilidades);
+        cbHabilidades = new JComboBox(Tecnico.cbsHabilidades);
         bCriaTecnico = new JButton[bsCriaTecnico.length];
 
         boxSuper = Box.createVerticalBox();
@@ -39,7 +38,7 @@ public class CriaTecnico extends Tela {
             if (i != 2)
                 tCampos[i] = new JTextField(5);
             else
-                tCampos[i] = novoJTextFieldMascarado("(##) ####-####");
+                tCampos[i] = novoJTextFieldMascarado("(##) #####-####");
             boxCampos[i] = Box.createHorizontalBox();
 
             boxCampos[i].add(jlCampos[i]);
