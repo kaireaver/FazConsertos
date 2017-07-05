@@ -39,23 +39,18 @@ public class MainCliente extends Tela {
     {
         if(event.getSource() == bNovaSolicitacao) {
             JFrame fNovaSolicitacao = new TelaOrdemCliente();
-            setBotao(bNovaSolicitacao, false);
-            setBotao(bConsultarSolicitacao, false);
+            setButton(bNovaSolicitacao, false);
+            setButton(bConsultarSolicitacao, false);
         }
 
         else if(event.getSource() == bConsultarSolicitacao)
         {
             JFrame fConsultaSolicitacao = new TelaClienteConsulta() ;
-            setBotao(bNovaSolicitacao, false);
-            setBotao(bConsultarSolicitacao, false);
+            setButton(bNovaSolicitacao, false);
+            setButton(bConsultarSolicitacao, false);
         }
     }
-
-    public static void setBotao(JButton b, boolean state)
-    {
-        b.setEnabled(state);
-        b.setBorderPainted(state);
-    }
+    
     
 
 }
