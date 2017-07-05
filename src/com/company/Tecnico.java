@@ -6,12 +6,12 @@ public class Tecnico {
     private String telefone;
     private String habilidade;
 
-    private static int i = 1;
+    private static int i = 0;
     private int numMatricula;
 
-    public Tecnico(String nome, String endereco, String telefone, String habilidade){
-        this.numMatricula = i;
+    public Tecnico(String nome, String email, String telefone, String habilidade){
         i++;
+        this.numMatricula = i;
 
         this.nome = nome;
         this.email = email;
