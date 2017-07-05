@@ -41,7 +41,7 @@ public class Tela extends JFrame implements WindowListener {
 
     public void checaDispose() {
         if (!checaDispose) {
-            setButton(TelaInicial.bTecnicos,false);
+            setButton(TelaInicial.bTecnicos, false);
             setButton(TelaInicial.bClientes,false);
         } else {
             setButton(TelaInicial.bTecnicos,true);
