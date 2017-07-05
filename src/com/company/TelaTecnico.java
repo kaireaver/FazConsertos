@@ -10,7 +10,7 @@ public class TelaTecnico extends Tela implements ActionListener {
     private static JButton bCancela;
     private ArrayList<Tecnico> tList;
 
-    public TelaTecnico(ArrayList<Tecnico> tList) {
+    public TelaTecnico() {
         super("Selecione sua opção:", 500, 70);
         this.tList = tList;
 

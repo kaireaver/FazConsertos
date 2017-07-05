@@ -11,10 +11,6 @@ public class TelaInicial extends Tela implements ActionListener {
     final private JLabel lDescription;
     protected static JButton bTecnicos;
     protected static JButton bClientes;
-    private Database data;
-    private ArrayList cList;
-    private ArrayList tList;
-    private ArrayList oList;
 
     public TelaInicial() {
         super("Bem-vindo ao sistema FazConsertos v1.0!", 500, 70);
@@ -69,13 +65,13 @@ public class TelaInicial extends Tela implements ActionListener {
 
     public void actionPerformed(ActionEvent event) {
         if(event.getSource() == bTecnicos) {
-            JFrame fTecnico = new TelaTecnico(tList);
+            JFrame fTecnico = new TelaTecnico();
             setButton(bTecnicos,false);
             setButton(bClientes,false);
         }
 
         else if(event.getSource() == bClientes) {
-            JFrame fClientes = new TelaCliente(cList);
+            JFrame fClientes = new TelaCliente();
             setButton(bTecnicos,false);
             setButton(bClientes,false);
         }
