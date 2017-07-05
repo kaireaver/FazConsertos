@@ -19,7 +19,7 @@ public class TelaInicial extends Tela implements ActionListener {
     public TelaInicial() {
         super("Bem-vindo ao sistema FazConsertos v1.0!", 500, 70);
 
-        Database data = new Database();
+        data = new Database();
         try{
             Connection conn = data.Connection();
             if (conn != null) {

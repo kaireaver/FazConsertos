@@ -7,10 +7,17 @@ import java.awt.*;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.text.NumberFormat;
+import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Tela extends JFrame implements WindowListener {
+
+    static Database data;
+    static ArrayList cList;
+    static ArrayList tList;
+    static ArrayList oList;
+
     protected boolean checaDispose = false;
 
     Tela(String str, int w, int h) {
