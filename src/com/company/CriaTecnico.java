@@ -36,7 +36,10 @@ public class CriaTecnico extends Tela implements ActionListener{
 
         for(int i = 0; i < jlsCampos.length-1; i++){
             jlCampos[i] = new JLabel(jlsCampos[i]);
-            tCampos[i] = new JTextField(5);
+            if (i != 2)
+                tCampos[i] = new JTextField(5);
+            else
+                tCampos[i] = novoJTextFieldMascarado("(##) ####-####");
             boxCampos[i] = Box.createHorizontalBox();
 
             boxCampos[i].add(jlCampos[i]);
