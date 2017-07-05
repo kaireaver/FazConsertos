@@ -1,19 +1,9 @@
 package com.company;
-import javafx.collections.transformation.SortedList;
-import javafx.scene.input.DataFormat;
 
 import javax.swing.*;
-import javax.swing.text.MaskFormatter;
-import javax.swing.text.NumberFormatter;
 import java.awt.*;
 import java.awt.event.*;
-import java.text.NumberFormat;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Date;
-import java.util.Set;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class TelaCliente extends Tela implements ActionListener, WindowListener {
 
@@ -73,10 +63,7 @@ public class TelaCliente extends Tela implements ActionListener, WindowListener 
             boCPF.add(tCPF);
 
         boTelefone = Box.createHorizontalBox();
-            try{
-                javax.swing.text.MaskFormatter format_textFieldTel = new javax.swing.text.MaskFormatter(" (##) ####-####");
-                tTelefone = new JFormattedTextField(format_textFieldTel);
-            }catch (Exception e){}
+            tTelefone = novaMascara(" (##) ####-####");
             lTelefone = new JLabel("Telefone Fixo + DDD:   ");
             boTelefone.add(lTelefone);
             boTelefone.add(tTelefone);
@@ -101,7 +88,7 @@ public class TelaCliente extends Tela implements ActionListener, WindowListener 
 
         fClientes.add(pClientes);
         addWindowListener(this);
-        atualizaCadastro(132);
+        tamanhoTela(132);
     }
 
     public void actionPerformed(ActionEvent event) {
@@ -215,7 +202,6 @@ public class TelaCliente extends Tela implements ActionListener, WindowListener 
     }
 
 
-
     public void cadastraNovoCliente()
     {
         this.setTitle("NOVO CADASTRO - "+tNome.getText());
@@ -262,17 +248,9 @@ public class TelaCliente extends Tela implements ActionListener, WindowListener 
 
         pClientes.add(boFormulario, 0);
         bOk.setText("CADASTRAR");
-        atualizaCadastro(212);
+        tamanhoTela(212);
     }
 
-    public void atualizaCadastro(int tam)
-    {
-        this.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        this.setSize(500, tam);
-        this.setResizable(false);
-        this.pack();
-        this.setVisible(true);
-    }
 
     public void windowClosed(WindowEvent event) {
         TelaInicial.setBotaoClientes(true);
@@ -297,7 +275,6 @@ public class TelaCliente extends Tela implements ActionListener, WindowListener 
             {
                 return c;
             }
-
         }
         return null;
     }
