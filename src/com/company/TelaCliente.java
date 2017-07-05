@@ -15,7 +15,7 @@ import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class TelaCliente extends JFrame implements ActionListener, WindowListener {
+public class TelaCliente extends Tela implements ActionListener, WindowListener {
 
     private Container fClientes;
     private JPanel pClientes;
@@ -53,7 +53,7 @@ public class TelaCliente extends JFrame implements ActionListener, WindowListene
 
     public TelaCliente(ArrayList<Cliente> listaClientes)
     {
-        this.setTitle("INSIRA SEUS DADOS:");
+        super("INSIRA SEUS DADOS:");
 
         this.listaClientes = listaClientes;
 
@@ -67,16 +67,10 @@ public class TelaCliente extends JFrame implements ActionListener, WindowListene
             boNome.add(tNome);
 
         boCPF = Box.createHorizontalBox();
-            try{
-                javax.swing.text.MaskFormatter format_textFieldCPF = new javax.swing.text.MaskFormatter("###.###.###-##");
-                tCPF = new JFormattedTextField(format_textFieldCPF);
-            }catch (Exception e){}
+            tCPF = novaMascara("###.###.###-##");
             lCPF = new JLabel("CPF - apenas números:   ");
             boCPF.add(lCPF);
             boCPF.add(tCPF);
-            //boCPF.add(new JLabel("                                                                                     "));
-
-
 
         boTelefone = Box.createHorizontalBox();
             try{
@@ -166,7 +160,7 @@ public class TelaCliente extends JFrame implements ActionListener, WindowListene
 
     private void logaCliente()
     {
-        //listaClientes.add(cliente);
+        listaClientes.add(this.cliente);
         JFrame TelaDeSolicitacoes = new MainCliente(cliente);
         this.dispose();
     }
@@ -220,6 +214,8 @@ public class TelaCliente extends JFrame implements ActionListener, WindowListene
         bCancel.setText("EDITAR");
     }
 
+
+
     public void cadastraNovoCliente()
     {
         this.setTitle("NOVO CADASTRO - "+tNome.getText());
@@ -227,10 +223,7 @@ public class TelaCliente extends JFrame implements ActionListener, WindowListene
         tCPF.setEditable(false);
         tTelefone.setEditable(false);
         boRG = Box.createHorizontalBox();
-            try{
-                javax.swing.text.MaskFormatter format_textField4 = new javax.swing.text.MaskFormatter("##.###.###-#");
-                tRG = new JFormattedTextField(format_textField4);
-            }catch (Exception e){}
+            tRG = novaMascara("##.###.###-#");
             lRG = new JLabel("Registro Geral - apenas números:   ");
             boRG.add(lRG);
             boRG.add(tRG);
@@ -293,33 +286,8 @@ public class TelaCliente extends JFrame implements ActionListener, WindowListene
     public void windowIconified(WindowEvent event) {}
     public void windowActivated(WindowEvent event) {}
 
-    public NumberFormatter FormatoNumerico(int max, int min)
-    {
-        NumberFormat format = NumberFormat.getInstance();
-        format.setGroupingUsed(false);
-        if(max!=0)
-            format.setMaximumIntegerDigits(max);
-        if(min!=0)
-            format.setMinimumIntegerDigits(min);
-        NumberFormatter formatter = new NumberFormatter(format);
-        formatter.setValueClass(Long.class);
-        formatter.setAllowsInvalid(false);
-        return formatter;
-    }
 
-    public static boolean emailIsValid(String email)
-    {
-        boolean isEmailIdValid = false;
-        if (email != null && email.length() > 0) {
-            String expression = "^[\\w\\.-]+@([\\w\\-]+\\.)+[A-Z]{2,4}$";
-            Pattern pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE);
-            Matcher matcher = pattern.matcher(email);
-            if (matcher.matches()) {
-                isEmailIdValid = true;
-            }
-        }
-        return isEmailIdValid;
-    }
+
 
     public Cliente procuraClienteNaLista()
     {
