@@ -16,7 +16,7 @@ public class TelaOrdemCliente extends Tela {
     private JLabel[] jlCampos;
     private String[] jlsCampos = {"Habilidades", "Descrição"};
 
-    private JTextField tDescricao;
+    private JTextArea tDescricao;
 
     private JComboBox cbHabilidades;
     private String[] cbsHabilidades = {"Técnico", "Mecânico", "Programador", "Cozinheiro"};
@@ -32,7 +32,7 @@ public class TelaOrdemCliente extends Tela {
         cbHabilidades = new JComboBox(cbsHabilidades);
         boxCampos = new Container[3];
         boxSuper = Box.createVerticalBox();
-        tDescricao = new JTextField(300);
+        tDescricao = new JTextArea(5,7);
         bOrdemCliente = new JButton[2];
 
         container.add(boxSuper);
