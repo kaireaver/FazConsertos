@@ -4,8 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class MainCliente extends Tela implements ActionListener
-{
+public class MainCliente extends Tela {
     private JPanel pOpcoes;
     final private JLabel lDescription;
     private static JButton bNovaSolicitacao;
@@ -35,6 +34,7 @@ public class MainCliente extends Tela implements ActionListener
         setVisible(true);
     }
 
+    @Override
     public void actionPerformed(ActionEvent event)
     {
         if(event.getSource() == bNovaSolicitacao) {

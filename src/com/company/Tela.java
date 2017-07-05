@@ -4,6 +4,8 @@ import javax.swing.*;
 import javax.swing.text.MaskFormatter;
 import javax.swing.text.NumberFormatter;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.text.NumberFormat;
@@ -11,7 +13,7 @@ import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Tela extends JFrame implements WindowListener {
+public class Tela extends JFrame implements WindowListener, ActionListener {
 
     static Database data;
     static ArrayList<Cliente> cList;
@@ -95,10 +97,11 @@ public class Tela extends JFrame implements WindowListener {
         b.add(textField);
         return b;
     }
+
+    public void actionPerformed(ActionEvent e){}
     public void windowClosing(WindowEvent e) {
         fechaTela(true);
     }
-
     public void windowOpened(WindowEvent e) {}
     public void windowClosed(WindowEvent e) {}
     public void windowIconified(WindowEvent e) {}

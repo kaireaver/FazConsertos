@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
 
-public class TelaCliente extends Tela implements ActionListener {
+public class TelaCliente extends Tela {
 
     private Container fClientes;
     private JPanel pClientes;
@@ -78,6 +78,7 @@ public class TelaCliente extends Tela implements ActionListener {
         setVisible(true);
     }
 
+    @Override
     public void actionPerformed(ActionEvent event) {
         
         if(event.getSource() == bOk) {

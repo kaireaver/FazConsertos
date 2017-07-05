@@ -3,7 +3,7 @@ import javax.swing.*;
 import java.awt.event.*;
 import java.util.ArrayList;
 
-public class TelaTecnico extends Tela implements ActionListener {
+public class TelaTecnico extends Tela {
     private JPanel pTecnicos;
     private static JButton bNovoTecnico;
     private static JButton bLogaTecnico;
@@ -31,6 +31,7 @@ public class TelaTecnico extends Tela implements ActionListener {
         setVisible(true);
     }
 
+    @Override
     public void actionPerformed(ActionEvent event) {
         if(event.getSource() == bNovoTecnico) {
             JFrame fCriaTecnico = new CriaTecnico();

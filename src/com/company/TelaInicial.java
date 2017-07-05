@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import java.util.Set;
 
-public class TelaInicial extends Tela implements ActionListener {
+public class TelaInicial extends Tela {
     private JPanel pInicial;
     final private JLabel lDescription;
     protected static JButton bTecnicos;
@@ -63,6 +63,7 @@ public class TelaInicial extends Tela implements ActionListener {
         setVisible(true);
     }
 
+    @Override
     public void actionPerformed(ActionEvent event) {
         if(event.getSource() == bTecnicos) {
             JFrame fTecnico = new TelaTecnico();

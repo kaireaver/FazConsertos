@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.ImageObserver;
 
-public class CriaTecnico extends Tela implements ActionListener{
+public class CriaTecnico extends Tela {
     private JLabel[] jlCampos;
     private  JTextField[] tCampos;
     private String[] jlsCampos = {"Nome: ", "E-mail: ", "Telefone: ","Habilidade: "};
@@ -69,6 +69,7 @@ public class CriaTecnico extends Tela implements ActionListener{
         setVisible(true);
     }
 
+    @Override
     public void actionPerformed(ActionEvent event){
         if(event.getSource() == bCriaTecnico[1]) {
             if(bCriaTecnico[1].getText() == "Cancelar") {

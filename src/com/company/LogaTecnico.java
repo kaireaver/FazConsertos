@@ -4,7 +4,7 @@ import javax.swing.text.NumberFormatter;
 import java.awt.event.*;
 import java.text.NumberFormat;
 
-public class LogaTecnico extends Tela implements ActionListener {
+public class LogaTecnico extends Tela {
     private JPanel pLoginTecnico;
     private static JButton bLogin;
     private static JButton bCancela;
@@ -42,6 +42,7 @@ public class LogaTecnico extends Tela implements ActionListener {
         setVisible(true);
         }
 
+        @Override
     public void actionPerformed(ActionEvent event) {
         if(event.getSource() == bLogin){
             if(true) {

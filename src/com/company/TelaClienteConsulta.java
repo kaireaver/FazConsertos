@@ -7,7 +7,7 @@ import java.awt.*;
  * Created by edvil on 05/07/2017.
  */
 
-public class TelaClienteConsulta extends Tela{
+public class TelaClienteConsulta extends Tela {
     private JComboBox cbOrdem;
     private JLabel jlOrdem;
 

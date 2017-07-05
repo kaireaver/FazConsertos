@@ -3,7 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class MainTecnico extends Tela implements ActionListener {
+public class MainTecnico extends Tela {
     private static JButton bAlteraDados;
     private static JButton bConsultaServico;
     private static JButton bExcluirTecnico;
@@ -64,6 +64,7 @@ public class MainTecnico extends Tela implements ActionListener {
         setVisible(true);
     }
 
+    @Override
     public void actionPerformed(ActionEvent event) {
         if(event.getSource() == bAlteraDados) {
             // IMPLEMENTAR!
