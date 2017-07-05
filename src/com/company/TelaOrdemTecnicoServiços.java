@@ -8,7 +8,7 @@ import java.awt.*;
 /**
  * Created by edvil on 05/07/2017.
  */
-public class TelaOrdemTecnicoServiços extends JFrame{
+public class TelaOrdemTecnicoServiços extends Tela{
     private JComboBox cbOrdem;
     private JLabel jlOrdem;
 
