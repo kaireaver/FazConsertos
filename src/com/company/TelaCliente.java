@@ -19,6 +19,8 @@ public class TelaCliente extends JFrame implements ActionListener, WindowListene
 
     private Container fClientes;
     private JPanel pClientes;
+
+    private ArrayList<Cliente> listaClientes;
     private Cliente cliente = null;
 
     Box boFormulario;
@@ -49,9 +51,12 @@ public class TelaCliente extends JFrame implements ActionListener, WindowListene
             private JLabel lDataNascimento;
 
 
-    public TelaCliente()
+    public TelaCliente(ArrayList<Cliente> listaClientes)
     {
         this.setTitle("INSIRA SEUS DADOS:");
+
+        this.listaClientes = listaClientes;
+
         fClientes = this.getContentPane();
         pClientes = new JPanel();
 
@@ -113,11 +118,11 @@ public class TelaCliente extends JFrame implements ActionListener, WindowListene
                 if(tNome.getText().trim()!="" || tCPF.getText().trim()!="")
                 {
                     criaCliente();
-                    if(false)//(listaClientes.contains(cliente))
+                    Cliente c = procuraClienteNaLista();
+                    if(c != null)
                     {
-                        //cliente = listaClientes.find(cliente);
-                        cliente.preencheCliente("1231231231", "1231asda", "asda@asdac.com", new Data(06,11,1996));
-                        confirmaClienteExistente();
+                        this.cliente = c;
+                        confirmaprocuraClienteNaLista();
                     }
                     else
                     {
@@ -129,7 +134,7 @@ public class TelaCliente extends JFrame implements ActionListener, WindowListene
             }
             else if(bOk.getText() == "CADASTRAR")
             {
-                if(isValid(tEmail.getText()))
+                if(emailIsValid(tEmail.getText()))
                     confirmaCliente();
                 else
                     JOptionPane.showMessageDialog(this,"EMAIL INVÁLIDO!");
@@ -156,7 +161,7 @@ public class TelaCliente extends JFrame implements ActionListener, WindowListene
         sCPF = sCPF.replace("-", "");
         sCPF = sCPF.replace(".", "");
         System.out.println(sCPF);
-        cliente = new Cliente(tNome.getText(), (Long.parseLong(sCPF)), tTelefone.getText());
+        this.cliente = new Cliente(tNome.getText(), (Long.parseLong(sCPF)), tTelefone.getText());
     }
 
     private void logaCliente()
@@ -195,7 +200,7 @@ public class TelaCliente extends JFrame implements ActionListener, WindowListene
 
     }
 
-    public void confirmaClienteExistente()
+    public void confirmaprocuraClienteNaLista()
     {
         cadastraNovoCliente();
         this.setTitle("CONFIRME SEUS DADOS CADASTRAIS:");
@@ -302,7 +307,7 @@ public class TelaCliente extends JFrame implements ActionListener, WindowListene
         return formatter;
     }
 
-    public static boolean isValid(String email)
+    public static boolean emailIsValid(String email)
     {
         boolean isEmailIdValid = false;
         if (email != null && email.length() > 0) {
@@ -316,5 +321,17 @@ public class TelaCliente extends JFrame implements ActionListener, WindowListene
         return isEmailIdValid;
     }
 
+    public Cliente procuraClienteNaLista()
+    {
+        for (Cliente c:this.listaClientes
+             ) {
+            if(c.CPF == this.cliente.CPF)
+            {
+                return c;
+            }
+
+        }
+        return null;
+    }
 }
 
