@@ -3,16 +3,24 @@ package com.company;
 import javax.swing.*;
 import javax.swing.text.MaskFormatter;
 import javax.swing.text.NumberFormatter;
-import java.awt.event.*;
+import java.awt.*;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 import java.text.NumberFormat;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public abstract class Tela extends JFrame {
+public class Tela extends JFrame implements WindowListener {
     protected boolean checaDispose = false;
 
     Tela(String str) {
         super(str);
+    }
+
+    public void fechaTela(boolean statusDispose) {
+        this.checaDispose = statusDispose;
+        checaDispose();
+        this.dispose();
     }
 
     public void checaDispose() {
@@ -37,8 +45,8 @@ public abstract class Tela extends JFrame {
     public JTextField novoJTextFieldMascarado(String str)
     {
         try{
-            MaskFormatter format_textField4 = new MaskFormatter(str);
-            return new JFormattedTextField(format_textField4);
+            MaskFormatter format_textField = new MaskFormatter(str);
+            return new JFormattedTextField(format_textField);
         }catch (Exception e){
             return null;
         }
@@ -80,4 +88,15 @@ public abstract class Tela extends JFrame {
         b.add(textField);
         return b;
     }
+    public void windowClosing(WindowEvent e) {
+        fechaTela(true);
+    }
+
+    public void windowOpened(WindowEvent e) {}
+    public void windowClosed(WindowEvent e) {}
+    public void windowIconified(WindowEvent e) {}
+    public void windowDeiconified(WindowEvent e) {}
+    public void windowActivated(WindowEvent e) {}
+    public void windowDeactivated(WindowEvent e) {}
+
 }
