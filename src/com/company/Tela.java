@@ -77,6 +77,7 @@ public abstract class Tela extends JFrame {
     {
         Box b = Box.createHorizontalBox();
         b.add(label);
+        //aa
         b.add(textField);
         return b;
     }
