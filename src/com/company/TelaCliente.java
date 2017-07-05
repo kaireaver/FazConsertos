@@ -221,21 +221,6 @@ public class TelaCliente extends Tela implements ActionListener, WindowListener 
     }
 
 
-    public void windowClosed(WindowEvent event) {
-        TelaInicial.setBotaoClientes(true);
-        TelaInicial.setBotaoTecnicos(true);
-    }
-
-    public void windowDeiconified(WindowEvent event) {}
-    public void windowOpened(WindowEvent event) {}
-    public void windowClosing(WindowEvent event) {}
-    public void windowDeactivated(WindowEvent event) {}
-    public void windowIconified(WindowEvent event) {}
-    public void windowActivated(WindowEvent event) {}
-
-
-
-
     public Cliente procuraClienteNaLista()
     {
         for (Cliente c:this.listaClientes
@@ -246,6 +231,41 @@ public class TelaCliente extends Tela implements ActionListener, WindowListener 
             }
         }
         return null;
+    }
+
+    @Override
+    public void windowOpened(WindowEvent e) {
+
+    }
+
+    @Override
+    public void windowClosing(WindowEvent e) {
+
+    }
+
+    @Override
+    public void windowClosed(WindowEvent e) {
+
+    }
+
+    @Override
+    public void windowIconified(WindowEvent e) {
+
+    }
+
+    @Override
+    public void windowDeiconified(WindowEvent e) {
+
+    }
+
+    @Override
+    public void windowActivated(WindowEvent e) {
+
+    }
+
+    @Override
+    public void windowDeactivated(WindowEvent e) {
+
     }
 }
 
