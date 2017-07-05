@@ -3,6 +3,7 @@ import javax.swing.*;
 import java.awt.event.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Set;
 
@@ -26,21 +27,24 @@ public class TelaInicial extends JFrame implements ActionListener {
                 cList = new ArrayList(); //Clients List.
                 tList = new ArrayList(); //Technicians List.
                 oList = new ArrayList(); //Orders List.
-                String query  = "Create table IF NOT EXISTS Tecnico(ID int NOT NULL AUTO_INCREMENT," +
-                        "nome VARCHAR(30), email varchar(50),habilidade varchar(200),numMatricula int," +
-                        " PRIMARY KEY(ID))";
+                String query  = "SELECT * FROM Clientes";
                 PreparedStatement pps = conn.prepareStatement(query);
-                pps.execute();
-                query  = "Create table IF NOT EXISTS Tecnico(ID int NOT NULL AUTO_INCREMENT," +
-                        "nome VARCHAR(30), email varchar(50),habilidade varchar(200),numMatricula int," +
-                        " PRIMARY KEY(ID))";
+                ResultSet rs = pps.executeQuery();
+                while(rs.next()){
+                    cList.add(rs);
+                }
+                query  = "SELECT * FROM Tecnicos";
                 pps = conn.prepareStatement(query);
-                pps.execute();
-                query  = "Create table IF NOT EXISTS Tecnico(ID int NOT NULL AUTO_INCREMENT," +
-                        "nome VARCHAR(30), email varchar(50),habilidade varchar(200),numMatricula int," +
-                        " PRIMARY KEY(ID))";
+                rs = pps.executeQuery();
+                while(rs.next()){
+                    tList.add(rs);
+                }
+                query  = "SELECT * FROM Orders";
                 pps = conn.prepareStatement(query);
-                pps.execute();
+                rs = pps.executeQuery();
+                while(rs.next()){
+                    oList.add(rs);
+                }
             }
         }
         catch(Exception e){
