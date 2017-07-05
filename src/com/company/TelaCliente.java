@@ -77,8 +77,8 @@ public class TelaCliente extends Tela implements ActionListener {
             boFormulario.add(boBotoes);
 
         pClientes.add(boFormulario);
-
         fClientes.add(pClientes);
+        setVisible(true);
     }
 
     public void actionPerformed(ActionEvent event) {
@@ -121,7 +121,7 @@ public class TelaCliente extends Tela implements ActionListener {
             {
                 editaCliente();
             }else
-                this.dispose();
+                this.fechaTela(true);
         }
 
     }
@@ -155,6 +155,7 @@ public class TelaCliente extends Tela implements ActionListener {
         bCancel.setText("EDITAR");
 
     }
+
     private void editaCliente()
     {
         this.setTitle("INSIRA SEUS DADOS:");
