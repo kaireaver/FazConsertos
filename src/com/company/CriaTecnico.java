@@ -15,7 +15,7 @@ public class CriaTecnico extends JFrame implements ActionListener{
     private  Container boxSuper;
 
     private JComboBox cbHabilidades;
-    private String[] cbsHabilidades = {"Técnico", "Mecânico", "Garota de Programa", "Cozinheiro"};
+    private String[] cbsHabilidades = {"Técnico", "Mecânico", "Programador", "Cozinheiro"};
 
     private JButton[] bCriaTecnico;
     private String[] bsCriaTecnico = {"Criar", "Cancelar"};
@@ -34,7 +34,7 @@ public class CriaTecnico extends JFrame implements ActionListener{
 
         container.add(this.boxSuper);
 
-        for(int i = 0; i< jlsCampos.length-1;i++){
+        for(int i = 0; i < jlsCampos.length-1; i++){
             jlCampos[i] = new JLabel(jlsCampos[i]);
             tCampos[i] = new JTextField(5);
             boxCampos[i] = Box.createHorizontalBox();
@@ -55,7 +55,7 @@ public class CriaTecnico extends JFrame implements ActionListener{
         boxCampos[4] = Box.createHorizontalBox();
         boxSuper.add(boxCampos[4]);
 
-        for(int i=0;i<bsCriaTecnico.length;i++){
+        for(int i = 0; i < bsCriaTecnico.length; i++){
             bCriaTecnico[i] = new JButton(bsCriaTecnico[i]);
             boxCampos[4].add(bCriaTecnico[i]);
         }
@@ -66,7 +66,6 @@ public class CriaTecnico extends JFrame implements ActionListener{
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         setSize(500,150);
         setResizable(false);
-        pack();
         setVisible(true);
     }
 
