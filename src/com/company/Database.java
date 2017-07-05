@@ -14,20 +14,17 @@ public class Database {
     ClientsDatabase clDB;
 
 
-    public static void Connection () throws SQLException {
+    public static Connection Connection () throws SQLException {
         conn = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
             conn = DriverManager.getConnection(URL, USERNAME, PASSWORD);
-            String query  = "Create table IF NOT EXISTS Tecnico(ID int NOT NULL AUTO_INCREMENT," +
-                    "nome VARCHAR(30), email varchar(50),habilidade varchar(200),numMatricula int," +
-                    " PRIMARY KEY(ID))";
-            PreparedStatement pps = conn.prepareStatement(query);
-            pps.execute();
         } catch (Exception e) {
             System.out.println(e);
         }
+        return conn;
     }
+
     public static void closeConnection(){
         try{
             conn.close();
