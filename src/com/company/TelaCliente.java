@@ -10,7 +10,6 @@ public class TelaCliente extends Tela implements ActionListener {
     private Container fClientes;
     private JPanel pClientes;
 
-    private ArrayList<Cliente> listaClientes;
     private Cliente cliente = null;
 
     Box boFormulario;
@@ -41,11 +40,9 @@ public class TelaCliente extends Tela implements ActionListener {
             private JLabel lDataNascimento;
 
 
-    public TelaCliente(ArrayList<Cliente> listaClientes)
+    public TelaCliente()
     {
         super("INSIRA SEUS DADOS:", 500, 132);
-
-        this.listaClientes = listaClientes;
 
         fClientes = this.getContentPane();
         pClientes = new JPanel();
@@ -137,7 +134,7 @@ public class TelaCliente extends Tela implements ActionListener {
 
     private void logaCliente()
     {
-        listaClientes.add(this.cliente);
+        cList.add(this.cliente);
         JFrame TelaDeSolicitacoes = new MainCliente(cliente);
         this.fechaTela(false);
     }
@@ -220,8 +217,8 @@ public class TelaCliente extends Tela implements ActionListener {
 
     public Cliente procuraClienteNaLista()
     {
-        for (Cliente c:this.listaClientes
-             ) {
+        for (Cliente c : Tela.cList )
+        {
             if(c.CPF == this.cliente.CPF)
             {
                 return c;

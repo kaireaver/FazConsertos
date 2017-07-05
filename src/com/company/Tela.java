@@ -14,7 +14,7 @@ import java.util.regex.Pattern;
 public class Tela extends JFrame implements WindowListener {
 
     static Database data;
-    static ArrayList cList;
+    static ArrayList<Cliente> cList;
     static ArrayList tList;
     static ArrayList oList;
 
