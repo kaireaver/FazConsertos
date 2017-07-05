@@ -14,7 +14,7 @@ public class TelaOrdemCliente extends Tela {
     private String[] bsOrdemCliente = {"Confirmar", "Cancelar"};
 
     private JLabel[] jlCampos;
-    private String[] jlsCampos = {"Habilidades", "Descrição"};
+    private String[] jlsCampos = {"Habilidades:  ", "Descrição  "};
 
     private JTextArea tDescricao;
 
