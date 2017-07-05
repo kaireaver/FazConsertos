@@ -25,6 +25,15 @@ public abstract class Tela extends JFrame {
         }
     }
 
+    public void tamanhoTela(int tam)
+    {
+        this.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        this.setSize(500, tam);
+        this.setResizable(false);
+        this.pack();
+        this.setVisible(true);
+    }
+
     public JTextField novaMascara(String str)
     {
         try{
