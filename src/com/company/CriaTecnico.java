@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.ImageObserver;
 
-public class CriaTecnico extends JFrame implements ActionListener{
+public class CriaTecnico extends Tela implements ActionListener{
     private JLabel[] jlCampos;
     private  JTextField[] tCampos;
     private String[] jlsCampos = {"Nome: ", "E-mail: ", "Telefone: ","Habilidade: "};
@@ -36,7 +36,10 @@ public class CriaTecnico extends JFrame implements ActionListener{
 
         for(int i = 0; i < jlsCampos.length-1; i++){
             jlCampos[i] = new JLabel(jlsCampos[i]);
-            tCampos[i] = new JTextField(5);
+            if(i!=2)
+                tCampos[i] = new JTextField(5);
+            else
+                tCampos[i] = novoJTextFieldMascarado("(##) ####-####");
             boxCampos[i] = Box.createHorizontalBox();
 
             boxCampos[i].add(jlCampos[i]);
@@ -64,7 +67,7 @@ public class CriaTecnico extends JFrame implements ActionListener{
         bCriaTecnico[1].addActionListener(this);
 
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        setSize(500,150);
+        setSize(250,150);
         setResizable(false);
         setVisible(true);
     }
