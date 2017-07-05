@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import java.util.Set;
 
-public class TelaInicial extends JFrame implements ActionListener {
+public class TelaInicial extends Tela implements ActionListener {
     private JPanel pInicial;
     final private JLabel lDescription;
     private static JButton bTecnicos;
@@ -70,13 +70,13 @@ public class TelaInicial extends JFrame implements ActionListener {
 
     public void actionPerformed(ActionEvent event) {
         if(event.getSource() == bTecnicos) {
-            JFrame fTecnico = new TelaTecnico();
+            JFrame fTecnico = new TelaTecnico(tList);
             setBotaoTecnicos(false);
             setBotaoClientes(false);
         }
 
         else if(event.getSource() == bClientes) {
-            JFrame fClientes = new TelaCliente();
+            JFrame fClientes = new TelaCliente(cList);
             setBotaoTecnicos(false);
             setBotaoClientes(false);
         }

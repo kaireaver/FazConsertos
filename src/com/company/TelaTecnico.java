@@ -1,15 +1,18 @@
 package com.company;
 import javax.swing.*;
 import java.awt.event.*;
+import java.util.ArrayList;
 
 public class TelaTecnico extends Tela implements ActionListener, WindowListener {
     private JPanel pTecnicos;
     private static JButton bNovoTecnico;
     private static JButton bLogaTecnico;
     private static JButton bCancela;
+    private ArrayList<Tecnico> tList;
 
-    public TelaTecnico() {
+    public TelaTecnico(ArrayList<Tecnico> tList) {
         super("Selecione sua opção:");
+        this.tList = tList;
 
         bNovoTecnico = new JButton("Novo Técnico");
         bLogaTecnico = new JButton("Entrar no sistema");
