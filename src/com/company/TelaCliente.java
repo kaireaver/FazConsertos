@@ -37,7 +37,7 @@ public class TelaCliente extends Tela implements ActionListener, WindowListener 
             private JTextField tEndereco;
             private JLabel lEndereco;
         Box boDataNascimento;
-            private JTextField tDia, tMes, tAno;
+            private JTextField tDataNascimento;
             private JLabel lDataNascimento;
 
 
@@ -149,14 +149,12 @@ public class TelaCliente extends Tela implements ActionListener, WindowListener 
     private void confirmaCliente()
     {
         this.setTitle("CONFIRME SEUS DADOS CADASTRAIS:");
-        Data dataNascimento = new Data(Integer.parseInt(tDia.getText()), Integer.parseInt(tMes.getText()), Integer.parseInt(tAno.getText()));
+        Data dataNascimento = new Data(tDataNascimento.getText());
         cliente.preencheCliente(tRG.getText(), tEmail.getText(), tEndereco.getText(), dataNascimento);
         tRG.setEditable(false);
         tEmail.setEditable(false);
         tEndereco.setEditable(false);
-        tDia.setEditable(false);
-        tMes.setEditable(false);
-        tAno.setEditable(false);
+        tDataNascimento.setEditable(false);
         bOk.setText("CONFIRMAR");
         bCancel.setText("EDITAR");
 
@@ -167,9 +165,7 @@ public class TelaCliente extends Tela implements ActionListener, WindowListener 
         tRG.setEditable(true);
         tEmail.setEditable(true);
         tEndereco.setEditable(true);
-        tDia.setEditable(true);
-        tMes.setEditable(true);
-        tAno.setEditable(true);
+        tDataNascimento.setEditable(true);
         bOk.setText("CADASTRAR");
         bCancel.setText("CANCELAR");
 
@@ -185,12 +181,8 @@ public class TelaCliente extends Tela implements ActionListener, WindowListener 
         tEmail.setEditable(false);
         tEndereco.setText(cliente.Endereco);
         tEndereco.setEditable(false);
-        tDia.setText(String.valueOf(cliente.DataNascimento.Dia));
-        tDia.setEditable(false);
-        tMes.setText(String.valueOf(cliente.DataNascimento.Mes));
-        tMes.setEditable(false);
-        tAno.setText(String.valueOf(cliente.DataNascimento.Ano));
-        tAno.setEditable(false);
+        tDataNascimento.setText(String.valueOf(cliente.DataNascimento.Dia));
+        tDataNascimento.setEditable(false);
         bOk.setText("CONFIRMAR");
         bCancel.setText("EDITAR");
     }
@@ -202,7 +194,7 @@ public class TelaCliente extends Tela implements ActionListener, WindowListener 
         tNome.setEditable(false);
         tCPF.setEditable(false);
         tTelefone.setEditable(false);
-            tRG = novoJTextFieldMascarado("##.###.###-#");
+            tRG = novoJTextFieldMascarado("##.###.###");
             lRG = new JLabel("Registro Geral - apenas números:   ");
             boRG = novoBoxHorizontal(lRG, tRG);
 
@@ -214,20 +206,9 @@ public class TelaCliente extends Tela implements ActionListener, WindowListener 
         lEndereco = new JLabel("Endereço:   ");
         boEndereco = novoBoxHorizontal(lEndereco, tEndereco);
 
-        boDataNascimento = Box.createHorizontalBox();
-            tDia = new JFormattedTextField(FormatoNumerico(2, 2));
-            tDia.setText("01");
-            tMes = new JFormattedTextField(FormatoNumerico(2, 2));
-            tMes.setText("01");
-            tAno = new JFormattedTextField(FormatoNumerico(4, 4));
-            tAno.setText("1800");
-            lDataNascimento = new JLabel("Data de Nascimento:   ");
-            boDataNascimento.add(lDataNascimento);
-            boDataNascimento.add(tDia);
-            boDataNascimento.add(new JLabel("/"));
-            boDataNascimento.add(tMes);
-            boDataNascimento.add(new JLabel("/"));
-            boDataNascimento.add(tAno);
+        tDataNascimento = novoJTextFieldMascarado("##/##/####");
+        lDataNascimento = new JLabel("Data de Nascimento:   ");
+        boDataNascimento = novoBoxHorizontal(lDataNascimento, tDataNascimento);
 
         boFormulario.add(boRG, 3);
         boFormulario.add(boEmail, 4);
