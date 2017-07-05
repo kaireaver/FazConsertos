@@ -4,9 +4,8 @@
     <bookmark url="file://$PROJECT_DIR$/src/com/company/CriaTecnico.java" line="28" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="48d4db42-c530-4046-bdc2-3405940f09ba" name="Default" comment="bora que o maluco tá doente">
+    <list default="true" id="48d4db42-c530-4046-bdc2-3405940f09ba" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Tela.java" afterPath="$PROJECT_DIR$/src/com/company/Tela.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/TelaCliente.java" afterPath="$PROJECT_DIR$/src/com/company/TelaCliente.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -97,7 +96,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/company/TelaCliente.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="65" column="12" lean-forward="false" selection-start-line="65" selection-start-column="12" selection-end-line="65" selection-end-column="12" />
+              <caret line="65" column="55" lean-forward="false" selection-start-line="65" selection-start-column="55" selection-end-line="65" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1000,11 +999,18 @@
       <option name="project" value="LOCAL" />
       <updated>1499264896388</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="bora que o maluco tá doente">
+      <created>1499265364280</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1499265364280</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40202000" />
+    <option name="totallyTimeSpent" value="40220000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1444,7 +1450,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/company/TelaCliente.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="65" column="12" lean-forward="false" selection-start-line="65" selection-start-column="12" selection-end-line="65" selection-end-column="12" />
+          <caret line="65" column="55" lean-forward="false" selection-start-line="65" selection-start-column="55" selection-end-line="65" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

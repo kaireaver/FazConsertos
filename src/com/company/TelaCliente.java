@@ -63,7 +63,7 @@ public class TelaCliente extends Tela implements ActionListener, WindowListener 
             boCPF.add(tCPF);
 
         boTelefone = Box.createHorizontalBox();
-            tTelefone = novaMascara(" (##) ####-####")
+            tTelefone = novaMascara(" (##) ####-####");
             lTelefone = new JLabel("Telefone Fixo + DDD:   ");
             boTelefone.add(lTelefone);
             boTelefone.add(tTelefone);
