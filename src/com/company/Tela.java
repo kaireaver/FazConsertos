@@ -21,8 +21,8 @@ public class Tela extends JFrame implements WindowListener {
         setSize(w, h);
     }
 
-    public void fechaTela(boolean statusDispose) {
-        this.checaDispose = statusDispose;
+    public void fechaTela(boolean ativaBotaoInicial) {
+        this.checaDispose = ativaBotaoInicial;
         checaDispose();
         this.dispose();
     }
@@ -86,7 +86,6 @@ public class Tela extends JFrame implements WindowListener {
     {
         Box b = Box.createHorizontalBox();
         b.add(label);
-        //aa
         b.add(textField);
         return b;
     }
