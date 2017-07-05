@@ -37,12 +37,6 @@ public class Tela extends JFrame implements WindowListener {
         }
     }
 
-    public void tamanhoTela(int tam)
-    {
-        this.setSize(500, tam);
-        this.pack();
-        this.setVisible(true);
-    }
 
     public JTextField novoJTextFieldMascarado(String str)
     {
