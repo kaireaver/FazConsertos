@@ -63,7 +63,6 @@ public class TelaInicial extends Tela implements ActionListener {
 
         getContentPane().add(pInicial);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setVisible(true);
     }
 
     public void actionPerformed(ActionEvent event) {

@@ -62,8 +62,6 @@ public class CriaTecnico extends Tela implements ActionListener{
 
         bCriaTecnico[0].addActionListener(this);
         bCriaTecnico[1].addActionListener(this);
-
-        setVisible(true);
     }
 
     public void actionPerformed(ActionEvent event){
