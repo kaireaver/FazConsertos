@@ -6,10 +6,10 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class MainTecnico extends Tela {
-    private static JButton bAlteraDados;
-    private static JButton bConsultaServico;
-    private static JButton bExcluirTecnico;
-    private static JButton bSair;
+    protected static JButton bAlteraDados;
+    protected static JButton bConsultaServico;
+    protected static JButton bExcluirTecnico;
+    protected static JButton bSair;
 
     private JPanel pTecnicoPrincipal;
 
@@ -21,7 +21,7 @@ public class MainTecnico extends Tela {
     private Tecnico t;
 
     public MainTecnico(Tecnico t) {
-        super("Bem-vindo! Selecione a opção desejada:", 600, 300);
+        super("Bem-vindo, " + t.getNome() + "! Selecione a opção desejada:", 500, 80);
         this.t = t;
 
         bAlteraDados = new JButton("Alterar dados");
@@ -34,15 +34,11 @@ public class MainTecnico extends Tela {
         bExcluirTecnico.addActionListener(this);
         bSair.addActionListener(this);
 
-        Box boxButtons = Box.createVerticalBox();
-        boxButtons.add(bAlteraDados);
-        boxButtons.add(bConsultaServico);
-        boxButtons.add(bExcluirTecnico);
-        boxButtons.add(bSair);
-
         pTecnicoPrincipal = new JPanel();
-        pTecnicoPrincipal.setLayout(new BorderLayout(600,300));
-        pTecnicoPrincipal.add(boxButtons, BorderLayout.LINE_START);
+        pTecnicoPrincipal.add(bAlteraDados);
+        pTecnicoPrincipal.add(bConsultaServico);
+        pTecnicoPrincipal.add(bExcluirTecnico);
+        pTecnicoPrincipal.add(bSair);
 
         bConfirma = new JButton("Prosseguir");
         bRecusa = new JButton("Cancelar");
@@ -50,16 +46,16 @@ public class MainTecnico extends Tela {
         bConfirma.addActionListener(this);
         bRecusa.addActionListener(this);
 
-        boxConfirma = Box.createHorizontalBox();
+        boxConfirma = Box.createVerticalBox();
         boxConfirma.add(lTemCerteza);
-        boxConfirma.add(bConfirma);
-        boxConfirma.add(bRecusa);
 
-        Container contAuxiliar = new Container();
-        contAuxiliar.setLayout(new BorderLayout(300,300));
-        contAuxiliar.add(boxConfirma, BorderLayout.CENTER);
+        Box boxAux = Box.createHorizontalBox();
+        boxAux.add(bConfirma);
+        boxAux.add(bRecusa);
 
-        pTecnicoPrincipal.add(contAuxiliar, BorderLayout.LINE_END);
+        boxConfirma.add(boxAux);
+
+        pTecnicoPrincipal.add(boxConfirma);
         boxConfirma.setVisible(false);
         getContentPane().add(pTecnicoPrincipal);
 
@@ -69,7 +65,12 @@ public class MainTecnico extends Tela {
     @Override
     public void actionPerformed(ActionEvent event) {
         if(event.getSource() == bAlteraDados) {
-            // IMPLEMENTAR!
+            setButton(bAlteraDados,false);
+            setButton(bConsultaServico,false);
+            setButton(bExcluirTecnico,false);
+            setButton(bSair,false);
+
+            TelaDadosTecnico tDados = new TelaDadosTecnico(t);
         }
 
         else if(event.getSource() == bConsultaServico) {
@@ -78,6 +79,7 @@ public class MainTecnico extends Tela {
 
         else if(event.getSource() == bExcluirTecnico) {
             boxConfirma.setVisible(true);
+            setSize(new Dimension(500,120));
         }
 
         else if(event.getSource() == bConfirma) {
@@ -87,6 +89,7 @@ public class MainTecnico extends Tela {
 
         else if(event.getSource() == bRecusa) {
             boxConfirma.setVisible(false);
+            setSize(new Dimension(500,80));
         }
 
         else if(event.getSource() == bSair) {
