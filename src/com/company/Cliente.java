@@ -8,14 +8,14 @@ import java.util.Date;
  * Created by Deivison Silva on 01/07/2017.
  */
 public class Cliente {
-    String Nome;
-    String Telefone;
+    private String Nome;
+    private String Telefone;
 
-    long CPF;
-    String RG;
-    String Endereco;
-    String Email;
-    Data DataNascimento;
+    private long CPF;
+    private String RG;
+    private String Endereco;
+    private String Email;
+    private Data DataNascimento;
 
     public Cliente(String Nome, long CPF, String Telefone)
     {
@@ -32,5 +32,8 @@ public class Cliente {
         this.DataNascimento = DataNascimento;
     }
 
+    public long getCPF() {
+        return CPF;
+    }
 }
 

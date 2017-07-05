@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Set;
 
 public class TelaInicial extends Tela {
@@ -27,19 +28,26 @@ public class TelaInicial extends Tela {
                 PreparedStatement pps = conn.prepareStatement(query);
                 ResultSet rs = pps.executeQuery();
                 while(rs.next()){
-                    cList.add(rs);
+                    cList.add(new Cliente(rs.getString("nome"),rs.getInt("cpf"),rs.getString("telefone")));
                 }
                 query  = "SELECT * FROM Tecnicos";
                 pps = conn.prepareStatement(query);
                 rs = pps.executeQuery();
                 while(rs.next()){
-                    tList.add(rs);
+                    tList.add(new Tecnico(rs.getString("nome"),rs.getString("email"),rs.getString("telefone"),rs.getString("habilidade")));
                 }
                 query  = "SELECT * FROM Orders";
                 pps = conn.prepareStatement(query);
                 rs = pps.executeQuery();
+                Cliente client = null;
                 while(rs.next()){
-                    oList.add(rs);
+                    for(Cliente c : cList){
+                        if(c.getCPF()==rs.getInt("cpf")){
+                            client = c;
+                            break;
+                        }
+                    }
+                    oList.add(new Ordem(client,rs.getString("descricao")));
                 }
             }
         }
