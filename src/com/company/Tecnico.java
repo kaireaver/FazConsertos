@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Iterator;
+
 public class Tecnico {
     private String nome;
     private String email;
@@ -35,8 +37,6 @@ public class Tecnico {
         return this.numMatricula;
     }
     public static int getNumTecnicos() { return i; }
-
-    //void abstract void ExcluiTecnico(int numMatricula);
 
     public void AlteraDados(String nome, String telefone, String email, String habilidade){
         this.nome = nome;

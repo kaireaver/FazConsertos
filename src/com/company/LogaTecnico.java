@@ -45,9 +45,16 @@ public class LogaTecnico extends Tela {
         @Override
     public void actionPerformed(ActionEvent event) {
         if(event.getSource() == bLogin) {
-            if(Integer.parseInt(txtMatricula.getText()) <= Tecnico.getNumTecnicos()
-                    && Integer.parseInt(txtMatricula.getText()) != 0) {
-                JFrame fMainTecnico = new MainTecnico(txtMatricula.getText());
+            int ID = Integer.parseInt(txtMatricula.getText());
+            if((ID != 0) && checaExistencia(ID)) {
+
+                for(Tecnico t : tList) {
+                    if(t.getId() == ID) {
+                        JFrame fMainTecnico = new MainTecnico(t);
+                        break;
+                    }
+                }
+
                 fechaTela(false);
             } else {
                 lNotFound.setVisible(true);
@@ -59,4 +66,12 @@ public class LogaTecnico extends Tela {
         }
     }
 
+    public boolean checaExistencia(int ID) {
+        for(Tecnico t : tList) {
+            if(t.getId() == ID)
+                return true;
+        }
+
+        return false;
+    }
 }

@@ -2,6 +2,8 @@ package com.company;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.ArrayList;
+import java.util.Iterator;
 
 public class MainTecnico extends Tela {
     private static JButton bAlteraDados;
@@ -16,11 +18,11 @@ public class MainTecnico extends Tela {
     private static JButton bConfirma;
     private static JButton bRecusa;
 
-    private int numMatricula;
+    private Tecnico t;
 
-    public MainTecnico(String numMatricula) {
+    public MainTecnico(Tecnico t) {
         super("Bem-vindo! Selecione a opção desejada:", 600, 300);
-        this.numMatricula = Integer.parseInt(numMatricula);
+        this.t = t;
 
         bAlteraDados = new JButton("Alterar dados");
         bConsultaServico = new JButton("Consultar serviço");
@@ -79,6 +81,7 @@ public class MainTecnico extends Tela {
         }
 
         else if(event.getSource() == bConfirma) {
+            tList.remove(t);
             fechaTela(true);
         }
 
