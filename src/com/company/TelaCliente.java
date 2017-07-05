@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
 
-public class TelaCliente extends Tela implements ActionListener, WindowListener {
+public class TelaCliente extends Tela implements ActionListener {
 
     private Container fClientes;
     private JPanel pClientes;
@@ -43,7 +43,7 @@ public class TelaCliente extends Tela implements ActionListener, WindowListener 
 
     public TelaCliente(ArrayList<Cliente> listaClientes)
     {
-        super("INSIRA SEUS DADOS:");
+        super("INSIRA SEUS DADOS:", 500, 132);
 
         this.listaClientes = listaClientes;
 
@@ -62,8 +62,6 @@ public class TelaCliente extends Tela implements ActionListener, WindowListener 
         lTelefone = new JLabel("Telefone Fixo + DDD:   ");
         boTelefone = novoBoxHorizontal(lTelefone, tTelefone);
 
-
-
         boBotoes = Box.createHorizontalBox();
             bOk = new JButton("OK");
             bOk.addActionListener(this);
@@ -81,8 +79,6 @@ public class TelaCliente extends Tela implements ActionListener, WindowListener 
         pClientes.add(boFormulario);
 
         fClientes.add(pClientes);
-        addWindowListener(this);
-        tamanhoTela(132);
     }
 
     public void actionPerformed(ActionEvent event) {
@@ -143,7 +139,7 @@ public class TelaCliente extends Tela implements ActionListener, WindowListener 
     {
         listaClientes.add(this.cliente);
         JFrame TelaDeSolicitacoes = new MainCliente(cliente);
-        this.dispose();
+        this.fechaTela(false);
     }
 
     private void confirmaCliente()
@@ -217,7 +213,7 @@ public class TelaCliente extends Tela implements ActionListener, WindowListener 
 
         pClientes.add(boFormulario, 0);
         bOk.setText("CADASTRAR");
-        tamanhoTela(212);
+        setSize(500, 212);
     }
 
 
@@ -233,39 +229,5 @@ public class TelaCliente extends Tela implements ActionListener, WindowListener 
         return null;
     }
 
-    @Override
-    public void windowOpened(WindowEvent e) {
-
-    }
-
-    @Override
-    public void windowClosing(WindowEvent e) {
-
-    }
-
-    @Override
-    public void windowClosed(WindowEvent e) {
-
-    }
-
-    @Override
-    public void windowIconified(WindowEvent e) {
-
-    }
-
-    @Override
-    public void windowDeiconified(WindowEvent e) {
-
-    }
-
-    @Override
-    public void windowActivated(WindowEvent e) {
-
-    }
-
-    @Override
-    public void windowDeactivated(WindowEvent e) {
-
-    }
 }
 

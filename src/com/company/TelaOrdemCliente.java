@@ -25,7 +25,7 @@ public class TelaOrdemCliente extends Tela {
     private Container boxSuper;
 
     public TelaOrdemCliente(){
-        super("Solicitar Ordem");
+        super("Solicitar Ordem", 500, 150);
         Container container = getContentPane();
 
         jlCampos = new JLabel[2];
@@ -55,9 +55,6 @@ public class TelaOrdemCliente extends Tela {
         boxSuper.add(boxCampos[1]);
 
 
-        setSize(500,150);
         setVisible(true);
-        setResizable(false);
-
     }
 }

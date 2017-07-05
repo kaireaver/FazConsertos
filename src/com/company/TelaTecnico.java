@@ -11,7 +11,7 @@ public class TelaTecnico extends Tela implements ActionListener {
     private ArrayList<Tecnico> tList;
 
     public TelaTecnico(ArrayList<Tecnico> tList) {
-        super("Selecione sua opção:");
+        super("Selecione sua opção:", 500, 70);
         this.tList = tList;
 
         bNovoTecnico = new JButton("Novo Técnico");
@@ -28,11 +28,6 @@ public class TelaTecnico extends Tela implements ActionListener {
         pTecnicos.add(bCancela);
 
         getContentPane().add(pTecnicos);
-        addWindowListener(this);
-
-        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        setSize(500,70);
-        setResizable(false);
         pack();
         setVisible(true);
     }

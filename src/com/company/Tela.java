@@ -13,18 +13,22 @@ import java.util.regex.Pattern;
 public class Tela extends JFrame implements WindowListener {
     protected boolean checaDispose = false;
 
-    Tela(String str) {
+    Tela(String str, int w, int h) {
         super(str);
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        setResizable(false);
+        addWindowListener(this);
+        setSize(w, h);
     }
 
-    public void fechaTela(boolean statusDispose) {
-        this.checaDispose = statusDispose;
+    public void fechaTela(boolean ativaBotaoInicial) {
+        this.checaDispose = ativaBotaoInicial;
         checaDispose();
         this.dispose();
     }
 
     public void checaDispose() {
-        if (checaDispose) {
+        if (!checaDispose) {
             TelaInicial.setBotaoTecnicos(false);
             TelaInicial.setBotaoClientes(false);
         } else {
@@ -33,14 +37,6 @@ public class Tela extends JFrame implements WindowListener {
         }
     }
 
-    public void tamanhoTela(int tam)
-    {
-        this.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        this.setSize(500, tam);
-        this.setResizable(false);
-        this.pack();
-        this.setVisible(true);
-    }
 
     public JTextField novoJTextFieldMascarado(String str)
     {
@@ -84,7 +80,6 @@ public class Tela extends JFrame implements WindowListener {
     {
         Box b = Box.createHorizontalBox();
         b.add(label);
-        //aa
         b.add(textField);
         return b;
     }

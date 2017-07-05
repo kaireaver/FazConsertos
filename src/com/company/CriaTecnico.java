@@ -21,7 +21,7 @@ public class CriaTecnico extends Tela implements ActionListener{
     private String[] bsCriaTecnico = {"Criar", "Cancelar"};
 
     public CriaTecnico(){
-        super("Insira suas informações");
+        super("Insira suas informações", 500,150);
 
         jlCampos = new JLabel[jlsCampos.length];
         tCampos = new JTextField[jlsCampos.length-1];
@@ -36,10 +36,7 @@ public class CriaTecnico extends Tela implements ActionListener{
 
         for(int i = 0; i < jlsCampos.length-1; i++){
             jlCampos[i] = new JLabel(jlsCampos[i]);
-            if(i!=2)
-                tCampos[i] = new JTextField(5);
-            else
-                tCampos[i] = novoJTextFieldMascarado("(##) ####-####");
+            tCampos[i] = new JTextField(5);
             boxCampos[i] = Box.createHorizontalBox();
 
             boxCampos[i].add(jlCampos[i]);
@@ -66,16 +63,13 @@ public class CriaTecnico extends Tela implements ActionListener{
         bCriaTecnico[0].addActionListener(this);
         bCriaTecnico[1].addActionListener(this);
 
-        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        setSize(250,150);
-        setResizable(false);
         setVisible(true);
     }
 
     public void actionPerformed(ActionEvent event){
         if(event.getSource() == bCriaTecnico[1]) {
             if(bCriaTecnico[1].getText() == "Cancelar") {
-                this.dispose();
+                fechaTela(true);
             }
             else if(bCriaTecnico[1].getText() == "Recusar") {
                 bCriaTecnico[0].setText(bsCriaTecnico[0]);
@@ -97,7 +91,7 @@ public class CriaTecnico extends Tela implements ActionListener{
             }
             else if(bCriaTecnico[0].getText() == "Confirmar") {
                 // INSERIR NO BANCO DE DADOS!
-                this.dispose();
+                fechaTela(true);
             }
         }
     }

@@ -13,7 +13,7 @@ public class LogaTecnico extends Tela implements ActionListener {
     private JFormattedTextField txtMatricula;
 
     public LogaTecnico() {
-        super("Digite seus dados de usuário:");
+        super("Digite seus dados de usuário:", 500, 85);
 
         bLogin = new JButton("Entrar");
         bCancela = new JButton("Cancelar");
@@ -39,12 +39,8 @@ public class LogaTecnico extends Tela implements ActionListener {
         lNotFound.setVisible(false);
         getContentPane().add(pLoginTecnico);
 
-        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        setSize(500,85);
-        setResizable(false);
         setVisible(true);
-
-    }
+        }
 
     public void actionPerformed(ActionEvent event) {
         if(event.getSource() == bLogin){

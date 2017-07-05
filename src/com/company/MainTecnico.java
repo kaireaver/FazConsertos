@@ -19,7 +19,7 @@ public class MainTecnico extends Tela implements ActionListener {
     private int numMatricula;
 
     public MainTecnico(String numMatricula) {
-        super("Bem-vindo! Selecione a opção desejada:");
+        super("Bem-vindo! Selecione a opção desejada:", 600, 300);
         this.numMatricula = Integer.parseInt(numMatricula);
 
         bAlteraDados = new JButton("Alterar dados");
@@ -61,9 +61,6 @@ public class MainTecnico extends Tela implements ActionListener {
         boxConfirma.setVisible(false);
         getContentPane().add(pTecnicoPrincipal);
 
-        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        setSize(600,300);
-        setResizable(false);
         setVisible(true);
 
     }
@@ -82,7 +79,7 @@ public class MainTecnico extends Tela implements ActionListener {
         }
 
         else if(event.getSource() == bConfirma) {
-            this.dispose();
+            fechaTela(true);
         }
 
         else if(event.getSource() == bRecusa) {
