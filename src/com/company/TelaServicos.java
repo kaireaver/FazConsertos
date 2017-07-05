@@ -17,7 +17,7 @@ public class TelaServicos extends Tela {
     private JTextField[] campos;
 
     public TelaServicos(){
-        super("Ordem de Serviços");
+        super("Ordem de Serviços", 500,150);
         this.layout = new BorderLayout(5,5);
         Container container = getContentPane();
         container.setLayout(this.layout);

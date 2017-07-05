@@ -17,7 +17,7 @@ public class TelaInicial extends Tela implements ActionListener {
     private ArrayList oList;
 
     public TelaInicial() {
-        super("Bem-vindo ao sistema FazConsertos v1.0!");
+        super("Bem-vindo ao sistema FazConsertos v1.0!", 500, 70);
 
         Database data = new Database();
         try{
@@ -63,8 +63,6 @@ public class TelaInicial extends Tela implements ActionListener {
 
         getContentPane().add(pInicial);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setSize(500,70);
-        setResizable(false);
         setVisible(true);
     }
 

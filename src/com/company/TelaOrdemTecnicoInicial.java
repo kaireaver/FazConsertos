@@ -12,7 +12,7 @@ public class TelaOrdemTecnicoInicial extends Tela{
 
     private Container boxSuper;
     public TelaOrdemTecnicoInicial(){
-        super("Serviços");
+        super("Serviços",315,75);
         Container container = getContentPane();
 
         boxSuper = Box.createHorizontalBox();
@@ -24,8 +24,6 @@ public class TelaOrdemTecnicoInicial extends Tela{
         }
         container.add(boxSuper);
 
-        setSize(315,75);
         setVisible(true);
-        setResizable(false);
-    }
+        }
 }

@@ -19,7 +19,7 @@ public class TelaClienteConsulta extends Tela{
     private Container boxCampos[];
 
     public TelaClienteConsulta(){
-        super("Suas Ordens ativas!");
+        super("Suas Ordens ativas!", 500, 150);
         Container container = getContentPane();
 
         cbOrdem = new JComboBox(getOrdens());
@@ -47,9 +47,6 @@ public class TelaClienteConsulta extends Tela{
         }
 
         container.add(boxSuper);
-        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        setSize(500,150);
-        setResizable(false);
         setVisible(true);
     }
 

@@ -20,7 +20,7 @@ public class TelaOrdemTecnicoServiços extends Tela{
     private Container boxCampos[];
 
     public TelaOrdemTecnicoServiços(){
-        super("Ordens Disponiveis!");
+        super("Ordens Disponiveis!", 500, 150);
         Container container = getContentPane();
 
         cbOrdem = new JComboBox(getOrdens());
@@ -48,9 +48,6 @@ public class TelaOrdemTecnicoServiços extends Tela{
         }
 
         container.add(boxSuper);
-        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        setSize(500,150);
-        setResizable(false);
         setVisible(true);
     }
 

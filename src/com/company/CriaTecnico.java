@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.ImageObserver;
 
-public class CriaTecnico extends JFrame implements ActionListener{
+public class CriaTecnico extends Tela implements ActionListener{
     private JLabel[] jlCampos;
     private  JTextField[] tCampos;
     private String[] jlsCampos = {"Nome: ", "E-mail: ", "Telefone: ","Habilidade: "};
@@ -21,7 +21,7 @@ public class CriaTecnico extends JFrame implements ActionListener{
     private String[] bsCriaTecnico = {"Criar", "Cancelar"};
 
     public CriaTecnico(){
-        super("Insira suas informações");
+        super("Insira suas informações", 500,150);
 
         jlCampos = new JLabel[jlsCampos.length];
         tCampos = new JTextField[jlsCampos.length-1];
@@ -63,16 +63,13 @@ public class CriaTecnico extends JFrame implements ActionListener{
         bCriaTecnico[0].addActionListener(this);
         bCriaTecnico[1].addActionListener(this);
 
-        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        setSize(500,150);
-        setResizable(false);
         setVisible(true);
     }
 
     public void actionPerformed(ActionEvent event){
         if(event.getSource() == bCriaTecnico[1]) {
             if(bCriaTecnico[1].getText() == "Cancelar") {
-                this.dispose();
+                fechaTela(true);
             }
             else if(bCriaTecnico[1].getText() == "Recusar") {
                 bCriaTecnico[0].setText(bsCriaTecnico[0]);
@@ -94,7 +91,7 @@ public class CriaTecnico extends JFrame implements ActionListener{
             }
             else if(bCriaTecnico[0].getText() == "Confirmar") {
                 // INSERIR NO BANCO DE DADOS!
-                this.dispose();
+                fechaTela(true);
             }
         }
     }

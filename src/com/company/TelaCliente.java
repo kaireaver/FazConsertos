@@ -43,7 +43,7 @@ public class TelaCliente extends Tela implements ActionListener, WindowListener 
 
     public TelaCliente(ArrayList<Cliente> listaClientes)
     {
-        super("INSIRA SEUS DADOS:");
+        super("INSIRA SEUS DADOS:", 500, 132);
 
         this.listaClientes = listaClientes;
 
@@ -81,7 +81,6 @@ public class TelaCliente extends Tela implements ActionListener, WindowListener 
         pClientes.add(boFormulario);
 
         fClientes.add(pClientes);
-        addWindowListener(this);
         tamanhoTela(132);
     }
 
