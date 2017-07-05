@@ -19,7 +19,6 @@ public class Tela extends JFrame implements WindowListener {
         setResizable(false);
         addWindowListener(this);
         setSize(w, h);
-        setVisible(true);
     }
 
     public void fechaTela(boolean ativaBotaoInicial) {

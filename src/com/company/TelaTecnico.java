@@ -28,6 +28,7 @@ public class TelaTecnico extends Tela implements ActionListener {
         pTecnicos.add(bCancela);
 
         getContentPane().add(pTecnicos);
+        setVisible(true);
     }
 
     public void actionPerformed(ActionEvent event) {

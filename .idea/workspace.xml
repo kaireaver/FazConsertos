@@ -9,6 +9,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/CriaTecnico.java" afterPath="$PROJECT_DIR$/src/com/company/CriaTecnico.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/LogaTecnico.java" afterPath="$PROJECT_DIR$/src/com/company/LogaTecnico.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/MainTecnico.java" afterPath="$PROJECT_DIR$/src/com/company/MainTecnico.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Tela.java" afterPath="$PROJECT_DIR$/src/com/company/Tela.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/TelaInicial.java" afterPath="$PROJECT_DIR$/src/com/company/TelaInicial.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/TelaTecnico.java" afterPath="$PROJECT_DIR$/src/com/company/TelaTecnico.java" />
     </list>
@@ -99,8 +100,8 @@
       <file leaf-file-name="MainTecnico.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/MainTecnico.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="61" column="48" lean-forward="false" selection-start-line="61" selection-start-column="48" selection-end-line="61" selection-end-column="48" />
+            <state relative-caret-position="254">
+              <caret line="63" column="24" lean-forward="false" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -108,15 +109,25 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Tela.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Tela.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="TelaInicial.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/TelaInicial.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="64" column="64" lean-forward="false" selection-start-line="64" selection-start-column="64" selection-end-line="64" selection-end-column="64" />
+            <state relative-caret-position="322">
+              <caret line="66" column="25" lean-forward="false" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="25" />
               <folding>
-                <marker date="1499272144534" expanded="true" signature="943:1161" ph="Create table... IF" />
-                <marker date="1499272144534" expanded="true" signature="1291:1509" ph="Create table... IF" />
-                <marker date="1499272144534" expanded="true" signature="1621:1839" ph="Create table... IF" />
+                <marker date="1499272273333" expanded="true" signature="943:1161" ph="Create table... IF" />
+                <marker date="1499272273333" expanded="true" signature="1291:1509" ph="Create table... IF" />
+                <marker date="1499272273333" expanded="true" signature="1621:1839" ph="Create table... IF" />
               </folding>
             </state>
           </provider>
@@ -125,18 +136,18 @@
       <file leaf-file-name="CriaTecnico.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/CriaTecnico.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="63" column="48" lean-forward="false" selection-start-line="63" selection-start-column="48" selection-end-line="63" selection-end-column="48" />
+            <state relative-caret-position="220">
+              <caret line="65" column="23" lean-forward="false" selection-start-line="65" selection-start-column="23" selection-end-line="65" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LogaTecnico.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LogaTecnico.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/LogaTecnico.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="39" column="44" lean-forward="false" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
+            <state relative-caret-position="153">
+              <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -146,7 +157,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/company/TelaTecnico.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
-              <caret line="29" column="40" lean-forward="false" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
+              <caret line="29" column="40" lean-forward="true" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -208,12 +219,12 @@
         <option value="$PROJECT_DIR$/src/com/company/TelaOrdemTecnicoInicial.java" />
         <option value="$PROJECT_DIR$/src/com/company/MainCliente.java" />
         <option value="$PROJECT_DIR$/src/com/company/TelaCliente.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Tela.java" />
         <option value="$PROJECT_DIR$/src/com/company/TelaInicial.java" />
-        <option value="$PROJECT_DIR$/src/com/company/TelaTecnico.java" />
-        <option value="$PROJECT_DIR$/src/com/company/MainTecnico.java" />
         <option value="$PROJECT_DIR$/src/com/company/CriaTecnico.java" />
         <option value="$PROJECT_DIR$/src/com/company/LogaTecnico.java" />
+        <option value="$PROJECT_DIR$/src/com/company/TelaTecnico.java" />
+        <option value="$PROJECT_DIR$/src/com/company/MainTecnico.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Tela.java" />
       </list>
     </option>
   </component>
@@ -1057,11 +1068,18 @@
       <option name="project" value="LOCAL" />
       <updated>1499272054757</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Ajustado setVisible(true) na classes referente à técnicos.">
+      <created>1499272169156</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1499272169156</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45284000" />
+    <option name="totallyTimeSpent" value="45413000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
@@ -1138,7 +1156,8 @@
     <MESSAGE value="bora que o maluco tá doente" />
     <MESSAGE value="Atualizando." />
     <MESSAGE value="Inserido setVisible(true) na classe Tela." />
-    <option name="LAST_COMMIT_MESSAGE" value="Inserido setVisible(true) na classe Tela." />
+    <MESSAGE value="Ajustado setVisible(true) na classes referente à técnicos." />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajustado setVisible(true) na classes referente à técnicos." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1455,17 +1474,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Tela.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="21" column="25" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-          <folding>
-            <marker date="1499272034193" expanded="false" signature="2609:2620" ph=" { " />
-            <marker date="1499272034193" expanded="false" signature="2636:2642" ph=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/TelaCliente.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3009">
@@ -1478,46 +1486,54 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/TelaInicial.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="64" column="64" lean-forward="false" selection-start-line="64" selection-start-column="64" selection-end-line="64" selection-end-column="64" />
+        <state relative-caret-position="322">
+          <caret line="66" column="25" lean-forward="false" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="25" />
           <folding>
-            <marker date="1499272144534" expanded="true" signature="943:1161" ph="Create table... IF" />
-            <marker date="1499272144534" expanded="true" signature="1291:1509" ph="Create table... IF" />
-            <marker date="1499272144534" expanded="true" signature="1621:1839" ph="Create table... IF" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/TelaTecnico.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="29" column="40" lean-forward="false" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/MainTecnico.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="61" column="48" lean-forward="false" selection-start-line="61" selection-start-column="48" selection-end-line="61" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1499272273333" expanded="true" signature="943:1161" ph="Create table... IF" />
+            <marker date="1499272273333" expanded="true" signature="1291:1509" ph="Create table... IF" />
+            <marker date="1499272273333" expanded="true" signature="1621:1839" ph="Create table... IF" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/CriaTecnico.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="63" column="48" lean-forward="false" selection-start-line="63" selection-start-column="48" selection-end-line="63" selection-end-column="48" />
+        <state relative-caret-position="220">
+          <caret line="65" column="23" lean-forward="false" selection-start-line="65" selection-start-column="23" selection-end-line="65" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/LogaTecnico.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="39" column="44" lean-forward="false" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
+        <state relative-caret-position="153">
+          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TelaTecnico.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="29" column="40" lean-forward="true" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/MainTecnico.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="63" column="24" lean-forward="false" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Tela.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
           <folding />
         </state>
       </provider>

@@ -38,6 +38,8 @@ public class LogaTecnico extends Tela implements ActionListener {
 
         lNotFound.setVisible(false);
         getContentPane().add(pLoginTecnico);
+
+        setVisible(true);
         }
 
     public void actionPerformed(ActionEvent event) {

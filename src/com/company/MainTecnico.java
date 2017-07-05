@@ -60,6 +60,8 @@ public class MainTecnico extends Tela implements ActionListener {
         pTecnicoPrincipal.add(contAuxiliar, BorderLayout.LINE_END);
         boxConfirma.setVisible(false);
         getContentPane().add(pTecnicoPrincipal);
+
+        setVisible(true);
     }
 
     public void actionPerformed(ActionEvent event) {
