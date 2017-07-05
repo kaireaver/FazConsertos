@@ -48,7 +48,7 @@ public class MainCliente extends JFrame implements ActionListener
 
         else if(event.getSource() == bConsultarSolicitacao)
         {
-            //JFrame fConsultaSolicitacao = new ;
+            JFrame fConsultaSolicitacao = new TelaClienteConsulta() ;
             setBotao(bNovaSolicitacao, false);
             setBotao(bConsultarSolicitacao, false);
         }

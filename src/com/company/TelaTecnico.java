@@ -1,15 +1,18 @@
 package com.company;
 import javax.swing.*;
 import java.awt.event.*;
+import java.util.ArrayList;
 
-public class TelaTecnico extends JFrame implements ActionListener, WindowListener {
+public class TelaTecnico extends Tela implements ActionListener, WindowListener {
     private JPanel pTecnicos;
     private static JButton bNovoTecnico;
     private static JButton bLogaTecnico;
     private static JButton bCancela;
+    private ArrayList<Tecnico> tList;
 
-    public TelaTecnico() {
+    public TelaTecnico(ArrayList<Tecnico> tList) {
         super("Selecione sua opção:");
+        this.tList = tList;
 
         bNovoTecnico = new JButton("Novo Técnico");
         bLogaTecnico = new JButton("Entrar no sistema");
@@ -42,6 +45,7 @@ public class TelaTecnico extends JFrame implements ActionListener, WindowListene
 
         else if(event.getSource() == bLogaTecnico) {
             JFrame fLoginTecnico = new LogaTecnico();
+            this.checaDispose = true;
             this.dispose();
         }
 
@@ -51,8 +55,7 @@ public class TelaTecnico extends JFrame implements ActionListener, WindowListene
     }
 
     public void windowClosed(WindowEvent event) {
-        TelaInicial.setBotaoTecnicos(true);
-        TelaInicial.setBotaoClientes(true);
+        this.checaDispose();
     }
 
     public void windowDeiconified(WindowEvent event) {}

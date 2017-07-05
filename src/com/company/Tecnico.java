@@ -1,15 +1,12 @@
 package com.company;
 
-/**
- * Created by edvil on 01/07/2017.
- */
 public class Tecnico {
     private String nome;
     private String email;
     private String telefone;
     private String habilidade;
 
-    private static int i = 0;
+    private static int i = 1;
     private int numMatricula;
 
     public Tecnico(String nome, String endereco, String telefone, String habilidade){
@@ -31,14 +28,13 @@ public class Tecnico {
     public String getTelefone(){
         return this.telefone;
     }
-
     public String getHabilidade(){
         return this.habilidade;
     }
-
     public int getId(){
         return this.numMatricula;
     }
+    public static int getNumTecnicos() { return i; }
 
     //void abstract void ExcluiTecnico(int numMatricula);
 
