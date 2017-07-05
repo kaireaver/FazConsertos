@@ -7,8 +7,8 @@ import java.awt.event.ActionListener;
 public class MainCliente extends Tela {
     private JPanel pOpcoes;
     final private JLabel lDescription;
-    private static JButton bNovaSolicitacao;
-    private static JButton bConsultarSolicitacao;
+    protected static JButton bNovaSolicitacao;
+    protected static JButton bConsultarSolicitacao;
     private Cliente cliente;
 
     public MainCliente(Cliente cliente)

@@ -5,9 +5,6 @@ import javafx.embed.swing.JFXPanel;
 import javax.swing.*;
 import java.awt.*;
 
-/**
- * Created by edvil on 05/07/2017.
- */
 public class TelaOrdemTecnicoServiços extends Tela {
     private JComboBox cbOrdem;
     private JLabel jlOrdem;

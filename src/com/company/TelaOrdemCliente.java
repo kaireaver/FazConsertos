@@ -4,6 +4,7 @@ import javafx.collections.transformation.SortedList;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.WindowEvent;
 
 /**
  * Created by kings on 12/06/2017.
@@ -56,5 +57,11 @@ public class TelaOrdemCliente extends Tela {
 
 
         setVisible(true);
+    }
+
+    @Override
+    public void windowClosing(WindowEvent e) {
+        setButton(MainCliente.bNovaSolicitacao,true);
+        setButton(MainCliente.bConsultarSolicitacao,true);
     }
 }

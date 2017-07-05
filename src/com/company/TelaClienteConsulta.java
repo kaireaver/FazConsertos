@@ -2,6 +2,7 @@ package com.company;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.WindowEvent;
 
 /**
  * Created by edvil on 05/07/2017.
@@ -53,5 +54,11 @@ public class TelaClienteConsulta extends Tela {
     public String[] getOrdens(){
         String[] s = {"a","b"};
         return s;
-    };
+    }
+
+    @Override
+    public void windowClosing(WindowEvent e) {
+        setButton(MainCliente.bNovaSolicitacao,true);
+        setButton(MainCliente.bConsultarSolicitacao,true);
+    }
 }
