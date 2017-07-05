@@ -3,6 +3,7 @@ package com.company;
 import javax.swing.*;
 import javax.swing.text.MaskFormatter;
 import javax.swing.text.NumberFormatter;
+import java.awt.*;
 import java.awt.event.*;
 import java.text.NumberFormat;
 import java.util.regex.Matcher;
@@ -34,7 +35,7 @@ public abstract class Tela extends JFrame {
         this.setVisible(true);
     }
 
-    public JTextField novaMascara(String str)
+    public JTextField novoJTextFieldMascarado(String str)
     {
         try{
             MaskFormatter format_textField4 = new MaskFormatter(str);
@@ -72,4 +73,11 @@ public abstract class Tela extends JFrame {
         return isEmailIdValid;
     }
 
+    public Box novoBoxHorizontal(JLabel label, Component textField)
+    {
+        Box b = Box.createHorizontalBox();
+        b.add(label);
+        b.add(textField);
+        return b;
+    }
 }
