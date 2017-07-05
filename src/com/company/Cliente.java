@@ -9,9 +9,9 @@ import java.util.Date;
  */
 public class Cliente {
     String Nome;
-    long CPF;
     String Telefone;
 
+    long CPF;
     String RG;
     String Endereco;
     String Email;
@@ -33,3 +33,4 @@ public class Cliente {
     }
 
 }
+

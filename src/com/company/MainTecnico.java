@@ -1,10 +1,9 @@
 package com.company;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 
-public class MainTecnico extends Tela implements ActionListener {
+public class MainTecnico extends Tela {
     private static JButton bAlteraDados;
     private static JButton bConsultaServico;
     private static JButton bExcluirTecnico;
@@ -20,7 +19,7 @@ public class MainTecnico extends Tela implements ActionListener {
     private int numMatricula;
 
     public MainTecnico(String numMatricula) {
-        super("Bem-vindo! Selecione a opção desejada:");
+        super("Bem-vindo! Selecione a opção desejada:", 600, 300);
         this.numMatricula = Integer.parseInt(numMatricula);
 
         bAlteraDados = new JButton("Alterar dados");
@@ -62,20 +61,17 @@ public class MainTecnico extends Tela implements ActionListener {
         boxConfirma.setVisible(false);
         getContentPane().add(pTecnicoPrincipal);
 
-        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        setSize(600,300);
-        setResizable(false);
         setVisible(true);
-
     }
 
+    @Override
     public void actionPerformed(ActionEvent event) {
         if(event.getSource() == bAlteraDados) {
             // IMPLEMENTAR!
         }
 
         else if(event.getSource() == bConsultaServico) {
-            // IMPLEMENTAR!
+            JFrame fConsultaServicos = new TelaOrdemTecnicoServiços();
         }
 
         else if(event.getSource() == bExcluirTecnico) {
@@ -83,7 +79,7 @@ public class MainTecnico extends Tela implements ActionListener {
         }
 
         else if(event.getSource() == bConfirma) {
-            this.dispose();
+            fechaTela(true);
         }
 
         else if(event.getSource() == bRecusa) {
@@ -91,7 +87,7 @@ public class MainTecnico extends Tela implements ActionListener {
         }
 
         else if(event.getSource() == bSair) {
-            this.dispose();
+            fechaTela(true);
         }
     }
 }

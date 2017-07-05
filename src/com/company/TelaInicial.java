@@ -7,20 +7,16 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Set;
 
-public class TelaInicial extends Tela implements ActionListener {
+public class TelaInicial extends Tela {
     private JPanel pInicial;
     final private JLabel lDescription;
-    private static JButton bTecnicos;
-    private static JButton bClientes;
-    private Database data;
-    private ArrayList cList;
-    private ArrayList tList;
-    private ArrayList oList;
+    protected static JButton bTecnicos;
+    protected static JButton bClientes;
 
     public TelaInicial() {
-        super("Bem-vindo ao sistema FazConsertos v1.0!");
+        super("Bem-vindo ao sistema FazConsertos v1.0!", 500, 70);
 
-        Database data = new Database();
+        data = new Database();
         try{
             Connection conn = data.Connection();
             if (conn != null) {
@@ -67,33 +63,23 @@ public class TelaInicial extends Tela implements ActionListener {
 
         getContentPane().add(pInicial);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setSize(500,70);
-        setResizable(false);
+
         setVisible(true);
     }
 
+    @Override
     public void actionPerformed(ActionEvent event) {
         if(event.getSource() == bTecnicos) {
-            JFrame fTecnico = new TelaTecnico(tList);
-            setBotaoTecnicos(false);
-            setBotaoClientes(false);
+            JFrame fTecnico = new TelaTecnico();
+            setButton(bTecnicos,false);
+            setButton(bClientes,false);
         }
 
         else if(event.getSource() == bClientes) {
-            JFrame fClientes = new TelaCliente(cList);
-            setBotaoTecnicos(false);
-            setBotaoClientes(false);
+            JFrame fClientes = new TelaCliente();
+            setButton(bTecnicos,false);
+            setButton(bClientes,false);
         }
-    }
-
-    public static void setBotaoTecnicos(boolean state) {
-        bTecnicos.setEnabled(state);
-        bTecnicos.setBorderPainted(state);
-    }
-
-    public static void setBotaoClientes(boolean state) {
-        bClientes.setEnabled(state);
-        bClientes.setBorderPainted(state);
     }
 
 }

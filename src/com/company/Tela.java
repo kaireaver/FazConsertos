@@ -3,42 +3,60 @@ package com.company;
 import javax.swing.*;
 import javax.swing.text.MaskFormatter;
 import javax.swing.text.NumberFormatter;
-import java.awt.event.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 import java.text.NumberFormat;
+import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public abstract class Tela extends JFrame {
+public class Tela extends JFrame implements WindowListener, ActionListener {
+
+    static Database data;
+    static ArrayList<Cliente> cList;
+    static ArrayList<Tecnico> tList;
+    static ArrayList oList;
+
     protected boolean checaDispose = false;
 
-    Tela(String str) {
+    Tela(String str, int w, int h) {
         super(str);
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        setResizable(false);
+        addWindowListener(this);
+        setSize(w, h);
     }
 
-    public void checaDispose() {
-        if (checaDispose) {
-            TelaInicial.setBotaoTecnicos(false);
-            TelaInicial.setBotaoClientes(false);
+    public static void setButton(JButton button, boolean state) {
+        button.setEnabled(state);
+        button.setBorderPainted(state);
+    }
+
+    public void fechaTela(boolean ativaBotaoInicial) {
+        this.checaDispose = ativaBotaoInicial;
+        checaDispose();
+        this.dispose();
+    }
+
+    private void checaDispose() {
+        if (!checaDispose) {
+            setButton(TelaInicial.bTecnicos,false);
+            setButton(TelaInicial.bClientes,false);
         } else {
-            TelaInicial.setBotaoTecnicos(true);
-            TelaInicial.setBotaoClientes(true);
+            setButton(TelaInicial.bTecnicos,true);
+            setButton(TelaInicial.bClientes,true);
         }
     }
 
-    public void tamanhoTela(int tam)
-    {
-        this.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        this.setSize(500, tam);
-        this.setResizable(false);
-        this.pack();
-        this.setVisible(true);
-    }
 
-    public JTextField novaMascara(String str)
+    public JTextField novoJTextFieldMascarado(String str)
     {
         try{
-            MaskFormatter format_textField4 = new MaskFormatter(str);
-            return new JFormattedTextField(format_textField4);
+            MaskFormatter format_textField = new MaskFormatter(str);
+            return new JFormattedTextField(format_textField);
         }catch (Exception e){
             return null;
         }
@@ -71,5 +89,24 @@ public abstract class Tela extends JFrame {
         }
         return isEmailIdValid;
     }
+
+    public Box novoBoxHorizontal(JLabel label, Component textField)
+    {
+        Box b = Box.createHorizontalBox();
+        b.add(label);
+        b.add(textField);
+        return b;
+    }
+
+    public void actionPerformed(ActionEvent e){}
+    public void windowClosing(WindowEvent e) {
+        fechaTela(true);
+    }
+    public void windowOpened(WindowEvent e) {}
+    public void windowClosed(WindowEvent e) {}
+    public void windowIconified(WindowEvent e) {}
+    public void windowDeiconified(WindowEvent e) {}
+    public void windowActivated(WindowEvent e) {}
+    public void windowDeactivated(WindowEvent e) {}
 
 }

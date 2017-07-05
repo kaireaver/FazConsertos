@@ -4,19 +4,20 @@ import javafx.collections.transformation.SortedList;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.WindowEvent;
 
 /**
  * Created by kings on 12/06/2017.
  */
-public class TelaOrdemCliente extends JFrame {
+public class TelaOrdemCliente extends Tela {
 
     private JButton[] bOrdemCliente;
     private String[] bsOrdemCliente = {"Confirmar", "Cancelar"};
 
     private JLabel[] jlCampos;
-    private String[] jlsCampos = {"Habilidades", "Descrição"};
+    private String[] jlsCampos = {"Habilidades:  ", "Descrição  "};
 
-    private JTextField tDescricao;
+    private JTextArea tDescricao;
 
     private JComboBox cbHabilidades;
     private String[] cbsHabilidades = {"Técnico", "Mecânico", "Programador", "Cozinheiro"};
@@ -25,14 +26,14 @@ public class TelaOrdemCliente extends JFrame {
     private Container boxSuper;
 
     public TelaOrdemCliente(){
-        super("Solicitar Ordem");
+        super("Solicitar Ordem", 500, 150);
         Container container = getContentPane();
 
         jlCampos = new JLabel[2];
         cbHabilidades = new JComboBox(cbsHabilidades);
         boxCampos = new Container[3];
         boxSuper = Box.createVerticalBox();
-        tDescricao = new JTextField(300);
+        tDescricao = new JTextArea(5,7);
         bOrdemCliente = new JButton[2];
 
         container.add(boxSuper);
@@ -55,9 +56,12 @@ public class TelaOrdemCliente extends JFrame {
         boxSuper.add(boxCampos[1]);
 
 
-        setSize(500,150);
         setVisible(true);
-        setResizable(false);
+    }
 
+    @Override
+    public void windowClosing(WindowEvent e) {
+        setButton(MainCliente.bNovaSolicitacao,true);
+        setButton(MainCliente.bConsultarSolicitacao,true);
     }
 }

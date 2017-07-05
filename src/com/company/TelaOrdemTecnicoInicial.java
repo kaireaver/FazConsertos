@@ -6,13 +6,13 @@ import java.awt.*;
 /**
  * Created by edvil on 03/07/2017.
  */
-public class TelaOrdemTecnicoInicial extends JFrame{
+public class TelaOrdemTecnicoInicial extends Tela {
     private JButton[] bOrdemCliente;
     private String[] bsOrdemCliente = {"Ver Ordens Ativas", "Ver Ordens Disponiveis"};
 
     private Container boxSuper;
     public TelaOrdemTecnicoInicial(){
-        super("Serviços");
+        super("Serviços",315,75);
         Container container = getContentPane();
 
         boxSuper = Box.createHorizontalBox();
@@ -24,8 +24,6 @@ public class TelaOrdemTecnicoInicial extends JFrame{
         }
         container.add(boxSuper);
 
-        setSize(315,75);
         setVisible(true);
-        setResizable(false);
-    }
+        }
 }

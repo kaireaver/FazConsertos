@@ -6,7 +6,7 @@ import java.awt.*;
 /**
  * Created by edvil on 01/07/2017.
  */
-public class TelaServicos extends JFrame {
+public class TelaServicos extends Tela {
 
     private JButton[] buttons;
     private String[] nomebotao;
@@ -17,7 +17,7 @@ public class TelaServicos extends JFrame {
     private JTextField[] campos;
 
     public TelaServicos(){
-        super("Ordem de Serviços");
+        super("Ordem de Serviços", 500,150);
         this.layout = new BorderLayout(5,5);
         Container container = getContentPane();
         container.setLayout(this.layout);
