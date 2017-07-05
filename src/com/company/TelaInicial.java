@@ -9,8 +9,8 @@ import java.util.Set;
 public class TelaInicial extends Tela implements ActionListener {
     private JPanel pInicial;
     final private JLabel lDescription;
-    private static JButton bTecnicos;
-    private static JButton bClientes;
+    protected static JButton bTecnicos;
+    protected static JButton bClientes;
     private Database data;
     private ArrayList cList;
     private ArrayList tList;
@@ -70,25 +70,15 @@ public class TelaInicial extends Tela implements ActionListener {
     public void actionPerformed(ActionEvent event) {
         if(event.getSource() == bTecnicos) {
             JFrame fTecnico = new TelaTecnico(tList);
-            setBotaoTecnicos(false);
-            setBotaoClientes(false);
+            setButton(bTecnicos,false);
+            setButton(bClientes,false);
         }
 
         else if(event.getSource() == bClientes) {
             JFrame fClientes = new TelaCliente(cList);
-            setBotaoTecnicos(false);
-            setBotaoClientes(false);
+            setButton(bTecnicos,false);
+            setButton(bClientes,false);
         }
-    }
-
-    public static void setBotaoTecnicos(boolean state) {
-        bTecnicos.setEnabled(state);
-        bTecnicos.setBorderPainted(state);
-    }
-
-    public static void setBotaoClientes(boolean state) {
-        bClientes.setEnabled(state);
-        bClientes.setBorderPainted(state);
     }
 
 }

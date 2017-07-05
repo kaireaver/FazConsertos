@@ -6,12 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="48d4db42-c530-4046-bdc2-3405940f09ba" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/CriaTecnico.java" afterPath="$PROJECT_DIR$/src/com/company/CriaTecnico.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/LogaTecnico.java" afterPath="$PROJECT_DIR$/src/com/company/LogaTecnico.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/MainTecnico.java" afterPath="$PROJECT_DIR$/src/com/company/MainTecnico.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Tela.java" afterPath="$PROJECT_DIR$/src/com/company/Tela.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/TelaInicial.java" afterPath="$PROJECT_DIR$/src/com/company/TelaInicial.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/TelaTecnico.java" afterPath="$PROJECT_DIR$/src/com/company/TelaTecnico.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -109,12 +105,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tela.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Tela.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Tela.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+            <state relative-caret-position="-460">
+              <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TelaCliente.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/company/TelaCliente.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="127">
+              <caret line="219" column="26" lean-forward="true" selection-start-line="219" selection-start-column="26" selection-end-line="219" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -122,12 +130,12 @@
       <file leaf-file-name="TelaInicial.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/TelaInicial.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="66" column="25" lean-forward="false" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="25" />
+            <state relative-caret-position="-850">
+              <caret line="11" column="39" lean-forward="true" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
               <folding>
-                <marker date="1499272273333" expanded="true" signature="943:1161" ph="Create table... IF" />
-                <marker date="1499272273333" expanded="true" signature="1291:1509" ph="Create table... IF" />
-                <marker date="1499272273333" expanded="true" signature="1621:1839" ph="Create table... IF" />
+                <marker date="1499272755507" expanded="true" signature="947:1165" ph="Create table... IF" />
+                <marker date="1499272755507" expanded="true" signature="1295:1513" ph="Create table... IF" />
+                <marker date="1499272755507" expanded="true" signature="1625:1843" ph="Create table... IF" />
               </folding>
             </state>
           </provider>
@@ -219,11 +227,11 @@
         <option value="$PROJECT_DIR$/src/com/company/TelaOrdemTecnicoInicial.java" />
         <option value="$PROJECT_DIR$/src/com/company/MainCliente.java" />
         <option value="$PROJECT_DIR$/src/com/company/TelaCliente.java" />
-        <option value="$PROJECT_DIR$/src/com/company/TelaInicial.java" />
         <option value="$PROJECT_DIR$/src/com/company/CriaTecnico.java" />
         <option value="$PROJECT_DIR$/src/com/company/LogaTecnico.java" />
         <option value="$PROJECT_DIR$/src/com/company/TelaTecnico.java" />
         <option value="$PROJECT_DIR$/src/com/company/MainTecnico.java" />
+        <option value="$PROJECT_DIR$/src/com/company/TelaInicial.java" />
         <option value="$PROJECT_DIR$/src/com/company/Tela.java" />
       </list>
     </option>
@@ -1075,11 +1083,18 @@
       <option name="project" value="LOCAL" />
       <updated>1499272169156</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Ajustado setVisible(true) na classes referente à técnicos.">
+      <created>1499272280689</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1499272280689</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45413000" />
+    <option name="totallyTimeSpent" value="45933000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
@@ -1474,28 +1489,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/TelaCliente.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3009">
-          <caret line="219" column="26" lean-forward="true" selection-start-line="219" selection-start-column="26" selection-end-line="219" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/TelaInicial.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="66" column="25" lean-forward="false" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="25" />
-          <folding>
-            <marker date="1499272273333" expanded="true" signature="943:1161" ph="Create table... IF" />
-            <marker date="1499272273333" expanded="true" signature="1291:1509" ph="Create table... IF" />
-            <marker date="1499272273333" expanded="true" signature="1621:1839" ph="Create table... IF" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/CriaTecnico.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -1530,11 +1523,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TelaInicial.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-850">
+          <caret line="11" column="39" lean-forward="true" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+          <folding>
+            <marker date="1499272755507" expanded="true" signature="947:1165" ph="Create table... IF" />
+            <marker date="1499272755507" expanded="true" signature="1295:1513" ph="Create table... IF" />
+            <marker date="1499272755507" expanded="true" signature="1625:1843" ph="Create table... IF" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Tela.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+        <state relative-caret-position="-460">
+          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TelaCliente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="219" column="26" lean-forward="true" selection-start-line="219" selection-start-column="26" selection-end-line="219" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

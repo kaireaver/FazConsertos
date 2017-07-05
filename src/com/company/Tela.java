@@ -21,6 +21,11 @@ public class Tela extends JFrame implements WindowListener {
         setSize(w, h);
     }
 
+    public static void setButton(JButton button, boolean state) {
+        button.setEnabled(state);
+        button.setBorderPainted(state);
+    }
+
     public void fechaTela(boolean ativaBotaoInicial) {
         this.checaDispose = ativaBotaoInicial;
         checaDispose();
@@ -29,11 +34,11 @@ public class Tela extends JFrame implements WindowListener {
 
     public void checaDispose() {
         if (!checaDispose) {
-            TelaInicial.setBotaoTecnicos(false);
-            TelaInicial.setBotaoClientes(false);
+            setButton(TelaInicial.bTecnicos,false);
+            setButton(TelaInicial.bClientes,false);
         } else {
-            TelaInicial.setBotaoTecnicos(true);
-            TelaInicial.setBotaoClientes(true);
+            setButton(TelaInicial.bTecnicos,true);
+            setButton(TelaInicial.bClientes,true);
         }
     }
 
