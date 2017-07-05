@@ -71,9 +71,6 @@ public class TelaCliente extends Tela implements ActionListener, WindowListener 
             lCPF = new JLabel("CPF - apenas números:   ");
             boCPF.add(lCPF);
             boCPF.add(tCPF);
-            //boCPF.add(new JLabel("                                                                                     "));
-
-
 
         boTelefone = Box.createHorizontalBox();
             try{
@@ -163,7 +160,7 @@ public class TelaCliente extends Tela implements ActionListener, WindowListener 
 
     private void logaCliente()
     {
-        //listaClientes.add(cliente);
+        listaClientes.add(this.cliente);
         JFrame TelaDeSolicitacoes = new MainCliente(cliente);
         this.dispose();
     }
