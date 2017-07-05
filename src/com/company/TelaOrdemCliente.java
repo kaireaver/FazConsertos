@@ -8,7 +8,7 @@ import java.awt.*;
 /**
  * Created by kings on 12/06/2017.
  */
-public class TelaOrdemCliente extends JFrame {
+public class TelaOrdemCliente extends Tela {
 
     private JButton[] bOrdemCliente;
     private String[] bsOrdemCliente = {"Confirmar", "Cancelar"};

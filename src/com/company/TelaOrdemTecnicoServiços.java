@@ -1,25 +1,26 @@
 package com.company;
 
+import javafx.embed.swing.JFXPanel;
+
 import javax.swing.*;
 import java.awt.*;
 
 /**
  * Created by edvil on 05/07/2017.
  */
-
-public class TelaClienteConsulta extends Tela{
+public class TelaOrdemTecnicoServiços extends Tela{
     private JComboBox cbOrdem;
     private JLabel jlOrdem;
 
     private  JTextField[] tCampos;
     private JLabel[] jlCampos;
-    private String[] sCampos = {"ID", "Tecnico", "Status"};
+    private String[] sCampos = {"ID", "Habilidade", "Descrição"};
 
     private Container boxSuper;
     private Container boxCampos[];
 
-    public TelaClienteConsulta(){
-        super("Suas Ordens ativas!");
+    public TelaOrdemTecnicoServiços(){
+        super("Ordens Disponiveis!");
         Container container = getContentPane();
 
         cbOrdem = new JComboBox(getOrdens());

@@ -3,7 +3,7 @@ package com.company;
 import javax.swing.*;
 import java.awt.*;
 
-public class TelaOrdemTecnicoOrçamentos extends JFrame {
+public class TelaOrdemTecnicoOrçamentos extends Tela {
     private JComboBox cbOrdens;
 
     private JLabel[] jlCampos = {};

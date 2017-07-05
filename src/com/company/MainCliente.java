@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class MainCliente extends JFrame implements ActionListener 
+public class MainCliente extends Tela implements ActionListener
 {
     private JPanel pOpcoes;
     final private JLabel lDescription;

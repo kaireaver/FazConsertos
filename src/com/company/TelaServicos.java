@@ -6,7 +6,7 @@ import java.awt.*;
 /**
  * Created by edvil on 01/07/2017.
  */
-public class TelaServicos extends JFrame {
+public class TelaServicos extends Tela {
 
     private JButton[] buttons;
     private String[] nomebotao;
