@@ -50,23 +50,17 @@ public class TelaCliente extends Tela implements ActionListener, WindowListener 
         fClientes = this.getContentPane();
         pClientes = new JPanel();
 
-        boNome = Box.createHorizontalBox();
-            tNome = new JTextField(40);
-            lNome = new JLabel("Nome:   ");
-            boNome.add(lNome);
-            boNome.add(tNome);
+        tNome = new JTextField(40);
+        lNome = new JLabel("Nome:   ");
+        boNome = novoBoxHorizontal(lNome, tNome);
 
-        boCPF = Box.createHorizontalBox();
-            tCPF = novaMascara("###.###.###-##");
-            lCPF = new JLabel("CPF - apenas números:   ");
-            boCPF.add(lCPF);
-            boCPF.add(tCPF);
+        tCPF = novoJTextFieldMascarado("###.###.###-##");
+        lCPF = new JLabel("CPF - apenas números:   ");
+        boCPF = novoBoxHorizontal(lCPF, tCPF);
 
-        boTelefone = Box.createHorizontalBox();
-            tTelefone = novaMascara(" (##) ####-####");
-            lTelefone = new JLabel("Telefone Fixo + DDD:   ");
-            boTelefone.add(lTelefone);
-            boTelefone.add(tTelefone);
+        tTelefone = novoJTextFieldMascarado(" (##) ####-####");
+        lTelefone = new JLabel("Telefone Fixo + DDD:   ");
+        boTelefone = novoBoxHorizontal(lTelefone, tTelefone);
 
 
 
@@ -208,23 +202,17 @@ public class TelaCliente extends Tela implements ActionListener, WindowListener 
         tNome.setEditable(false);
         tCPF.setEditable(false);
         tTelefone.setEditable(false);
-        boRG = Box.createHorizontalBox();
-            tRG = novaMascara("##.###.###-#");
+            tRG = novoJTextFieldMascarado("##.###.###-#");
             lRG = new JLabel("Registro Geral - apenas números:   ");
-            boRG.add(lRG);
-            boRG.add(tRG);
+            boRG = novoBoxHorizontal(lRG, tRG);
 
-        boEmail = Box.createHorizontalBox();
-            tEmail = new JTextField();
-            lEmail = new JLabel("E-mail:   ");
-            boEmail.add(lEmail);
-            boEmail.add(tEmail);
+        tEmail = new JTextField();
+        lEmail = new JLabel("E-mail:   ");
+        boEmail = novoBoxHorizontal(lEmail, tEmail);
 
-        boEndereco = Box.createHorizontalBox();
-            tEndereco = new JTextField();
-            lEndereco = new JLabel("Endereço:   ");
-            boEndereco.add(lEndereco);
-            boEndereco.add(tEndereco);
+        tEndereco = new JTextField();
+        lEndereco = new JLabel("Endereço:   ");
+        boEndereco = novoBoxHorizontal(lEndereco, tEndereco);
 
         boDataNascimento = Box.createHorizontalBox();
             tDia = new JFormattedTextField(FormatoNumerico(2, 2));
