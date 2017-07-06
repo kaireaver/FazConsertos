@@ -96,6 +96,7 @@ public class CriaTecnico extends Tela {
                 String str = (String)cbHabilidades.getSelectedItem();
                 Tecnico t = new Tecnico(tCampos[0].getText(), tCampos[1].getText(), tCampos[2].getText(), str);
                 tList.add(t);
+                JOptionPane.showMessageDialog(this,"Técnico gerado, seu número de matrícula é: " + t.getId());
                 fechaTela(true);
             }
         }

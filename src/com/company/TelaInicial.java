@@ -29,8 +29,8 @@ public class TelaInicial extends Tela {
                 PreparedStatement pps = conn.prepareStatement(query);
                 ResultSet rs = pps.executeQuery();
                 while(rs.next()){
-                    cList.add(new Cliente(rs.getString("nome"),rs.getInt("cpf"),rs.getString("telefone")));
-                }
+                    cList.add(new Cliente(rs.getString("nome"),rs.getString("cpf"),rs.getString("telefone")));
+                }cList.add(new Cliente(rs.getString("nome"),rs.getString("cpf"),rs.getString("telefone")));
                 query  = "SELECT * FROM Tecnicos";
                 pps = conn.prepareStatement(query);
                 rs = pps.executeQuery();
@@ -43,7 +43,7 @@ public class TelaInicial extends Tela {
                 Cliente client = null;
                 while(rs.next()){
                     for(Cliente c : cList){
-                        if(c.getCPF()==rs.getInt("cpf")){
+                        if(c.getCPF()==rs.getString("cpf")){
                             client = c;
                             break;
                         }

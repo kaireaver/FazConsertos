@@ -3,7 +3,6 @@ package com.company;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.util.ArrayList;
 
 public class TelaCliente extends Tela {
 
@@ -81,17 +80,15 @@ public class TelaCliente extends Tela {
     @Override
     public void actionPerformed(ActionEvent event) {
         
-        if(event.getSource() == bOk) {
+        if(event.getSource() == bOk) 
+        {
             if(bOk.getText() == "OK")
             {
                 if(tNome.getText().trim()!="" || tCPF.getText().trim()!="")
                 {
-                    
-
                     try
                     {
-                        adicionaCliente();
-                        
+                        procuraCliente();
                         confirmaClienteExistente();
                     }
                     catch (Exception e)
@@ -101,7 +98,7 @@ public class TelaCliente extends Tela {
                 }
                 else
                 {
-                    JOptionPane.showMessageDialog(this, "NOME INVÁLIDO!");
+                    JOptionPane.showMessageDialog(this, "DADOS INVÁLIDO!");
                 }
 
             }
@@ -112,7 +109,7 @@ public class TelaCliente extends Tela {
                 else
                     JOptionPane.showMessageDialog(this,"EMAIL INVÁLIDO!");
             }
-            else if(cliente!= null)
+            else if(bOk.getText() == "CONFIRMAR")
             {
                 logaCliente();
             }
@@ -131,11 +128,15 @@ public class TelaCliente extends Tela {
 
     private void logaCliente()
     {
+        Data dataNascimento = new Data(tDataNascimento.getText());
+        cliente.preencheCliente(tRG.getText(), tEmail.getText(), tEndereco.getText(), dataNascimento);
         cList.add(this.cliente);
-        System.out.print("Cliente "+ cliente.Nome + " adicionado.");
+        System.out.println("Cliente adicionado." +cliente.toString());
+
         JFrame TelaDeSolicitacoes = new MainCliente(cliente);
         this.fechaTela(false);
     }
+
 
     private void confirmaCliente()
     {
@@ -158,7 +159,7 @@ public class TelaCliente extends Tela {
         tEmail.setEditable(true);
         tEndereco.setEditable(true);
         tDataNascimento.setEditable(true);
-        bOk.setText("CADASTRAR");
+        bOk.setText("CONFIRMAR");
         bCancel.setText("CANCELAR");
 
     }
@@ -167,14 +168,19 @@ public class TelaCliente extends Tela {
     {
         cadastraNovoCliente();
         this.setTitle("CONFIRME SEUS DADOS CADASTRAIS:");
+        System.out.println("Abrindo tela de confirmação de cliente.");
         tRG.setText(cliente.RG);
         tRG.setEditable(false);
+
         tEmail.setText(cliente.Email);
         tEmail.setEditable(false);
+
         tEndereco.setText(cliente.Endereco);
         tEndereco.setEditable(false);
-        tDataNascimento.setText(String.valueOf(cliente.DataNascimento.Dia));
+
+        tDataNascimento.setText(cliente.DataNascimento.toString());
         tDataNascimento.setEditable(false);
+
         bOk.setText("CONFIRMAR");
         bCancel.setText("EDITAR");
     }
@@ -183,12 +189,18 @@ public class TelaCliente extends Tela {
     public void cadastraNovoCliente()
     {
         this.setTitle("NOVO CADASTRO - "+tNome.getText());
+
+        System.out.println("Abrindo tela de cadastro.");
+        tNome.setText(this.cliente.Nome);
         tNome.setEditable(false);
+        tCPF.setText(this.cliente.CPF);
         tCPF.setEditable(false);
+        tTelefone.setText(this.cliente.Telefone);
         tTelefone.setEditable(false);
-            tRG = novoJTextFieldMascarado("##.###.###");
-            lRG = new JLabel("Registro Geral - apenas números:   ");
-            boRG = novoBoxHorizontal(lRG, tRG);
+
+        tRG = novoJTextFieldMascarado("##.###.###");
+        lRG = new JLabel("Registro Geral - apenas números:   ");
+        boRG = novoBoxHorizontal(lRG, tRG);
 
         tEmail = new JTextField();
         lEmail = new JLabel("E-mail:   ");
@@ -213,18 +225,22 @@ public class TelaCliente extends Tela {
     }
 
 
-    public void adicionaCliente() throws Exception {
+    public void procuraCliente() throws Exception {
 
         String sCPF = tCPF.getText();
-        sCPF = sCPF.replace("-", "");
-        sCPF = sCPF.replace(".", "");
-        this.cliente = new Cliente(tNome.getText(), (Long.parseLong(sCPF)), tTelefone.getText());
+        this.cliente = new Cliente(tNome.getText(), sCPF, tTelefone.getText());
 
+        System.out.println("Procurando na lista com  "+ String.valueOf(cList.size()) + " clientes cadastrados.");
+        System.out.println("Procurando pelo cliente: " + String.valueOf(cliente.CPF) + ".");
         for (Cliente c : Tela.cList )
         {
-            if(c.CPF == this.cliente.CPF)
+            System.out.println("Encontrado cliente: " + String.valueOf(c.CPF) + ".");
+            if(c.CPF.equals(this.cliente.CPF) )
             {
+                System.out.println(String.valueOf(cList.remove(cList.indexOf(c))));
+                System.out.println("Cliente " + cliente.Nome + " encontrado!\n--------------------\n");
                 this.cliente = c;
+                return;
             }
         }
 

@@ -11,20 +11,22 @@ public class Cliente {
     String Nome;
     String Telefone;
 
-    long CPF;
+    String CPF;
     String RG;
     String Endereco;
     String Email;
     Data DataNascimento;
 
-    public Cliente(String Nome, long CPF, String Telefone)
+    public Cliente(String Nome, String CPF, String Telefone)
     {
+        System.out.println("Criando novo cliente:");
         this.Nome = Nome;
         this.CPF =  CPF;
         this.Telefone = Telefone;
+        System.out.println("\n"+this.toString() + "\n-------------\n");
 
     }
-    public void preencheCliente(String RG, String Endereco, String Email, Data DataNascimento)
+    public void preencheCliente(String RG, String Email, String Endereco, Data DataNascimento)
     {
         this.RG = RG;
         this.Endereco = Endereco;
@@ -32,8 +34,14 @@ public class Cliente {
         this.DataNascimento = DataNascimento;
     }
 
-    public long getCPF() {
-        return CPF;
+    public String getCPF() {
+        return this.CPF;
+    }
+
+    @Override
+    public String toString()
+    {
+        return "Nome: "+this.Nome+"\nCPF: " + this.CPF + "\nEmail: " + this.Email;
     }
 }
 
