@@ -86,19 +86,23 @@ public class TelaCliente extends Tela {
             {
                 if(tNome.getText().trim()!="" || tCPF.getText().trim()!="")
                 {
-                    criaCliente();
-                    Cliente c = procuraClienteNaLista();
-                    if(c != null)
+                    
+
+                    try
                     {
-                        this.cliente = c;
-                        confirmaprocuraClienteNaLista();
+                        adicionaCliente();
+                        
+                        confirmaClienteExistente();
                     }
-                    else
+                    catch (Exception e)
                     {
                         cadastraNovoCliente();
                     }
-                } else
-                    JOptionPane.showMessageDialog(this,"NOME INVÁLIDO!");
+                }
+                else
+                {
+                    JOptionPane.showMessageDialog(this, "NOME INVÁLIDO!");
+                }
 
             }
             else if(bOk.getText() == "CADASTRAR")
@@ -124,17 +128,11 @@ public class TelaCliente extends Tela {
 
     }
 
-    private void criaCliente()
-    {
-        String sCPF = tCPF.getText();
-        sCPF = sCPF.replace("-", "");
-        sCPF = sCPF.replace(".", "");
-        this.cliente = new Cliente(tNome.getText(), (Long.parseLong(sCPF)), tTelefone.getText());
-    }
 
     private void logaCliente()
     {
         cList.add(this.cliente);
+        System.out.print("Cliente "+ cliente.Nome + " adicionado.");
         JFrame TelaDeSolicitacoes = new MainCliente(cliente);
         this.fechaTela(false);
     }
@@ -165,7 +163,7 @@ public class TelaCliente extends Tela {
 
     }
 
-    public void confirmaprocuraClienteNaLista()
+    public void confirmaClienteExistente()
     {
         cadastraNovoCliente();
         this.setTitle("CONFIRME SEUS DADOS CADASTRAIS:");
@@ -215,17 +213,29 @@ public class TelaCliente extends Tela {
     }
 
 
-    public Cliente procuraClienteNaLista()
-    {
+    public void adicionaCliente() throws Exception {
+
+        String sCPF = tCPF.getText();
+        sCPF = sCPF.replace("-", "");
+        sCPF = sCPF.replace(".", "");
+        this.cliente = new Cliente(tNome.getText(), (Long.parseLong(sCPF)), tTelefone.getText());
+
         for (Cliente c : Tela.cList )
         {
             if(c.CPF == this.cliente.CPF)
             {
-                return c;
+                this.cliente = c;
             }
         }
-        return null;
+
+        System.out.println("Cliente " + cliente.Nome + " não encontrado!");
+        throw new Exception("Cliente existente!");
     }
 
+    @Override
+    public void fechaTela(boolean ativaBotaoInicial) {
+        this.cliente = null;
+        super.fechaTela(ativaBotaoInicial);
+    }
 }
 
