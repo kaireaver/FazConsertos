@@ -106,7 +106,7 @@ public class TelaInicial extends Tela {
             pps = conn.prepareStatement(query);
             pps.execute();
             for(Cliente c : cList){
-                query = "Insert INTO Cliente (nome,telefone,cpf,endereco,email) VALUES (" + c.getNome() + "," + c.getTelefone() + "," + c.getCPF() + "," + c.getEndereco() + "," + c.getEmail() + ")";
+                query = "Insert INTO Cliente (nome,telefone,cpf,endereco,email) VALUES (" + c.Nome + "," + c.Telefone + "," + c.getCPF() + "," + c.Endereco + "," + c.Email + ")";
                 pps = conn.prepareStatement(query);
                 pps.execute();
             }
