@@ -44,4 +44,8 @@ public class Tecnico {
         this.telefone = telefone;
         this.habilidade = habilidade;
     }
+
+    public int getNumMatricula() {
+        return numMatricula;
+    }
 }

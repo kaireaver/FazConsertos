@@ -13,6 +13,7 @@ public class TelaInicial extends Tela {
     final private JLabel lDescription;
     protected static JButton bTecnicos;
     protected static JButton bClientes;
+    private Database data;
 
     public TelaInicial() {
         super("Bem-vindo ao sistema FazConsertos v1.0!", 500, 70);
@@ -90,4 +91,38 @@ public class TelaInicial extends Tela {
         }
     }
 
+    @Override
+    public void setDefaultCloseOperation(int operation) {
+        //Save lists.
+        try{
+            Connection conn = data.Connection();
+            String query = "TRUNCATE TABLE Cliente";
+            PreparedStatement pps = conn.prepareStatement(query);
+            pps.execute();
+            query = "TRUNCATE TABLE ORDEM";
+            pps = conn.prepareStatement(query);
+            pps.execute();
+            query = "TRUNCATE TABLE TECNICO";
+            pps = conn.prepareStatement(query);
+            pps.execute();
+            for(Cliente c : cList){
+                query = "Insert INTO Cliente (nome,telefone,cpf,endereco,email) VALUES (" + c.getNome() + "," + c.getTelefone() + "," + c.getCPF() + "," + c.getEndereco() + "," + c.getEmail() + ")";
+                pps = conn.prepareStatement(query);
+                pps.execute();
+            }
+            for(Ordem o : oList){
+                query = "Insert INTO Ordem (Qnt_Horas,ValorHora,DataPedido,Preco,Materiais,tID,Descricao,Habilidade,cID,Status) VALUES (" + o.getHora() + "," + o.getValor_hora() + "," + o.getData_pedido() + "," + o.getMaterial_valor() + "," + o.getMateriais() + "," + o.gettID() + "," + o.getDescricao() + "," + o.getHabilidades() + "," + o.getCliente().getCPF() + "," + o.getStatus() + ")";
+                pps = conn.prepareStatement(query);
+                pps.execute();
+            }
+            for(Tecnico t : tList){
+                query = "Insert INTO Tecnico (ID,nome,email,habilidade,numMatricula,Telefone) VALUES (" + t.getId() + "," + t.getEmail() + "," + t.getHabilidade() + "," + t.getNumMatricula() + "," + t.getTelefone() + ")";
+                pps = conn.prepareStatement(query);
+                pps.execute();
+            }
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+    }
 }

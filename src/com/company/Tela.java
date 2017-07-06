@@ -18,7 +18,7 @@ public class Tela extends JFrame implements WindowListener, ActionListener {
     static Database data;
     static ArrayList<Cliente> cList;
     static ArrayList<Tecnico> tList;
-    static ArrayList oList;
+    static ArrayList<Ordem> oList;
 
     protected boolean checaDispose = false;
 

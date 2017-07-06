@@ -15,6 +15,7 @@ public class Ordem {
 
     private String[] materiais;
     private int[] material_valor;
+    private String habilidades;
 
     private String descricao;
     private boolean validade; //Para determinar se já se passaram os 90 dias
@@ -22,6 +23,7 @@ public class Ordem {
 
     private static int i = 0;
     private int id; //id do Orçamento
+    private int tID;
 
     public Ordem(Cliente cliente, String descricao) {
         this.cliente = cliente;
@@ -51,5 +53,53 @@ public class Ordem {
     }
     public void setStatus(String status){
         this.status = status;
+    }
+
+    public int getHora() {
+        return hora;
+    }
+
+    public int getValor_hora() {
+        return valor_hora;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public Date getData_pedido() {
+        return data_pedido;
+    }
+
+    public static int getI() {
+        return i;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public int[] getMaterial_valor() {
+        return material_valor;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public String[] getMateriais() {
+        return materiais;
+    }
+
+    public int gettID() {
+        return tID;
+    }
+
+    public String getHabilidades() {
+        return habilidades;
     }
 }
