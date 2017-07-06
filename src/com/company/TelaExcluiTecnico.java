@@ -37,6 +37,7 @@ public class TelaExcluiTecnico extends Tela {
     public void actionPerformed(ActionEvent event) {
         if(event.getSource() == bConfirma) {
             tList.remove(t);
+            JOptionPane.showMessageDialog(this, "Técnico excluído.");
             this.dispose();
         }
         else if(event.getSource() == bRecusa) {
