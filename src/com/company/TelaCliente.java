@@ -132,6 +132,7 @@ public class TelaCliente extends Tela {
     private void logaCliente()
     {
         cList.add(this.cliente);
+        System.out.print("Cliente "+ cliente.Nome + " adicionado.");
         JFrame TelaDeSolicitacoes = new MainCliente(cliente);
         this.fechaTela(false);
     }
@@ -226,9 +227,15 @@ public class TelaCliente extends Tela {
                 this.cliente = c;
             }
         }
-        
-            throw new Exception("Cliente existente!");
+
+        System.out.println("Cliente " + cliente.Nome + " não encontrado!");
+        throw new Exception("Cliente existente!");
     }
 
+    @Override
+    public void fechaTela(boolean ativaBotaoInicial) {
+        this.cliente = null;
+        super.fechaTela(ativaBotaoInicial);
+    }
 }
 
