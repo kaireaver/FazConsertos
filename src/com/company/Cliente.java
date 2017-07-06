@@ -11,29 +11,39 @@ public class Cliente {
     String Nome;
     String Telefone;
 
-    long CPF;
+    String CPF;
     String RG;
     String Endereco;
     String Email;
     Data DataNascimento;
 
-    public Cliente(String Nome, long CPF, String Telefone)
+    public Cliente(String Nome, String CPF, String Telefone)
     {
+        System.out.println("Criando novo cliente:");
         this.Nome = Nome;
         this.CPF =  CPF;
         this.Telefone = Telefone;
+        System.out.println("\n"+this.toString() + "\n-------------\n");
 
     }
     public void preencheCliente(String RG, String Endereco, String Email, Data DataNascimento)
     {
+        System.out.println("Preenchendo  cliente:\n");
         this.RG = RG;
         this.Endereco = Endereco;
         this.Email = Email;
         this.DataNascimento = DataNascimento;
+        System.out.println("\n"+this.toString() + "\n-------------\n");
     }
 
-    public long getCPF() {
-        return CPF;
+    public String getCPF() {
+        return this.CPF;
+    }
+
+    @Override
+    public String toString()
+    {
+        return "Nome: "+this.Nome+"\nCPF: " + this.CPF;
     }
 }
 

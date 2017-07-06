@@ -76,6 +76,8 @@ public class TelaCliente extends Tela {
         pClientes.add(boFormulario);
         fClientes.add(pClientes);
         setVisible(true);
+
+        cList.add(new Cliente("Deivim", "12315939623", "31975036052"));
     }
 
     @Override
@@ -86,8 +88,6 @@ public class TelaCliente extends Tela {
             {
                 if(tNome.getText().trim()!="" || tCPF.getText().trim()!="")
                 {
-                    
-
                     try
                     {
                         adicionaCliente();
@@ -216,9 +216,7 @@ public class TelaCliente extends Tela {
     public void adicionaCliente() throws Exception {
 
         String sCPF = tCPF.getText();
-        sCPF = sCPF.replace("-", "");
-        sCPF = sCPF.replace(".", "");
-        this.cliente = new Cliente(tNome.getText(), (Long.parseLong(sCPF)), tTelefone.getText());
+        this.cliente = new Cliente(tNome.getText(), sCPF, tTelefone.getText());
 
         for (Cliente c : Tela.cList )
         {
