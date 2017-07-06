@@ -25,7 +25,7 @@ public class TelaInicial extends Tela {
                 cList = new ArrayList(); //Clients List.
                 tList = new ArrayList(); //Technicians List.
                 oList = new ArrayList(); //Orders List.
-                String query  = "SELECT * FROM Clientes";
+                String query  = "SELECT * FROM Cliente";
                 PreparedStatement pps = conn.prepareStatement(query);
                 ResultSet rs = pps.executeQuery();
                 while(rs.next()){
@@ -99,10 +99,10 @@ public class TelaInicial extends Tela {
             String query = "TRUNCATE TABLE Cliente";
             PreparedStatement pps = conn.prepareStatement(query);
             pps.execute();
-            query = "TRUNCATE TABLE ORDEM";
+            query = "TRUNCATE TABLE Ordem";
             pps = conn.prepareStatement(query);
             pps.execute();
-            query = "TRUNCATE TABLE TECNICO";
+            query = "TRUNCATE TABLE Tecnico";
             pps = conn.prepareStatement(query);
             pps.execute();
             for(Cliente c : cList){
@@ -120,6 +120,7 @@ public class TelaInicial extends Tela {
                 pps = conn.prepareStatement(query);
                 pps.execute();
             }
+            conn.close();
         }
         catch(Exception e){
             e.printStackTrace();
