@@ -7,24 +7,26 @@ public class Data
     public int Dia;
     public int Mes;
     public int Ano;
-    public Data(int D, int M, int A)
-    {
-        Dia = D;
-        Mes = M;
-        Ano = A;
-    }
+    public String sData;
+
 
     public Data(String s)
     {
+        this.sData = s;
         try{
-            Dia = Integer.parseInt(s.substring(0,1));
-            Mes = Integer.parseInt(s.substring(3,4));
-            Ano = Integer.parseInt(s.substring(6,9));
+            Dia = Integer.parseInt(s.substring(0,2));
+            Mes = Integer.parseInt(s.substring(3,5));
+            Ano = Integer.parseInt(s.substring(6,10));
         }
         catch (Exception e)
         {
             System.out.println(e.getMessage());
         }
 
+    }
+
+    @Override
+    public String toString() {
+        return sData;
     }
 }

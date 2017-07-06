@@ -26,14 +26,12 @@ public class Cliente {
         System.out.println("\n"+this.toString() + "\n-------------\n");
 
     }
-    public void preencheCliente(String RG, String Endereco, String Email, Data DataNascimento)
+    public void preencheCliente(String RG, String Email, String Endereco, Data DataNascimento)
     {
-        System.out.println("Preenchendo  cliente:\n");
         this.RG = RG;
         this.Endereco = Endereco;
         this.Email = Email;
         this.DataNascimento = DataNascimento;
-        System.out.println("\n"+this.toString() + "\n-------------\n");
     }
 
     public String getCPF() {
@@ -43,7 +41,7 @@ public class Cliente {
     @Override
     public String toString()
     {
-        return "Nome: "+this.Nome+"\nCPF: " + this.CPF;
+        return "Nome: "+this.Nome+"\nCPF: " + this.CPF + "\nEmail: " + this.Email;
     }
 }
 
