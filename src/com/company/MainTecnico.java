@@ -13,11 +13,6 @@ public class MainTecnico extends Tela {
 
     private JPanel pTecnicoPrincipal;
 
-    private Box boxConfirma;
-    final private static JLabel lTemCerteza = new JLabel("Tem certeza?");
-    private static JButton bConfirma;
-    private static JButton bRecusa;
-
     private Tecnico t;
 
     public MainTecnico(Tecnico t) {
@@ -40,23 +35,6 @@ public class MainTecnico extends Tela {
         pTecnicoPrincipal.add(bExcluirTecnico);
         pTecnicoPrincipal.add(bSair);
 
-        bConfirma = new JButton("Prosseguir");
-        bRecusa = new JButton("Cancelar");
-
-        bConfirma.addActionListener(this);
-        bRecusa.addActionListener(this);
-
-        boxConfirma = Box.createVerticalBox();
-        boxConfirma.add(lTemCerteza);
-
-        Box boxAux = Box.createHorizontalBox();
-        boxAux.add(bConfirma);
-        boxAux.add(bRecusa);
-
-        boxConfirma.add(boxAux);
-
-        pTecnicoPrincipal.add(boxConfirma);
-        boxConfirma.setVisible(false);
         getContentPane().add(pTecnicoPrincipal);
 
         setVisible(true);
@@ -65,11 +43,7 @@ public class MainTecnico extends Tela {
     @Override
     public void actionPerformed(ActionEvent event) {
         if(event.getSource() == bAlteraDados) {
-            setButton(bAlteraDados,false);
-            setButton(bConsultaServico,false);
-            setButton(bExcluirTecnico,false);
-            setButton(bSair,false);
-
+            setButtonsMainTecnico(false);
             TelaDadosTecnico tDados = new TelaDadosTecnico(t);
         }
 
@@ -78,22 +52,21 @@ public class MainTecnico extends Tela {
         }
 
         else if(event.getSource() == bExcluirTecnico) {
-            boxConfirma.setVisible(true);
-            setSize(new Dimension(500,120));
-        }
-
-        else if(event.getSource() == bConfirma) {
-            tList.remove(t);
-            fechaTela(true);
-        }
-
-        else if(event.getSource() == bRecusa) {
-            boxConfirma.setVisible(false);
-            setSize(new Dimension(500,80));
+            setButtonsMainTecnico(false);
+            TelaExcluiTecnico tExclui = new TelaExcluiTecnico(t);
         }
 
         else if(event.getSource() == bSair) {
             fechaTela(true);
         }
+    }
+
+    public static void setButtonsMainTecnico(boolean state) {
+        setButton(MainTecnico.bAlteraDados,state);
+        setButton(MainTecnico.bConsultaServico,state);
+        setButton(MainTecnico.bExcluirTecnico,state);
+        setButton(MainTecnico.bSair,state);
+
+        return;
     }
 }
