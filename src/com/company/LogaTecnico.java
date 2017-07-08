@@ -13,7 +13,7 @@ public class LogaTecnico extends Tela {
     private JFormattedTextField txtMatricula;
 
     public LogaTecnico() {
-        super("Digite seus dados de usuário:", 500, 85);
+        super("Digite seus dados de usuário:", 500, 88);
 
         bLogin = new JButton("Entrar");
         bCancela = new JButton("Cancelar");
