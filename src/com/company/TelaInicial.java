@@ -33,7 +33,7 @@ public class TelaInicial extends Tela {
                 while(rs.next()) {
                     System.out.println(rs.getString("nome"));
                     cList.add(new Cliente(rs.getString("nome"), rs.getString("cpf"), rs.getString("telefone")));
-                    cList.get(i).preencheCliente(rs.getString("RG"),rs.getString("Email"),rs.getString("Endereco"),rs.getDate("DataNascimento"));
+                    cList.get(i).preencheCliente(rs.getString("RG"),rs.getString("Email"),rs.getString("Endereco"),rs.getString("DataNascimento"));
                     i++;
                 }
                 query  = "SELECT * FROM Tecnico";
@@ -111,7 +111,8 @@ public class TelaInicial extends Tela {
             if(cList.isEmpty())
                 System.out.println("eMpty");
             for(Cliente c : cList){
-                query = "Insert INTO Cliente (nome,telefone,cpf,endereco,email) VALUES (" + c.Nome + "," + c.Telefone + "," + c.getCPF() + "," + c.Endereco + "," + c.Email + ")";
+                query = "Insert INTO Cliente (nome,telefone,cpf,rg,endereco,email,DataNascimento) VALUES (" + "'" + c.Nome + "'" + "," + c.Telefone + "," + c.getCPF() + "," + "'" + c.RG + "'" + "," + "'" + c.Endereco + "'" + "," + "'" + c.Email + "'" + "," + "'" + c.DataNascimento + "'" + ")";
+                System.out.println(query);
                 pps = conn.prepareStatement(query);
                 pps.execute();
             }

@@ -129,7 +129,7 @@ public class TelaCliente extends Tela {
 
     private void logaCliente()
     {
-        Date dataNascimento = new Date(tDataNascimento.getText());
+        String dataNascimento = new String(tDataNascimento.getText());
         cliente.preencheCliente(tRG.getText(), tEmail.getText(), tEndereco.getText(), dataNascimento);
         cList.add(this.cliente);
         System.out.println("Cliente adicionado." +cliente.toString());
@@ -142,7 +142,7 @@ public class TelaCliente extends Tela {
     private void confirmaCliente()
     {
         this.setTitle("CONFIRME SEUS DADOS CADASTRAIS:");
-        Date dataNascimento = new Date(tDataNascimento.getText());
+        String dataNascimento = new String(tDataNascimento.getText());
         cliente.preencheCliente(tRG.getText(), tEmail.getText(), tEndereco.getText(), dataNascimento);
         tRG.setEditable(false);
         tEmail.setEditable(false);
