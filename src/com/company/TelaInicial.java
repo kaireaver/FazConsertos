@@ -51,7 +51,7 @@ public class TelaInicial extends Tela {
                             break;
                         }
                     }
-                    oList.add(new Ordem(client,rs.getString("descricao")));
+                    oList.add(new Ordem(client,rs.getString("descricao"),rs.getString("Habilidade")));
                 }
             }
         }
@@ -108,6 +108,7 @@ public class TelaInicial extends Tela {
             }
             for(Ordem o : oList){
                 query = "Insert IGNORE INTO Ordem (Qnt_Horas,id,ValorHora,DataPedido,Preco,Materiais,tID,Descricao,Habilidade,cID,Status) VALUES (" + o.getHora() + "," + o.getId() + "," + o.getValor_hora() + "," + o.getData_pedido() + "," + o.getMaterial_valor() + "," + "'" + o.getMateriais() + "'" + "," + o.gettID() + "," + "'" + o.getDescricao() + "'" + "," + "'" + o.getHabilidades() + "'" + "," + o.getCliente().getCPF() + "," + "'" + o.getStatus() + "'" + ")";
+                System.out.println(query);
                 pps = conn.prepareStatement(query);
                 pps.execute();
             }
