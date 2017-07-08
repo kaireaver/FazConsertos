@@ -4,6 +4,7 @@ import java.awt.event.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Set;
@@ -26,10 +27,15 @@ public class TelaInicial extends Tela {
                 tList = new ArrayList<Tecnico>(); //Technicians List.
                 oList = new ArrayList<Ordem>(); //Orders List.
                 String query  = "SELECT * FROM Cliente";
+                Statement stmt = conn.createStatement();
                 PreparedStatement pps = conn.prepareStatement(query);
-                ResultSet rs = pps.executeQuery();
+                ResultSet rs = stmt.executeQuery(query);
+                int i=0;//Controlar para preencherCliente.
                 while(rs.next()) {
+                    System.out.println(rs.getString("nome"));
                     cList.add(new Cliente(rs.getString("nome"), rs.getString("cpf"), rs.getString("telefone")));
+                    cList.get(i).preencheCliente(rs.getString("RG"),rs.getString("Email"),rs.getString("Endereco"),rs.getDate("DataNascimento"));
+                    i++;
                 }
                 query  = "SELECT * FROM Tecnico";
                 pps = conn.prepareStatement(query);
