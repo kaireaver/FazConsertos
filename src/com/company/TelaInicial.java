@@ -46,7 +46,7 @@ public class TelaInicial extends Tela {
                 Cliente client = null;
                 while(rs.next()){
                     for(Cliente c : cList){
-                        if(c.getCPF()== rs.getString("cpf")){
+                        if(c.getCPF()== rs.getString("cId")){
                             client = c;
                             break;
                         }
@@ -108,8 +108,6 @@ public class TelaInicial extends Tela {
             query = "TRUNCATE TABLE Tecnico";
             pps = conn.prepareStatement(query);
             pps.execute();
-            if(cList.isEmpty())
-                System.out.println("eMpty");
             for(Cliente c : cList){
                 query = "Insert INTO Cliente (nome,telefone,cpf,rg,endereco,email,DataNascimento) VALUES (" + "'" + c.Nome + "'" + "," + c.Telefone + "," + c.getCPF() + "," + "'" + c.RG + "'" + "," + "'" + c.Endereco + "'" + "," + "'" + c.Email + "'" + "," + "'" + c.DataNascimento + "'" + ")";
                 System.out.println(query);
@@ -117,12 +115,12 @@ public class TelaInicial extends Tela {
                 pps.execute();
             }
             for(Ordem o : oList){
-                query = "Insert INTO Ordem (Qnt_Horas,ValorHora,DataPedido,Preco,Materiais,tID,Descricao,Habilidade,cID,Status) VALUES (" + o.getHora() + "," + o.getValor_hora() + "," + o.getData_pedido() + "," + o.getMaterial_valor() + "," + o.getMateriais() + "," + o.gettID() + "," + o.getDescricao() + "," + o.getHabilidades() + "," + o.getCliente().getCPF() + "," + o.getStatus() + ")";
+                query = "Insert INTO Ordem (Qnt_Horas,ValorHora,DataPedido,Preco,Materiais,tID,Descricao,Habilidade,cID,Status) VALUES (" + o.getHora() + "," + o.getValor_hora() + "," + o.getData_pedido() + "," + o.getMaterial_valor() + "," + "'" + o.getMateriais() + "'" + "," + o.gettID() + "," + "'" + o.getDescricao() + "'" + "," + "'" + o.getHabilidades() + "'" + "," + o.getCliente().getCPF() + "," + "'" + o.getStatus() + "'" + ")";
                 pps = conn.prepareStatement(query);
                 pps.execute();
             }
             for(Tecnico t : tList){
-                query = "Insert INTO Tecnico (ID,nome,email,habilidade,numMatricula,Telefone) VALUES (" + t.getId() + "," + t.getEmail() + "," + t.getHabilidade() + "," + t.getNumMatricula() + "," + t.getTelefone() + ")";
+                query = "Insert INTO Tecnico (ID,nome,email,habilidade,numMatricula,Telefone) VALUES (" + t.getId() + "," + "'" + t.getNome() + "'" + ",''" + t.getEmail() + "'" + ",'" + t.getHabilidade() + "'" + "," + t.getNumMatricula() + "," + t.getTelefone() + ")";
                 pps = conn.prepareStatement(query);
                 pps.execute();
             }
