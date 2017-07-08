@@ -38,7 +38,7 @@ public class TelaMainCliente extends Tela {
     public void actionPerformed(ActionEvent event)
     {
         if(event.getSource() == bNovaSolicitacao) {
-            JFrame fNovaSolicitacao = new TelaOrdemCliente();
+            JFrame fNovaSolicitacao = new TelaOrdemCliente(this.cliente);
             setButton(bNovaSolicitacao, false);
             setButton(bConsultarSolicitacao, false);
         }
