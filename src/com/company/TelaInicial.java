@@ -99,28 +99,21 @@ public class TelaInicial extends Tela {
 
         try{
             Connection conn = data.Connection();
-            String query = "TRUNCATE TABLE Cliente";
-            PreparedStatement pps = conn.prepareStatement(query);
-            pps.execute();
-            query = "TRUNCATE TABLE Ordem";
-            pps = conn.prepareStatement(query);
-            pps.execute();
-            query = "TRUNCATE TABLE Tecnico";
-            pps = conn.prepareStatement(query);
-            pps.execute();
+            String query;
+            PreparedStatement pps;
             for(Cliente c : cList){
-                query = "Insert INTO Cliente (nome,telefone,cpf,rg,endereco,email,DataNascimento) VALUES (" + "'" + c.Nome + "'" + "," + c.Telefone + "," + c.getCPF() + "," + "'" + c.RG + "'" + "," + "'" + c.Endereco + "'" + "," + "'" + c.Email + "'" + "," + "'" + c.DataNascimento + "'" + ")";
+                query = "Insert INTO Cliente (nome,telefone,cpf,rg,endereco,email,DataNascimento) VALUES (" + "'" + c.Nome + "'" + "," + c.Telefone + "," + c.getCPF() + "," + "'" + c.RG + "'" + "," + "'" + c.Endereco + "'" + "," + "'" + c.Email + "'" + "," + "'" + c.DataNascimento + "'" + ")" + " ON DUPLICATE KEY UPDATE cpf = " + c.CPF;
                 System.out.println(query);
                 pps = conn.prepareStatement(query);
                 pps.execute();
             }
             for(Ordem o : oList){
-                query = "Insert INTO Ordem (Qnt_Horas,ValorHora,DataPedido,Preco,Materiais,tID,Descricao,Habilidade,cID,Status) VALUES (" + o.getHora() + "," + o.getValor_hora() + "," + o.getData_pedido() + "," + o.getMaterial_valor() + "," + "'" + o.getMateriais() + "'" + "," + o.gettID() + "," + "'" + o.getDescricao() + "'" + "," + "'" + o.getHabilidades() + "'" + "," + o.getCliente().getCPF() + "," + "'" + o.getStatus() + "'" + ")";
+                query = "Insert INTO Ordem (Qnt_Horas,id,ValorHora,DataPedido,Preco,Materiais,tID,Descricao,Habilidade,cID,Status) VALUES (" + o.getHora() + "," + o.getId() + "," + o.getValor_hora() + "," + o.getData_pedido() + "," + o.getMaterial_valor() + "," + "'" + o.getMateriais() + "'" + "," + o.gettID() + "," + "'" + o.getDescricao() + "'" + "," + "'" + o.getHabilidades() + "'" + "," + o.getCliente().getCPF() + "," + "'" + o.getStatus() + "'" + ")" + " ON DUPLICATE KEY UPDATE id = " + o.getId();
                 pps = conn.prepareStatement(query);
                 pps.execute();
             }
             for(Tecnico t : tList){
-                query = "Insert INTO Tecnico (ID,nome,email,habilidade,numMatricula,Telefone) VALUES (" + t.getId() + "," + "'" + t.getNome() + "'" + ",''" + t.getEmail() + "'" + ",'" + t.getHabilidade() + "'" + "," + t.getNumMatricula() + "," + t.getTelefone() + ")";
+                query = "Insert INTO Tecnico (nome,email,habilidade,numMatricula,Telefone) VALUES (" + "'" + t.getNome() + "'" + ",''" + t.getEmail() + "'" + ",'" + t.getHabilidade() + "'" + "," + t.getNumMatricula() + "," + t.getTelefone() + ")" + " ON DUPLICATE KEY UPDATE numMatricula = " + t.getNumMatricula();
                 pps = conn.prepareStatement(query);
                 pps.execute();
             }
