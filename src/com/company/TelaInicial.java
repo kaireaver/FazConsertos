@@ -46,7 +46,7 @@ public class TelaInicial extends Tela {
                 Cliente client = null;
                 while(rs.next()){
                     for(Cliente c : cList){
-                        if(c.getCPF()==rs.getString("cpf")){
+                        if(c.getCPF()== rs.getString("cpf")){
                             client = c;
                             break;
                         }

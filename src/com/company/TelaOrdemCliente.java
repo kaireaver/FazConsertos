@@ -1,7 +1,5 @@
 package com.company;
 
-import javafx.collections.transformation.SortedList;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowEvent;
@@ -61,7 +59,7 @@ public class TelaOrdemCliente extends Tela {
 
     @Override
     public void windowClosing(WindowEvent e) {
-        setButton(MainCliente.bNovaSolicitacao,true);
-        setButton(MainCliente.bConsultarSolicitacao,true);
+        setButton(TelaMainCliente.bNovaSolicitacao,true);
+        setButton(TelaMainCliente.bConsultarSolicitacao,true);
     }
 }

@@ -58,7 +58,7 @@ public class TelaClienteConsulta extends Tela {
 
     @Override
     public void windowClosing(WindowEvent e) {
-        setButton(MainCliente.bNovaSolicitacao,true);
-        setButton(MainCliente.bConsultarSolicitacao,true);
+        setButton(TelaMainCliente.bNovaSolicitacao,true);
+        setButton(TelaMainCliente.bConsultarSolicitacao,true);
     }
 }

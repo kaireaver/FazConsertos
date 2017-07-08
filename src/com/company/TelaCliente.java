@@ -134,7 +134,7 @@ public class TelaCliente extends Tela {
         cList.add(this.cliente);
         System.out.println("Cliente adicionado." +cliente.toString());
 
-        JFrame TelaDeSolicitacoes = new MainCliente(cliente);
+        JFrame TelaDeSolicitacoes = new TelaMainCliente(cliente);
         this.fechaTela(false);
     }
 
