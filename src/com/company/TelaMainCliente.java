@@ -4,14 +4,14 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class MainCliente extends Tela {
+public class TelaMainCliente extends Tela {
     private JPanel pOpcoes;
     final private JLabel lDescription;
     protected static JButton bNovaSolicitacao;
     protected static JButton bConsultarSolicitacao;
     private Cliente cliente;
 
-    public MainCliente(Cliente cliente)
+    public TelaMainCliente(Cliente cliente)
     {
 
         super("Bem-vindo ao sistema FazConsertos v1.0 - "+ cliente.Nome, 500, 70);
