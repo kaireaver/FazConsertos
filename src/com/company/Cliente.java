@@ -15,7 +15,7 @@ public class Cliente {
     String RG;
     String Endereco;
     String Email;
-    Data DataNascimento;
+    Date DataNascimento;
 
     public Cliente(String Nome, String CPF, String Telefone)
     {
@@ -26,7 +26,7 @@ public class Cliente {
         System.out.println("\n"+this.toString() + "\n-------------\n");
 
     }
-    public void preencheCliente(String RG, String Email, String Endereco, Data DataNascimento)
+    public void preencheCliente(String RG, String Email, String Endereco, Date DataNascimento)
     {
         this.RG = RG;
         this.Endereco = Endereco;
