@@ -142,8 +142,7 @@ public class TelaCliente extends Tela {
     private void confirmaCliente()
     {
         this.setTitle("CONFIRME SEUS DADOS CADASTRAIS:");
-        String dataNascimento = new String(tDataNascimento.getText());
-        cliente.preencheCliente(tRG.getText(), tEmail.getText(), tEndereco.getText(), dataNascimento);
+        cliente.preencheCliente(tRG.getText(), tEmail.getText(), tEndereco.getText(), tDataNascimento.getText());
         tRG.setEditable(false);
         tEmail.setEditable(false);
         tEndereco.setEditable(false);
@@ -179,7 +178,7 @@ public class TelaCliente extends Tela {
         tEndereco.setText(cliente.Endereco);
         tEndereco.setEditable(false);
 
-        tDataNascimento.setText(cliente.DataNascimento.toString());
+        tDataNascimento.setText(cliente.DataNascimento);
         tDataNascimento.setEditable(false);
 
         bOk.setText("CONFIRMAR");
