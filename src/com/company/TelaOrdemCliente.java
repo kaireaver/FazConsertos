@@ -68,8 +68,9 @@ public class TelaOrdemCliente extends Tela {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getSource()==bOrdemCliente[0]){ //Confirmar
-            Ordem o = new Ordem(cliente,tDescricao.getText());
+        if(e.getSource()== bOrdemCliente[0])
+        { //Confirmar
+            Ordem o = new Ordem(this.cliente,tDescricao.getText());
             oList.add(o);
         }
         else{ //Cancelar

@@ -42,6 +42,12 @@ public class Tela extends JFrame implements WindowListener, ActionListener {
         this.dispose();
     }
 
+    public void dispose(boolean ativaBotaoInicial)
+    {
+        fechaTela(ativaBotaoInicial);
+        super.dispose();
+    }
+
     private void checaDispose() {
         if (!checaDispose) {
             setButton(TelaInicial.bTecnicos,false);
