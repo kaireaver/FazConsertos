@@ -74,7 +74,7 @@ public class TelaOrdemCliente extends Tela {
             oList.add(o);
         }
         else{ //Cancelar
-            this.dispose();
+            this.fechaTela(false);
         }
     }
 }
