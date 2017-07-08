@@ -7,7 +7,7 @@ import java.util.Date;
  * Created by edvil on 01/07/2017.
  */
 public class Ordem {
-    Cliente cliente;
+    private Cliente cliente;
 
     private int hora;
     private int valor_hora;
