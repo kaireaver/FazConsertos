@@ -31,13 +31,13 @@ public class TelaInicial extends Tela {
                 while(rs.next()) {
                     cList.add(new Cliente(rs.getString("nome"), rs.getString("cpf"), rs.getString("telefone")));
                 }
-                query  = "SELECT * FROM Tecnicos";
+                query  = "SELECT * FROM Tecnico";
                 pps = conn.prepareStatement(query);
                 rs = pps.executeQuery();
                 while(rs.next()){
                     tList.add(new Tecnico(rs.getString("nome"),rs.getString("email"),rs.getString("telefone"),rs.getString("habilidade")));
                 }
-                query  = "SELECT * FROM Orders";
+                query  = "SELECT * FROM Ordem";
                 pps = conn.prepareStatement(query);
                 rs = pps.executeQuery();
                 Cliente client = null;
@@ -105,6 +105,8 @@ public class TelaInicial extends Tela {
             query = "TRUNCATE TABLE Tecnico";
             pps = conn.prepareStatement(query);
             pps.execute();
+            if(cList.isEmpty())
+                System.out.println("eMpty");
             for(Cliente c : cList){
                 query = "Insert INTO Cliente (nome,telefone,cpf,endereco,email) VALUES (" + c.Nome + "," + c.Telefone + "," + c.getCPF() + "," + c.Endereco + "," + c.Email + ")";
                 pps = conn.prepareStatement(query);
