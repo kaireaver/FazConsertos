@@ -9,6 +9,7 @@ import java.awt.event.WindowEvent;
  */
 public class TelaOrdemCliente extends Tela {
 
+    private final Cliente cliente;
     private JButton[] bOrdemCliente;
     private String[] bsOrdemCliente = {"Confirmar", "Cancelar"};
 
@@ -23,9 +24,10 @@ public class TelaOrdemCliente extends Tela {
     private Container boxCampos[];
     private Container boxSuper;
 
-    public TelaOrdemCliente(){
+    public TelaOrdemCliente(Cliente cliente){
         super("Solicitar Ordem", 500, 150);
         Container container = getContentPane();
+        this.cliente = cliente;
 
         jlCampos = new JLabel[2];
         cbHabilidades = new JComboBox(cbsHabilidades);
