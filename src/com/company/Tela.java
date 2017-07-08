@@ -45,7 +45,6 @@ public class Tela extends JFrame implements WindowListener, ActionListener {
     public void dispose(boolean ativaBotaoInicial)
     {
         fechaTela(ativaBotaoInicial);
-        super.dispose();
     }
 
     private void checaDispose() {
