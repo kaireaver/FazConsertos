@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="48d4db42-c530-4046-bdc2-3405940f09ba" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/TelaOrdemCliente.java" afterPath="$PROJECT_DIR$/src/com/company/TelaOrdemCliente.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/TelaInicial.java" afterPath="$PROJECT_DIR$/src/com/company/TelaInicial.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -92,26 +92,29 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TelaInicial.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TelaInicial.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/TelaInicial.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="87" column="9" lean-forward="true" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="9" />
+            <state relative-caret-position="477">
+              <caret line="126" column="5" lean-forward="true" selection-start-line="126" selection-start-column="5" selection-end-line="126" selection-end-column="5" />
               <folding>
-                <marker date="1499545370000" expanded="true" signature="931:952" ph="SELECT * FRO... Cliente" />
-                <marker date="1499545370000" expanded="true" signature="1555:1576" ph="SELECT * FRO... Tecnico" />
-                <marker date="1499545370000" expanded="true" signature="1844:1863" ph="SELECT * FRO... Ordem" />
-                <marker date="1499545370000" expanded="true" signature="3656:3923" ph="Insert INTO Cliente... " />
-                <marker date="1499545370000" expanded="true" signature="3656:3958" ph="Insert INTO Cliente... " />
-                <marker date="1499545370000" expanded="true" signature="3656:3959" ph="Insert INTO Cliente... " />
-                <marker date="1499545370000" expanded="true" signature="4169:4303" ph="Insert INTO Ordem... " />
-                <marker date="1499545370000" expanded="true" signature="4169:4321" ph="Insert INTO Ordem... " />
-                <marker date="1499545370000" expanded="true" signature="4169:4344" ph="Insert INTO Ordem... " />
-                <marker date="1499545370000" expanded="true" signature="4169:4602" ph="Insert INTO Ordem... " />
-                <marker date="1499545370000" expanded="true" signature="4169:4637" ph="Insert INTO Ordem... " />
-                <marker date="1499545370000" expanded="true" signature="4810:4884" ph="Insert INTO Tecnico... " />
-                <marker date="1499545370000" expanded="true" signature="4810:5030" ph="Insert INTO Tecnico... " />
-                <marker date="1499545370000" expanded="true" signature="4810:5075" ph="Insert INTO Tecnico... " />
+                <marker date="1499549454000" expanded="true" signature="931:952" ph="SELECT * FRO... Cliente" />
+                <marker date="1499549454000" expanded="true" signature="1555:1576" ph="SELECT * FRO... Tecnico" />
+                <marker date="1499549454000" expanded="true" signature="1844:1863" ph="SELECT * FRO... Ordem" />
+                <marker date="1499549454000" expanded="true" signature="3656:3777" ph="Insert INTO Cliente... " />
+                <marker date="1499549454000" expanded="true" signature="3656:3796" ph="Insert INTO Cliente... " />
+                <marker date="1499549454000" expanded="true" signature="3656:3800" ph="Insert INTO Cliente... " />
+                <marker date="1499549454000" expanded="true" signature="3656:3808" ph="Insert INTO Cliente... " />
+                <marker date="1499549454000" expanded="true" signature="3656:3826" ph="Insert INTO Cliente... " />
+                <marker date="1499549454000" expanded="true" signature="3656:3830" ph="Insert INTO Cliente... " />
+                <marker date="1499549454000" expanded="true" signature="3656:3953" ph="Insert INTO Cliente... " />
+                <marker date="1499549454000" expanded="true" signature="3656:3954" ph="Insert INTO Cliente... " />
+                <marker date="1499549454000" expanded="true" signature="4112:4253" ph="Insert INTO Ordem... " />
+                <marker date="1499549454000" expanded="true" signature="4112:4271" ph="Insert INTO Ordem... " />
+                <marker date="1499549454000" expanded="true" signature="4112:4294" ph="Insert INTO Ordem... " />
+                <marker date="1499549454000" expanded="true" signature="4112:4552" ph="Insert INTO Ordem... " />
+                <marker date="1499549454000" expanded="true" signature="4713:4794" ph="Insert INTO Tecnico... " />
+                <marker date="1499549454000" expanded="true" signature="4713:4940" ph="Insert INTO Tecnico... " />
               </folding>
             </state>
           </provider>
@@ -121,7 +124,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/company/TelaClienteConsulta.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="690">
-              <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+              <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -131,7 +134,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/company/Tecnico.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="540">
-              <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+              <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding>
                 <element signature="e#1418#1419#0" expanded="true" />
                 <element signature="e#1453#1454#0" expanded="true" />
@@ -156,8 +159,8 @@
       <file leaf-file-name="TelaCliente.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/TelaCliente.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1809">
-              <caret line="105" column="34" lean-forward="false" selection-start-line="105" selection-start-column="34" selection-end-line="105" selection-end-column="34" />
+            <state relative-caret-position="1154">
+              <caret line="186" column="0" lean-forward="false" selection-start-line="186" selection-start-column="0" selection-end-line="186" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -299,18 +302,18 @@
       <file leaf-file-name="TelaMainCliente.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/TelaMainCliente.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-253">
-              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            <state relative-caret-position="362">
+              <caret line="47" column="67" lean-forward="false" selection-start-line="47" selection-start-column="67" selection-end-line="47" selection-end-column="67" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TelaOrdemCliente.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TelaOrdemCliente.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/TelaOrdemCliente.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="72" column="25" lean-forward="false" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
+            <state relative-caret-position="1140">
+              <caret line="79" column="1" lean-forward="false" selection-start-line="79" selection-start-column="1" selection-end-line="79" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -320,7 +323,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/company/Cliente.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="525">
-              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -331,7 +334,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
               <caret line="30" column="22" lean-forward="false" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
-              <folding />
+              <folding>
+                <marker date="1499549075000" expanded="true" signature="1252:1521" ph="{...}" />
+                <marker date="1499549075000" expanded="true" signature="1586:1802" ph="{...}" />
+                <marker date="1499549075000" expanded="true" signature="1869:2288" ph="{...}" />
+                <marker date="1499549075000" expanded="true" signature="2347:2789" ph="{...}" />
+                <marker date="1499549075000" expanded="true" signature="2863:2979" ph="{...}" />
+                <marker date="1499549075000" expanded="false" signature="3074:3085" ph=" { " />
+                <marker date="1499549075000" expanded="false" signature="3101:3107" ph=" }" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -403,10 +414,10 @@
         <option value="$PROJECT_DIR$/src/com/company/LogaTecnico.java" />
         <option value="$PROJECT_DIR$/src/com/company/MainTecnico.java" />
         <option value="$PROJECT_DIR$/src/com/company/Cliente.java" />
-        <option value="$PROJECT_DIR$/src/com/company/TelaInicial.java" />
         <option value="$PROJECT_DIR$/src/com/company/Tela.java" />
         <option value="$PROJECT_DIR$/src/com/company/TelaCliente.java" />
         <option value="$PROJECT_DIR$/src/com/company/TelaOrdemCliente.java" />
+        <option value="$PROJECT_DIR$/src/com/company/TelaInicial.java" />
       </list>
     </option>
   </component>
@@ -502,7 +513,7 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/company/TelaMainCliente.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/company/Tela.java</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/company/TelaOrdemCliente.java</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
@@ -1035,7 +1046,7 @@
       <workItem from="1499099338770" duration="354000" />
       <workItem from="1499274018748" duration="12207000" />
       <workItem from="1499344669510" duration="601000" />
-      <workItem from="1499539342522" duration="7119000" />
+      <workItem from="1499539342522" duration="8365000" />
     </task>
     <task id="LOCAL-00001" summary="LINDÕES">
       <created>1498933264831</created>
@@ -1373,11 +1384,18 @@
       <option name="project" value="LOCAL" />
       <updated>1499548402896</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="GATOS">
+      <created>1499548430827</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1499548430827</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68649000" />
+    <option name="totallyTimeSpent" value="69895000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1276" y="23" width="1280" height="922" extended-state="0" />
@@ -1761,7 +1779,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/company/Cliente.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
-          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1770,29 +1788,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="30" column="22" lean-forward="false" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/TelaInicial.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="87" column="9" lean-forward="true" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="9" />
           <folding>
-            <marker date="1499545370000" expanded="true" signature="931:952" ph="SELECT * FRO... Cliente" />
-            <marker date="1499545370000" expanded="true" signature="1555:1576" ph="SELECT * FRO... Tecnico" />
-            <marker date="1499545370000" expanded="true" signature="1844:1863" ph="SELECT * FRO... Ordem" />
-            <marker date="1499545370000" expanded="true" signature="3656:3923" ph="Insert INTO Cliente... " />
-            <marker date="1499545370000" expanded="true" signature="3656:3958" ph="Insert INTO Cliente... " />
-            <marker date="1499545370000" expanded="true" signature="3656:3959" ph="Insert INTO Cliente... " />
-            <marker date="1499545370000" expanded="true" signature="4169:4303" ph="Insert INTO Ordem... " />
-            <marker date="1499545370000" expanded="true" signature="4169:4321" ph="Insert INTO Ordem... " />
-            <marker date="1499545370000" expanded="true" signature="4169:4344" ph="Insert INTO Ordem... " />
-            <marker date="1499545370000" expanded="true" signature="4169:4602" ph="Insert INTO Ordem... " />
-            <marker date="1499545370000" expanded="true" signature="4169:4637" ph="Insert INTO Ordem... " />
-            <marker date="1499545370000" expanded="true" signature="4810:4884" ph="Insert INTO Tecnico... " />
-            <marker date="1499545370000" expanded="true" signature="4810:5030" ph="Insert INTO Tecnico... " />
-            <marker date="1499545370000" expanded="true" signature="4810:5075" ph="Insert INTO Tecnico... " />
+            <marker date="1499549075000" expanded="true" signature="1252:1521" ph="{...}" />
+            <marker date="1499549075000" expanded="true" signature="1586:1802" ph="{...}" />
+            <marker date="1499549075000" expanded="true" signature="1869:2288" ph="{...}" />
+            <marker date="1499549075000" expanded="true" signature="2347:2789" ph="{...}" />
+            <marker date="1499549075000" expanded="true" signature="2863:2979" ph="{...}" />
+            <marker date="1499549075000" expanded="false" signature="3074:3085" ph=" { " />
+            <marker date="1499549075000" expanded="false" signature="3101:3107" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -1928,18 +1931,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/TelaCliente.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1809">
-          <caret line="105" column="34" lean-forward="false" selection-start-line="105" selection-start-column="34" selection-end-line="105" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/TelaClienteConsulta.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
-          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1947,7 +1942,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/company/Tecnico.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
-          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
           <folding>
             <element signature="e#1418#1419#0" expanded="true" />
             <element signature="e#1453#1454#0" expanded="true" />
@@ -1966,19 +1961,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TelaCliente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1154">
+          <caret line="186" column="0" lean-forward="false" selection-start-line="186" selection-start-column="0" selection-end-line="186" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/TelaMainCliente.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-253">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        <state relative-caret-position="362">
+          <caret line="47" column="67" lean-forward="false" selection-start-line="47" selection-start-column="67" selection-end-line="47" selection-end-column="67" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/TelaOrdemCliente.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="72" column="25" lean-forward="false" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
+        <state relative-caret-position="1140">
+          <caret line="79" column="1" lean-forward="false" selection-start-line="79" selection-start-column="1" selection-end-line="79" selection-end-column="1" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TelaInicial.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="126" column="5" lean-forward="true" selection-start-line="126" selection-start-column="5" selection-end-line="126" selection-end-column="5" />
+          <folding>
+            <marker date="1499549454000" expanded="true" signature="931:952" ph="SELECT * FRO... Cliente" />
+            <marker date="1499549454000" expanded="true" signature="1555:1576" ph="SELECT * FRO... Tecnico" />
+            <marker date="1499549454000" expanded="true" signature="1844:1863" ph="SELECT * FRO... Ordem" />
+            <marker date="1499549454000" expanded="true" signature="3656:3777" ph="Insert INTO Cliente... " />
+            <marker date="1499549454000" expanded="true" signature="3656:3796" ph="Insert INTO Cliente... " />
+            <marker date="1499549454000" expanded="true" signature="3656:3800" ph="Insert INTO Cliente... " />
+            <marker date="1499549454000" expanded="true" signature="3656:3808" ph="Insert INTO Cliente... " />
+            <marker date="1499549454000" expanded="true" signature="3656:3826" ph="Insert INTO Cliente... " />
+            <marker date="1499549454000" expanded="true" signature="3656:3830" ph="Insert INTO Cliente... " />
+            <marker date="1499549454000" expanded="true" signature="3656:3953" ph="Insert INTO Cliente... " />
+            <marker date="1499549454000" expanded="true" signature="3656:3954" ph="Insert INTO Cliente... " />
+            <marker date="1499549454000" expanded="true" signature="4112:4253" ph="Insert INTO Ordem... " />
+            <marker date="1499549454000" expanded="true" signature="4112:4271" ph="Insert INTO Ordem... " />
+            <marker date="1499549454000" expanded="true" signature="4112:4294" ph="Insert INTO Ordem... " />
+            <marker date="1499549454000" expanded="true" signature="4112:4552" ph="Insert INTO Ordem... " />
+            <marker date="1499549454000" expanded="true" signature="4713:4794" ph="Insert INTO Tecnico... " />
+            <marker date="1499549454000" expanded="true" signature="4713:4940" ph="Insert INTO Tecnico... " />
+          </folding>
         </state>
       </provider>
     </entry>
