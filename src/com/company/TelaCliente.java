@@ -42,7 +42,7 @@ public class TelaCliente extends Tela {
 
     public TelaCliente()
     {
-        super("INSIRA SEUS DADOS:", 500, 132);
+        super("INSIRA SEUS DADOS:", 545, 132);
 
         fClientes = this.getContentPane();
         pClientes = new JPanel();
@@ -221,7 +221,7 @@ public class TelaCliente extends Tela {
 
         pClientes.add(boFormulario, 0);
         bOk.setText("CADASTRAR");
-        setSize(500, 212);
+        setSize(600, 250);
     }
 
 

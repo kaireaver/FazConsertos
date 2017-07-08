@@ -2,6 +2,7 @@ package com.company;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.awt.event.WindowEvent;
 
 /**
@@ -63,5 +64,15 @@ public class TelaOrdemCliente extends Tela {
     public void windowClosing(WindowEvent e) {
         setButton(TelaMainCliente.bNovaSolicitacao,true);
         setButton(TelaMainCliente.bConsultarSolicitacao,true);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if(e.getSource()==bOrdemCliente[0]){ //Confirmar
+            Ordem o = new Ordem(cliente,tDescricao.getText());
+        }
+        else{ //Cancelar
+            this.dispose();
+        }
     }
 }
