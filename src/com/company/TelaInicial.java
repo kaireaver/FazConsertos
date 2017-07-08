@@ -22,9 +22,9 @@ public class TelaInicial extends Tela {
         try{
             Connection conn = data.Connection();
             if (conn != null) {
-                cList = new ArrayList(); //Clients List.
-                tList = new ArrayList(); //Technicians List.
-                oList = new ArrayList(); //Orders List.
+                cList = new ArrayList<Cliente>(); //Clients List.
+                tList = new ArrayList<Tecnico>(); //Technicians List.
+                oList = new ArrayList<Ordem>(); //Orders List.
                 String query  = "SELECT * FROM Cliente";
                 PreparedStatement pps = conn.prepareStatement(query);
                 ResultSet rs = pps.executeQuery();
@@ -92,8 +92,8 @@ public class TelaInicial extends Tela {
     }
 
     @Override
-    public void setDefaultCloseOperation(int operation) {
-        //Save lists.
+    public void windowClosing(WindowEvent evnt) {
+
         try{
             Connection conn = data.Connection();
             String query = "TRUNCATE TABLE Cliente";
@@ -124,6 +124,9 @@ public class TelaInicial extends Tela {
         }
         catch(Exception e){
             e.printStackTrace();
+        }
+        finally {
+            super.windowClosing(evnt);
         }
     }
 }
