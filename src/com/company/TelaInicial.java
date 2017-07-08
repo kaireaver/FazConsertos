@@ -28,7 +28,6 @@ public class TelaInicial extends Tela {
                 oList = new ArrayList<Ordem>(); //Orders List.
                 String query  = "SELECT * FROM Cliente";
                 Statement stmt = conn.createStatement();
-                PreparedStatement pps = conn.prepareStatement(query);
                 ResultSet rs = stmt.executeQuery(query);
                 int i=0;//Controlar para preencherCliente.
                 while(rs.next()) {
@@ -38,14 +37,12 @@ public class TelaInicial extends Tela {
                     i++;
                 }
                 query  = "SELECT * FROM Tecnico";
-                pps = conn.prepareStatement(query);
-                rs = pps.executeQuery();
+                rs = stmt.executeQuery(query);
                 while(rs.next()){
                     tList.add(new Tecnico(rs.getString("nome"),rs.getString("email"),rs.getString("telefone"),rs.getString("habilidade")));
                 }
                 query  = "SELECT * FROM Ordem";
-                pps = conn.prepareStatement(query);
-                rs = pps.executeQuery();
+                rs = stmt.executeQuery(query);
                 Cliente client = null;
                 while(rs.next()){
                     for(Cliente c : cList){
