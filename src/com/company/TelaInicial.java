@@ -25,12 +25,12 @@ public class TelaInicial extends Tela {
                 cList = new ArrayList(); //Clients List.
                 tList = new ArrayList(); //Technicians List.
                 oList = new ArrayList(); //Orders List.
-                String query  = "SELECT * FROM Clientes";
+                String query  = "SELECT * FROM Cliente";
                 PreparedStatement pps = conn.prepareStatement(query);
                 ResultSet rs = pps.executeQuery();
                 while(rs.next()){
                     cList.add(new Cliente(rs.getString("nome"),rs.getString("cpf"),rs.getString("telefone")));
-                }
+                }cList.add(new Cliente(rs.getString("nome"),rs.getString("cpf"),rs.getString("telefone")));
                 query  = "SELECT * FROM Tecnicos";
                 pps = conn.prepareStatement(query);
                 rs = pps.executeQuery();
@@ -98,13 +98,13 @@ public class TelaInicial extends Tela {
             Connection conn = data.Connection();
             String query = "TRUNCATE TABLE Cliente";
             PreparedStatement pps = conn.prepareStatement(query);
-            //pps.execute();
+            pps.execute();
             query = "TRUNCATE TABLE Ordem";
             pps = conn.prepareStatement(query);
-            //pps.execute();
+            pps.execute();
             query = "TRUNCATE TABLE Tecnico";
             pps = conn.prepareStatement(query);
-            //pps.execute();
+            pps.execute();
             for(Cliente c : cList){
                 query = "Insert INTO Cliente (nome,telefone,cpf,endereco,email) VALUES (" + c.Nome + "," + c.Telefone + "," + c.getCPF() + "," + c.Endereco + "," + c.Email + ")";
                 pps = conn.prepareStatement(query);
@@ -120,6 +120,7 @@ public class TelaInicial extends Tela {
                 pps = conn.prepareStatement(query);
                 pps.execute();
             }
+            conn.close();
         }
         catch(Exception e){
             e.printStackTrace();

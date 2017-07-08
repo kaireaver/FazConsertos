@@ -61,7 +61,6 @@
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
     </column>
     <column id="18" parent="5" name="ValorHora">
       <Position>3</Position>
@@ -101,12 +100,12 @@
       <Position>11</Position>
       <DataType>varchar(30)|0</DataType>
     </column>
-    <index id="27" parent="5" name="Ordem_id_uindex">
+    <index id="27" parent="5" name="Ordem_Cliente_cpf_fk">
+      <ColNames>cID</ColNames>
+    </index>
+    <index id="28" parent="5" name="Ordem_id_uindex">
       <ColNames>id</ColNames>
       <Unique>1</Unique>
-    </index>
-    <index id="28" parent="5" name="Ordem_Cliente_cpf_fk">
-      <ColNames>cID</ColNames>
     </index>
     <index id="29" parent="5" name="Ordem_Tecnico_ID_fk">
       <ColNames>tID</ColNames>
