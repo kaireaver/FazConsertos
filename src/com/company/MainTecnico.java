@@ -16,7 +16,7 @@ public class MainTecnico extends Tela {
     private Tecnico t;
 
     public MainTecnico(Tecnico t) {
-        super("Bem-vindo, " + t.getNome() + "! Selecione a opção desejada:", 500, 80);
+        super("Bem-vindo, " + t.getNome() + "! Selecione a opção desejada:", 500, 90);
         this.t = t;
 
         bAlteraDados = new JButton("Alterar dados");
