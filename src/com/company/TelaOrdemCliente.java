@@ -50,6 +50,7 @@ public class TelaOrdemCliente extends Tela {
         for(int i = 0; i<bsOrdemCliente.length;i++) {
             bOrdemCliente[i] = new JButton(bsOrdemCliente[i]);
             boxCampos[1].add(bOrdemCliente[i]);
+            bOrdemCliente[i].addActionListener(this);
         }
         boxSuper.add(boxCampos[0]);
         boxSuper.add(jlCampos[1]);
@@ -72,9 +73,14 @@ public class TelaOrdemCliente extends Tela {
         { //Confirmar
             Ordem o = new Ordem(this.cliente,tDescricao.getText());
             oList.add(o);
+            JOptionPane.showMessageDialog(this, "Sua solicitação foi confirmada e será processada em breve! ");
+            setButton(TelaMainCliente.bNovaSolicitacao,true);
+            setButton(TelaMainCliente.bConsultarSolicitacao,true);
+            this.dispose();
         }
         else{ //Cancelar
-            this.fechaTela(false);
+            this.dispose();
+            System.out.println("Fechando tela de nova solicitação!");
         }
     }
 }
