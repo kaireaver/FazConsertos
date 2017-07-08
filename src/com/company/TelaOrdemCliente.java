@@ -70,6 +70,7 @@ public class TelaOrdemCliente extends Tela {
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==bOrdemCliente[0]){ //Confirmar
             Ordem o = new Ordem(cliente,tDescricao.getText());
+            oList.add(o);
         }
         else{ //Cancelar
             this.dispose();

@@ -4,9 +4,8 @@
     <bookmark url="file://$PROJECT_DIR$/src/com/company/CriaTecnico.java" line="27" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="48d4db42-c530-4046-bdc2-3405940f09ba" name="Default" comment="GATOS">
+    <list default="true" id="48d4db42-c530-4046-bdc2-3405940f09ba" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/TelaCliente.java" afterPath="$PROJECT_DIR$/src/com/company/TelaCliente.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/TelaOrdemCliente.java" afterPath="$PROJECT_DIR$/src/com/company/TelaOrdemCliente.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -310,8 +309,8 @@
       <file leaf-file-name="TelaOrdemCliente.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/TelaOrdemCliente.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="497">
-              <caret line="78" column="0" lean-forward="true" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+            <state relative-caret-position="407">
+              <caret line="72" column="25" lean-forward="false" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -1036,7 +1035,7 @@
       <workItem from="1499099338770" duration="354000" />
       <workItem from="1499274018748" duration="12207000" />
       <workItem from="1499344669510" duration="601000" />
-      <workItem from="1499539342522" duration="7090000" />
+      <workItem from="1499539342522" duration="7119000" />
     </task>
     <task id="LOCAL-00001" summary="LINDÕES">
       <created>1498933264831</created>
@@ -1367,11 +1366,18 @@
       <option name="project" value="LOCAL" />
       <updated>1499547359320</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="GATOS">
+      <created>1499548402896</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1499548402896</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68620000" />
+    <option name="totallyTimeSpent" value="68649000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1276" y="23" width="1280" height="922" extended-state="0" />
@@ -1970,8 +1976,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/TelaOrdemCliente.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="78" column="0" lean-forward="true" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+        <state relative-caret-position="407">
+          <caret line="72" column="25" lean-forward="false" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
           <folding />
         </state>
       </provider>
