@@ -4,9 +4,10 @@
     <bookmark url="file://$PROJECT_DIR$/src/com/company/CriaTecnico.java" line="27" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="48d4db42-c530-4046-bdc2-3405940f09ba" name="Default" comment="">
+    <list default="true" id="48d4db42-c530-4046-bdc2-3405940f09ba" name="Default" comment="GATOS">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/TelaInicial.java" afterPath="$PROJECT_DIR$/src/com/company/TelaInicial.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Ordem.java" afterPath="$PROJECT_DIR$/src/com/company/Ordem.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/TelaOrdemCliente.java" afterPath="$PROJECT_DIR$/src/com/company/TelaOrdemCliente.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -92,11 +93,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TelaInicial.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TelaInicial.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/TelaInicial.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="477">
-              <caret line="126" column="5" lean-forward="true" selection-start-line="126" selection-start-column="5" selection-end-line="126" selection-end-column="5" />
+            <state relative-caret-position="87">
+              <caret line="100" column="25" lean-forward="true" selection-start-line="100" selection-start-column="25" selection-end-line="100" selection-end-column="25" />
               <folding>
                 <marker date="1499549454000" expanded="true" signature="931:952" ph="SELECT * FRO... Cliente" />
                 <marker date="1499549454000" expanded="true" signature="1555:1576" ph="SELECT * FRO... Tecnico" />
@@ -146,11 +147,11 @@
       <file leaf-file-name="Ordem.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Ordem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1035">
-              <caret line="102" column="8" lean-forward="false" selection-start-line="102" selection-start-column="8" selection-end-line="102" selection-end-column="27" />
+            <state relative-caret-position="430">
+              <caret line="32" column="33" lean-forward="false" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
               <folding>
-                <element signature="e#2133#2134#0" expanded="true" />
-                <element signature="e#2167#2168#0" expanded="true" />
+                <element signature="e#2185#2186#0" expanded="true" />
+                <element signature="e#2219#2220#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -159,7 +160,7 @@
       <file leaf-file-name="TelaCliente.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/TelaCliente.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1154">
+            <state relative-caret-position="2316">
               <caret line="186" column="0" lean-forward="false" selection-start-line="186" selection-start-column="0" selection-end-line="186" selection-end-column="0" />
               <folding />
             </state>
@@ -302,18 +303,18 @@
       <file leaf-file-name="TelaMainCliente.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/TelaMainCliente.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
+            <state relative-caret-position="576">
               <caret line="47" column="67" lean-forward="false" selection-start-line="47" selection-start-column="67" selection-end-line="47" selection-end-column="67" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TelaOrdemCliente.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TelaOrdemCliente.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/TelaOrdemCliente.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1140">
-              <caret line="79" column="1" lean-forward="false" selection-start-line="79" selection-start-column="1" selection-end-line="79" selection-end-column="1" />
+            <state relative-caret-position="142">
+              <caret line="32" column="33" lean-forward="true" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -416,8 +417,9 @@
         <option value="$PROJECT_DIR$/src/com/company/Cliente.java" />
         <option value="$PROJECT_DIR$/src/com/company/Tela.java" />
         <option value="$PROJECT_DIR$/src/com/company/TelaCliente.java" />
-        <option value="$PROJECT_DIR$/src/com/company/TelaOrdemCliente.java" />
         <option value="$PROJECT_DIR$/src/com/company/TelaInicial.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Ordem.java" />
+        <option value="$PROJECT_DIR$/src/com/company/TelaOrdemCliente.java" />
       </list>
     </option>
   </component>
@@ -513,7 +515,6 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/company/Tela.java</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/company/TelaOrdemCliente.java</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
@@ -1046,14 +1047,7 @@
       <workItem from="1499099338770" duration="354000" />
       <workItem from="1499274018748" duration="12207000" />
       <workItem from="1499344669510" duration="601000" />
-      <workItem from="1499539342522" duration="8365000" />
-    </task>
-    <task id="LOCAL-00001" summary="LINDÕES">
-      <created>1498933264831</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1498933264831</updated>
+      <workItem from="1499539342522" duration="8988000" />
     </task>
     <task id="LOCAL-00002" summary="GATOS">
       <created>1498933415097</created>
@@ -1391,11 +1385,18 @@
       <option name="project" value="LOCAL" />
       <updated>1499548430827</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="GATOS">
+      <created>1499549683068</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1499549683069</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69895000" />
+    <option name="totallyTimeSpent" value="70518000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1276" y="23" width="1280" height="922" extended-state="0" />
@@ -1411,7 +1412,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3235639" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25087926" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25087926" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Floobits" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32937685" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1950,45 +1951,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Ordem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1035">
-          <caret line="102" column="8" lean-forward="false" selection-start-line="102" selection-start-column="8" selection-end-line="102" selection-end-column="27" />
-          <folding>
-            <element signature="e#2133#2134#0" expanded="true" />
-            <element signature="e#2167#2168#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/TelaCliente.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1154">
-          <caret line="186" column="0" lean-forward="false" selection-start-line="186" selection-start-column="0" selection-end-line="186" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/TelaMainCliente.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="47" column="67" lean-forward="false" selection-start-line="47" selection-start-column="67" selection-end-line="47" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/TelaOrdemCliente.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="79" column="1" lean-forward="false" selection-start-line="79" selection-start-column="1" selection-end-line="79" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/TelaInicial.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="126" column="5" lean-forward="true" selection-start-line="126" selection-start-column="5" selection-end-line="126" selection-end-column="5" />
+        <state relative-caret-position="87">
+          <caret line="100" column="25" lean-forward="true" selection-start-line="100" selection-start-column="25" selection-end-line="100" selection-end-column="25" />
           <folding>
             <marker date="1499549454000" expanded="true" signature="931:952" ph="SELECT * FRO... Cliente" />
             <marker date="1499549454000" expanded="true" signature="1555:1576" ph="SELECT * FRO... Tecnico" />
@@ -2008,6 +1974,41 @@
             <marker date="1499549454000" expanded="true" signature="4713:4794" ph="Insert INTO Tecnico... " />
             <marker date="1499549454000" expanded="true" signature="4713:4940" ph="Insert INTO Tecnico... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Ordem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="32" column="33" lean-forward="false" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+          <folding>
+            <element signature="e#2185#2186#0" expanded="true" />
+            <element signature="e#2219#2220#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TelaCliente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2316">
+          <caret line="186" column="0" lean-forward="false" selection-start-line="186" selection-start-column="0" selection-end-line="186" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TelaMainCliente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="47" column="67" lean-forward="false" selection-start-line="47" selection-start-column="67" selection-end-line="47" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TelaOrdemCliente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="32" column="33" lean-forward="true" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>

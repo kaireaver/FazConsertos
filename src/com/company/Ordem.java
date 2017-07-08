@@ -25,12 +25,12 @@ public class Ordem {
     private int id; //id do Orçamento
     private int tID;
 
-    public Ordem(Cliente cliente, String descricao) {
+    public Ordem(Cliente cliente, String descricao, String habilidade) {
         this.cliente = cliente;
         this.validade = true;
         this.status = "Cadastrada";
         this.descricao = descricao;
-
+        habilidades = habilidade;
         this.id = i;
         this.id++;
     }

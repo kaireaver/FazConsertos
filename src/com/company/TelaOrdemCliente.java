@@ -71,7 +71,7 @@ public class TelaOrdemCliente extends Tela {
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()== bOrdemCliente[0])
         { //Confirmar
-            Ordem o = new Ordem(this.cliente,tDescricao.getText());
+            Ordem o = new Ordem(this.cliente,tDescricao.getText(),(String) cbHabilidades.getSelectedItem());
             oList.add(o);
             JOptionPane.showMessageDialog(this, "Sua solicitação foi confirmada e será processada em breve! ");
             setButton(TelaMainCliente.bNovaSolicitacao,true);
