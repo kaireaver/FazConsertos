@@ -128,7 +128,10 @@ public class TelaClienteConsulta extends Tela {
         this.ordem = (Ordem) cbOrdem.getSelectedItem();
         if(this.ordem == null) return;
         this.tCampoDescr.setText(this.ordem.getDescricao());
-        this.tCampos[1].setText(String.valueOf(this.ordem.gettID()));
+        if(this.ordem.gettID() == 0 )
+            this.tCampos[1].setText("Nenhum técnico até o momento");
+        else
+            this.tCampos[1].setText(String.valueOf(this.ordem.gettID()));
         this.tCampos[2].setText(String.valueOf(this.ordem.getStatus()));
         if(this.ordem.getStatus().equals("Aguardando Aprovação do Cliente"))
         {

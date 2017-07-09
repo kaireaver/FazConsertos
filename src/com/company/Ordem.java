@@ -127,9 +127,9 @@ public class Ordem {
         return materiais;
     }
 
-    public String gettID() {
-        if(this.tID == 0) return "Nenhum até o momento";
-        return String.valueOf(tID);
+    public int gettID() {
+
+        return tID;
     }
 
     public String getHabilidades() {
