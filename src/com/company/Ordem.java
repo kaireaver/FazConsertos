@@ -84,8 +84,9 @@ public class Ordem {
         return cliente;
     }
 
-    public Data getData_pedido() {
-        return data_pedido;
+    public String getData_pedido() {
+        System.out.println(data_pedido.toString());
+        return data_pedido.toString();
     }
 
     public static int getI() {
