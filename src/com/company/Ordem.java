@@ -1,20 +1,18 @@
 package com.company;
 
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
-import java.util.GregorianCalendar;
 
 /**
  * Created by edvil on 01/07/2017.
  */
+
 public class Ordem {
     private Cliente cliente;
-
+    private static final int VALIDADE = 14;
     private int hora;
     private int valor_hora;
-    private String data_pedido;
+    private Data data_pedido;
 
     private String materiais;
     private int material_valor;
@@ -39,7 +37,7 @@ public class Ordem {
         this.tID = 0;
     }
 
-    public Ordem(Cliente cliente, String descricao, String habilidade, String data_pedido) {
+    public Ordem(Cliente cliente, String descricao, String habilidade, Data data_pedido) {
         this(cliente, descricao, habilidade);
         this.data_pedido = data_pedido;
         verificaValidade();
@@ -47,7 +45,9 @@ public class Ordem {
 
     private void verificaValidade()
     {
-
+        Date hoje = new Date();
+        Date pedido = new Date(data_pedido.Ano, data_pedido.Mes, data_pedido.Dia);
+        this.validade = ( hoje.compareTo(pedido) < VALIDADE);
     }
 
     public void setHora(int hora){
@@ -79,7 +79,7 @@ public class Ordem {
         return cliente;
     }
 
-    public String getData_pedido() {
+    public Data getData_pedido() {
         return data_pedido;
     }
 
@@ -120,11 +120,11 @@ public class Ordem {
         return this.getData_pedido() + " - " + this.getHabilidades();
     }
 
-    public String DataAtual()
+    public Data DataAtual()
     {
         Date hoje = new Date();
         SimpleDateFormat df;
         df = new SimpleDateFormat("dd/MM/yyyy");
-        return df.format(hoje);
+        return new Data(df.format(hoje));
     }
 }
