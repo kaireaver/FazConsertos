@@ -45,7 +45,7 @@ public class TelaMainCliente extends Tela {
 
         else if(event.getSource() == bConsultarSolicitacao)
         {
-            JFrame fConsultaSolicitacao = new TelaClienteConsulta() ;
+            JFrame fConsultaSolicitacao = new TelaClienteConsulta(this.cliente) ;
             setButton(bNovaSolicitacao, false);
             setButton(bConsultarSolicitacao, false);
         }
