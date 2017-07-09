@@ -7,14 +7,15 @@ import java.util.Date;
 
 public class Ordem {
     private Cliente cliente;
-    private static final int VALIDADE = 90;
+    private String habilidades;
+
     private int hora;
     private float valor_hora;
     private String data_pedido;
-
+    private int LIM_VALIDADE = 90;
     private String materiais;
     private float material_valor;
-    private String habilidades;
+
 
     private String descricao;
     private boolean validade; //Para determinar se já se passaram os 90 dias
@@ -35,11 +36,21 @@ public class Ordem {
         this.tID = 0;
     }
 
-    public Ordem(Cliente cliente, String descricao, String habilidade, String data_pedido) {
+    public Ordem(Cliente cliente, String descricao, String habilidade, String data_pedido, String tID, String Status) {
         this(cliente, descricao, habilidade);
         this.data_pedido = data_pedido;
         this.descricao = descricao;
+        this.tID = Integer.parseInt(tID);
+        this.status = Status;
         verificaValidade();
+    }
+
+    public void preencheOrcamento(String H, String vH, String m, String vM)
+    {
+        this.valor_hora = Float.parseFloat(vH);
+        this.hora = Integer.parseInt(H);
+        this.materiais = m;
+        this.material_valor = Float.parseFloat(vM);
     }
 
     private void verificaValidade()
@@ -47,7 +58,7 @@ public class Ordem {
         Calendar hoje = Calendar.getInstance();
         Date pedido = Date_pedido();
         long dt = (hoje.getTime().getTime() - pedido.getTime()) + 3600000; // 1 hora para compensar horário de verão
-        this.validade = ( dt < VALIDADE + 1 );
+        this.validade = ( dt < LIM_VALIDADE + 1 );
     }
 
     public void setHora(int hora){
@@ -95,9 +106,6 @@ public class Ordem {
         return d;
     }
 
-    public static int getI() {
-        return i;
-    }
 
     public int getId() {
         return id;
@@ -120,7 +128,7 @@ public class Ordem {
     }
 
     public String gettID() {
-        if(this.tID == 0) return "Nenhum até o momento!";
+        if(this.tID == 0) return "Nenhum até o momento";
         return String.valueOf(tID);
     }
 
@@ -141,4 +149,19 @@ public class Ordem {
         df = new SimpleDateFormat("dd/MM/yyyy");
         return (df.format(hoje));
     }
+
+    public float getPreco() {
+        return 22;
+    }
+
+    public void aprova(boolean b) {
+        if(b)
+        {
+            this.status = "Aprovada";
+            return;
+        }
+        this.status = "Cancelada";
+        return;
+    }
+
 }

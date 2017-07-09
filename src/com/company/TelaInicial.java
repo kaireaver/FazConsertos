@@ -52,8 +52,9 @@ public class TelaInicial extends Tela {
                             break;
                         }
                     }
-                    oList.add(new Ordem(client,rs.getString("descricao"),rs.getString("Habilidade"), rs.getString("DataPedido")));
-                    //Preencher com o resto dos itens de ordem que não vêm do construtor. oList.get(i);
+                    Ordem o = new Ordem(client,rs.getString("descricao"),rs.getString("Habilidade"), rs.getString("DataPedido"), rs.getString("tID"), rs.getString("Status"));
+                    o.preencheOrcamento(rs.getString("Qnt_Horas"), rs.getString("ValorHora"), rs.getString("Materiais"), rs.getString("Materiais_Valor"));
+                    oList.add(o);//Preencher com o resto dos itens de ordem que não vêm do construtor. oList.get(i);
                     i++;
                 }
                 System.out.println("\n-------------\n\nCarregamento efetuado com sucesso\n\n---------------------\n");

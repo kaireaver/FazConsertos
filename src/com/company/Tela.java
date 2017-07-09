@@ -98,6 +98,15 @@ public class Tela extends JFrame implements WindowListener, ActionListener {
         b.add(textField);
         return b;
     }
+    public Box novoBoxHorizontal(JLabel label, Component textField, JLabel label2, Component textField2)
+    {
+        Box b = Box.createHorizontalBox();
+        b.add(label);
+        b.add(textField);
+        b.add(label2);
+        b.add(textField2);
+        return b;
+    }
 
     public void actionPerformed(ActionEvent e){}
     public void windowClosing(WindowEvent e) {

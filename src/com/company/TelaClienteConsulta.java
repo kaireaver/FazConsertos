@@ -116,11 +116,11 @@ public class TelaClienteConsulta extends Tela {
         {
             if(bAprovar.getText() == "ORÇAMENTO")
             {
-                JOptionPane.showMessageDialog(null, "MOMENTO DE VISUALIZAR O ORÇAMENTO");
+                Tela Orcamento = new TelaOrdemClienteOrcamento(this.ordem);
+               // JOptionPane.showMessageDialog(null, "MOMENTO DE VISUALIZAR O ORÇAMENTO");
             }else if (bAprovar.getText() == "PAGAR")
             {
                 JOptionPane.showMessageDialog(null, "MOMENTO DE VISUALIZAR A FATURA");
-
             }
         }
     }
@@ -141,6 +141,10 @@ public class TelaClienteConsulta extends Tela {
         {
             bAprovar.setText("PAGAR");
             setButton(bAprovar, true);
+        }
+        else
+        {
+            setButton(bAprovar, false);
         }
     }
 }
