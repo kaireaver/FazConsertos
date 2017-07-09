@@ -111,11 +111,10 @@ public class TelaOrdemClienteOrcamento extends Tela {
             if(ord.getId()== this.o.getId())
             {
                 oList.remove(ord);
-                oList.add(o);
+                oList.add(this.o);
                 System.out.println("ACHEI!");
                 break;
             }
         }
-
     }
 }
