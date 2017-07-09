@@ -120,7 +120,7 @@ public class TelaInicial extends Tela {
                 pps.execute();
             }
             for(Tecnico t : tList){
-                query = "Insert IGNORE INTO Tecnico (nome,email,habilidade,numMatricula,Telefone) VALUES ('" + t.getNome() + "'," + "'" + t.getEmail() + "'" + ",'" + t.getHabilidade() + "'," + t.getNumMatricula() + ",'" + t.getTelefone() + "')" + "ON DUPLICATE KEY UPDATE nome = '" + t.getNome() + "'," + "email = " + "'" + t.getEmail() + "'," + "habilidade = " + t.getNumMatricula() + "," + "Telefone = " + "'" + t.getTelefone() + "'";
+                query = "Insert INTO Tecnico (nome,email,habilidade,numMatricula,Telefone) VALUES ('" + t.getNome() + "'," + "'" + t.getEmail() + "'" + ",'" + t.getHabilidade() + "'," + t.getNumMatricula() + ",'" + t.getTelefone() + "')" + "ON DUPLICATE KEY UPDATE nome = '" + t.getNome() + "'," + "email = " + "'" + t.getEmail() + "'," + "habilidade = " + t.getNumMatricula() + "," + "Telefone = " + "'" + t.getTelefone() + "'";
                 pps = conn.prepareStatement(query);
                 pps.execute();
             }
