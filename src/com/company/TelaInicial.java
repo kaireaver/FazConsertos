@@ -31,7 +31,6 @@ public class TelaInicial extends Tela {
                 ResultSet rs = stmt.executeQuery(query);
                 int i=0;//Controlar para preencherCliente.
                 while(rs.next()) {
-                    System.out.println(rs.getString("nome"));
                     cList.add(new Cliente(rs.getString("nome"), rs.getString("cpf"), rs.getString("telefone")));
                     cList.get(i).preencheCliente(rs.getString("RG"),rs.getString("Email"),rs.getString("Endereco"),rs.getString("DataNascimento"));
                     i++;
@@ -46,7 +45,7 @@ public class TelaInicial extends Tela {
                 Cliente client = null;
                 while(rs.next()){
                     for(Cliente c : cList){
-                        if(c.getCPF()== rs.getString("cId")){
+                        if(rs.getString("cId").equals(c.getCPF())){
                             client = c;
                             break;
                         }
@@ -107,12 +106,13 @@ public class TelaInicial extends Tela {
                 pps.execute();
             }
             for(Ordem o : oList){
+                System.out.println(o.getCliente());
                 query = "Insert IGNORE INTO Ordem (Qnt_Horas,id,ValorHora,DataPedido,Preco,Materiais,tID,Descricao,Habilidade,cID,Status) VALUES (" + o.getHora() + "," + o.getId() + "," + o.getValor_hora() + "," + o.getData_pedido() + "," + o.getMaterial_valor() + "," + "'" + o.getMateriais() + "'" + "," + o.gettID() + "," + "'" + o.getDescricao() + "'" + "," + "'" + o.getHabilidades() + "'" + "," + "'" + o.getCliente().getCPF() + "'" + "," + "'" + o.getStatus() + "'" + ")";
                 pps = conn.prepareStatement(query);
                 pps.execute();
             }
             for(Tecnico t : tList){
-                query = "Insert IGNORE INTO Tecnico (nome,email,habilidade,numMatricula,Telefone) VALUES (" + "'" + t.getNome() + "'" + ",''" + t.getEmail() + "'" + ",'" + t.getHabilidade() + "'" + "," + t.getNumMatricula() + "," + t.getTelefone() + ")";
+                query = "Insert IGNORE INTO Tecnico (nome,email,habilidade,numMatricula,Telefone) VALUES ('" + t.getNome() + "'," + "'" + t.getEmail() + "'" + ",'" + t.getHabilidade() + "'," + t.getNumMatricula() + ",'" + t.getTelefone() + "')";
                 pps = conn.prepareStatement(query);
                 pps.execute();
             }

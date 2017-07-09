@@ -13,8 +13,8 @@ public class Ordem {
     private int valor_hora;
     private Date data_pedido;
 
-    private String[] materiais;
-    private int[] material_valor;
+    private String materiais;
+    private int material_valor;
     private String habilidades;
 
     private String descricao;
@@ -44,7 +44,7 @@ public class Ordem {
     public void setDataPedido(Date data_pedido){
         this.data_pedido = data_pedido;
     }
-    public void setMateriais(String[] materiais, int[] material_valor){
+    public void setMateriais(String materiais, int material_valor){
         this.materiais = materiais;
         this.material_valor = material_valor;
     }
@@ -79,7 +79,7 @@ public class Ordem {
         return id;
     }
 
-    public int[] getMaterial_valor() {
+    public int getMaterial_valor() {
         return material_valor;
     }
 
@@ -91,7 +91,7 @@ public class Ordem {
         return status;
     }
 
-    public String[] getMateriais() {
+    public String getMateriais() {
         return materiais;
     }
 
