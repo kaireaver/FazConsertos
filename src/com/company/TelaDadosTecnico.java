@@ -37,6 +37,7 @@ public class TelaDadosTecnico extends Tela {
         for(int i = 0; i < sLabels.length; i++) {
             labels[i] = new JLabel(sLabels[i]);
             txtFields[i] = new JTextField();
+            txtFields[2] = novoJTextFieldMascarado("(##) #####-####");
             boxB[i] = novoBoxHorizontal(labels[i], txtFields[i]);
             bForm.add(boxB[i]);
 
