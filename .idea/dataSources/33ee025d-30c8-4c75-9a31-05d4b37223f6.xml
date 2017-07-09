@@ -72,7 +72,7 @@
     </column>
     <column id="20" parent="5" name="DataPedido">
       <Position>4</Position>
-      <DataType>varchar(11)|0</DataType>
+      <DataType>varchar(15)|0</DataType>
     </column>
     <column id="21" parent="5" name="Preco">
       <Position>5</Position>

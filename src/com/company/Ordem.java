@@ -12,11 +12,11 @@ public class Ordem {
     private Cliente cliente;
     private static final int VALIDADE = 14;
     private int hora;
-    private int valor_hora;
-    private Data data_pedido;
+    private float valor_hora;
+    private String data_pedido;
 
     private String materiais;
-    private int material_valor;
+    private float material_valor;
     private String habilidades;
 
     private String descricao;
@@ -40,18 +40,15 @@ public class Ordem {
 
     public Ordem(Cliente cliente, String descricao, String habilidade, String data_pedido) {
         this(cliente, descricao, habilidade);
-        this.data_pedido = new Data(data_pedido);
+        this.data_pedido = data_pedido;
         verificaValidade();
     }
 
     private void verificaValidade()
     {
         Calendar hoje = Calendar.getInstance();
-        Calendar pedido = Calendar.getInstance();
-        pedido.set(Calendar.YEAR, data_pedido.Ano);
-        pedido.set(Calendar.MONTH, data_pedido.Mes-1);
-        pedido.set(Calendar.DAY_OF_MONTH, data_pedido.Dia);
-        long dt = (hoje.getTime().getTime() - pedido.getTime().getTime()) + 3600000; // 1 hora para compensar horário de verão
+        Date pedido = Date_pedido();
+        long dt = (hoje.getTime().getTime() - pedido.getTime()) + 3600000; // 1 hora para compensar horário de verão
         this.validade = ( dt < VALIDADE + 1 );
     }
 
@@ -76,7 +73,7 @@ public class Ordem {
         return hora;
     }
 
-    public int getValor_hora() {
+    public float getValor_hora() {
         return valor_hora;
     }
 
@@ -84,9 +81,21 @@ public class Ordem {
         return cliente;
     }
 
-    public String getData_pedido() {
-        System.out.println(data_pedido.toString());
-        return data_pedido.toString();
+    public String getData_pedido()
+    {
+        return this.data_pedido;
+    }
+
+    private Date Date_pedido() {
+
+        Calendar cal = Calendar.getInstance();
+        Data dCal = new Data(this.data_pedido);
+        cal.set(Calendar.YEAR, dCal.Ano);
+        cal.set(Calendar.MONTH, dCal.Mes-1);
+        cal.set(Calendar.DAY_OF_MONTH, dCal.Dia);
+        Date d = cal.getTime();
+
+        return d;
     }
 
     public static int getI() {
@@ -97,7 +106,7 @@ public class Ordem {
         return id;
     }
 
-    public int getMaterial_valor() {
+    public float getMaterial_valor() {
         return material_valor;
     }
 
@@ -124,14 +133,14 @@ public class Ordem {
     @Override
     public String toString() {
         verificaValidade();
-        return this.getData_pedido() + " - " + this.getHabilidades();
+        return this.data_pedido + " - " + this.getHabilidades();
     }
 
-    public Data DataDeHoje()
+    public String DataDeHoje()
     {
         Date hoje = new Date();
         SimpleDateFormat df;
         df = new SimpleDateFormat("dd/MM/yyyy");
-        return new Data(df.format(hoje));
+        return new Data(df.format(hoje)).toString();
     }
 }

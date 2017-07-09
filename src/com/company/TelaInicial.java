@@ -113,7 +113,7 @@ public class TelaInicial extends Tela {
             }
             for(Ordem o : oList){
                 System.out.println(o.getCliente());
-                query = "Insert IGNORE INTO Ordem (Qnt_Horas,id,ValorHora,DataPedido,Preco,Materiais,tID,Descricao,Habilidade,cID,Status) VALUES (" + o.getHora() + "," + o.getId() + "," + o.getValor_hora() + "," + o.getData_pedido() + "," + o.getMaterial_valor() + "," + "'" + o.getMateriais() + "'" + "," + o.gettID() + "," + "'" + o.getDescricao() + "'" + "," + "'" + o.getHabilidades() + "'" + "," + "'" + o.getCliente().getCPF() + "'" + "," + "'" + o.getStatus() + "'" + ")";
+                query = "Insert IGNORE INTO Ordem (Qnt_Horas,id,ValorHora,DataPedido,Preco,Materiais,tID,Descricao,Habilidade,cID,Status) VALUES (" + o.getHora() + "," + o.getId() + "," + o.getValor_hora() + "," + "'" + o.getData_pedido() + "'" + "," + o.getMaterial_valor() + "," + "'" + o.getMateriais() + "'" + "," + o.gettID() + "," + "'" + o.getDescricao() + "'" + "," + "'" + o.getHabilidades() + "'" + "," + "'" + o.getCliente().getCPF() + "'" + "," + "'" + o.getStatus() + "'" + ")";
                 pps = conn.prepareStatement(query);
                 pps.execute();
             }
@@ -123,12 +123,14 @@ public class TelaInicial extends Tela {
                 pps.execute();
             }
             conn.close();
+            System.out.println("\n-------------\n\nArmazenamento efetuado com sucesso\n\n---------------------\n");
+
         }
         catch(Exception e){
             e.printStackTrace();
+            System.out.println("\n-------------\n\nFalha no armazenamento!\n\n---------------------\n");
         }
         finally {
-            System.out.println("\n-------------\n\nArmazenamento efetuado com sucesso\n\n---------------------\n");
             super.windowClosing(evnt);
         }
     }
