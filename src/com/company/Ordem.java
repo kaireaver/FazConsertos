@@ -164,4 +164,6 @@ public class Ordem {
         return;
     }
 
+    public void realizarOrcamento(Tecnico tecnico) {
+    }
 }
