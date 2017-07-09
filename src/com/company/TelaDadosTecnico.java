@@ -17,7 +17,7 @@ public class TelaDadosTecnico extends Tela {
     private static JButton[] buttons;
 
     public TelaDadosTecnico(Tecnico t) {
-        super("Dados cadastrais ", 500, 140);
+        super("Dados cadastrais ", 500, 160);
         this.t = t;
 
         Box boxSuper = Box.createVerticalBox();
