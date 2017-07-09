@@ -41,7 +41,7 @@ public class Cliente {
     @Override
     public String toString()
     {
-        return "Nome: "+this.Nome+"\nCPF: " + this.CPF + "\nEmail: " + this.Email;
+        return "-----------------\nNome: "+this.Nome+"\nCPF: " + this.CPF + "\nEmail: " + this.Email + "\n----------------\n";
     }
 }
 

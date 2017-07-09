@@ -132,7 +132,7 @@ public class TelaCliente extends Tela {
         String dataNascimento = new String(tDataNascimento.getText());
         cliente.preencheCliente(tRG.getText(), tEmail.getText(), tEndereco.getText(), dataNascimento);
         cList.add(this.cliente);
-        System.out.println("Cliente adicionado." +cliente.toString());
+        System.out.println("Cliente adicionado.\n" +cliente.toString());
 
         JFrame TelaDeSolicitacoes = new TelaMainCliente(cliente);
         this.fechaTela(false);

@@ -16,12 +16,14 @@ public class Database {
 
     public static Connection Connection () throws SQLException {
         conn = null;
+        System.out.println("Iniciando conexão...");
         try {
             Class.forName("com.mysql.jdbc.Driver");
             conn = DriverManager.getConnection(URL, USERNAME, PASSWORD);
         } catch (Exception e) {
             System.out.println(e);
         }
+        if(conn != null)System.out.println("Conexão iniciada com sucesso!");
         return conn;
     }
 
@@ -32,5 +34,6 @@ public class Database {
         catch(Exception e){
             e.printStackTrace();
         }
+        System.out.println("Conexão encerrada com sucesso!");
     }
 }

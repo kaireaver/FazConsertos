@@ -31,8 +31,7 @@ public class Ordem {
         this.status = "Cadastrada";
         this.descricao = descricao;
         habilidades = habilidade;
-        this.id = i;
-        this.id++;
+        this.id = i++;
     }
 
     public void setHora(int hora){
@@ -101,5 +100,10 @@ public class Ordem {
 
     public String getHabilidades() {
         return habilidades;
+    }
+
+    @Override
+    public String toString() {
+        return String.valueOf(this.getId()) + " - " + this.getHabilidades();
     }
 }
