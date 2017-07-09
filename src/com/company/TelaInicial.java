@@ -56,6 +56,7 @@ public class TelaInicial extends Tela {
                     o.preencheOrcamento(rs.getString("Qnt_Horas"), rs.getString("ValorHora"), rs.getString("Materiais"), rs.getString("Materiais_Valor"));
                     oList.add(o);//Preencher com o resto dos itens de ordem que não vêm do construtor. oList.get(i);
                     i++;
+                    System.out.println(oList.get(i).getCliente().getCPF());
                 }
                 System.out.println("\n-------------\n\nCarregamento efetuado com sucesso\n\n---------------------\n");
             }
@@ -115,8 +116,9 @@ public class TelaInicial extends Tela {
             }
             for(Ordem o : oList){
                 System.out.println(o.getCliente());
-                query = "Insert INTO Ordem (Qnt_Horas,id,ValorHora,DataPedido,Preco,Materiais,tID,Descricao,Habilidade,cID,Status) VALUES (" + o.getHora() + "," + o.getId() + "," + o.getValor_hora() + "," + "'" + o.getData_pedido() + "'" + "," + o.getMaterial_valor() + "," + "'" + o.getMateriais() + "'" + "," + o.gettID() + "," + "'" + o.getDescricao() + "'" + "," + "'" + o.getHabilidades() + "'" + "," + "'" + o.getCliente().getCPF() + "'" + "," + "'" + o.getStatus() + "'" + ") ON DUPLICATE KEY UPDATE Qnt_Horas = " + o.getHora() + "," + "id = " + "'" + o.getId() + "'," + "ValorHora = " + o.getValor_hora() + "," + "DataPedido = " + "'" + o.getData_pedido() + "'," + "Preco = " + o.getPreco() +  "," +
-                        "Materiais = " + "'" + o.getMateriais() + "'," + "tID = " + o.gettID() + "," + "Descricao = '" + o.getDescricao() + "'," + "Habilidade = '" + o.getHabilidades() + "'," + "cID = '" + o.getCliente().getCPF() + "'," + "Status = '" + o.getStatus() + "'";
+                query = "Insert INTO Ordem (Qnt_Horas,id,ValorHora,DataPedido,Materiais,Materiais_Valor,tID,Descricao,Habilidade,cID,Status) VALUES (" + o.getHora() + "," + o.getId() + "," + o.getValor_hora() + "," + "'" + o.getData_pedido() + "'" + ",'" + o.getMateriais() + "'," + o.getMaterial_valor() + "," + o.gettID() + "," + "'" + o.getDescricao() + "'" + "," + "'" + o.getHabilidades() + "'" + "," + "'" + o.getCliente().getCPF() + "'" + "," + "'" + o.getStatus() + "'" + ") ON DUPLICATE KEY UPDATE Qnt_Horas = " + o.getHora() + "," + "id = " + "'" + o.getId() + "'," + "ValorHora = " + o.getValor_hora() + "," + "DataPedido = " + "'" + o.getData_pedido() + "'," +
+                        "Materiais = " + "'" + o.getMateriais() + "'," + "Materiais_Valor = '" + o.getMaterial_valor() + "'" + "tID = " + o.gettID() + "," + "Descricao = '" + o.getDescricao() + "'," + "Habilidade = '" + o.getHabilidades() + "'," + "cID = '" + o.getCliente().getCPF() + "'," + "Status = '" + o.getStatus() + "'";
+                System.out.println(query);
                 pps = conn.prepareStatement(query);
                 pps.execute();
             }
