@@ -52,7 +52,7 @@ public class TelaInicial extends Tela {
                             break;
                         }
                     }
-                    oList.add(new Ordem(client,rs.getString("descricao"),rs.getString("Habilidade")));
+                    oList.add(new Ordem(client,rs.getString("descricao"),rs.getString("Habilidade"), rs.getString("DataPedido")));
                     //Preencher com o resto dos itens de ordem que não vêm do construtor. oList.get(i);
                     i++;
                 }

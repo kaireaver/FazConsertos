@@ -1,7 +1,10 @@
 package com.company;
 
 import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 /**
  * Created by edvil on 01/07/2017.
@@ -11,7 +14,7 @@ public class Ordem {
 
     private int hora;
     private int valor_hora;
-    private Date data_pedido;
+    private String data_pedido;
 
     private String materiais;
     private int material_valor;
@@ -30,9 +33,21 @@ public class Ordem {
         this.validade = true;
         this.status = "Cadastrada";
         this.descricao = descricao;
-        habilidades = habilidade;
+        this.habilidades = habilidade;
+        this.data_pedido = DataAtual();
         this.id = i++;
         this.tID = 0;
+    }
+
+    public Ordem(Cliente cliente, String descricao, String habilidade, String data_pedido) {
+        this(cliente, descricao, habilidade);
+        this.data_pedido = data_pedido;
+        verificaValidade();
+    }
+
+    private void verificaValidade()
+    {
+
     }
 
     public void setHora(int hora){
@@ -40,9 +55,6 @@ public class Ordem {
     }
     public void setValorHora(int valor_hora){
         this.valor_hora = valor_hora;
-    }
-    public void setDataPedido(Date data_pedido){
-        this.data_pedido = data_pedido;
     }
     public void setMateriais(String materiais, int material_valor){
         this.materiais = materiais;
@@ -67,7 +79,7 @@ public class Ordem {
         return cliente;
     }
 
-    public Date getData_pedido() {
+    public String getData_pedido() {
         return data_pedido;
     }
 
@@ -105,6 +117,14 @@ public class Ordem {
 
     @Override
     public String toString() {
-        return String.valueOf(this.getId()) + " - " + this.getHabilidades();
+        return this.getData_pedido() + " - " + this.getHabilidades();
+    }
+
+    public String DataAtual()
+    {
+        Date hoje = new Date();
+        SimpleDateFormat df;
+        df = new SimpleDateFormat("dd/MM/yyyy");
+        return df.format(hoje);
     }
 }
