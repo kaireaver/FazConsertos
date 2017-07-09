@@ -151,7 +151,7 @@ public class Ordem {
     }
 
     public float getPreco() {
-        return 22;
+        return (float) ((this.material_valor + this.valor_hora*this.hora)*1.05);
     }
 
     public void aprova(boolean b) {
