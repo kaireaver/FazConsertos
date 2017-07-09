@@ -48,7 +48,7 @@ public class MainTecnico extends Tela {
         }
 
         else if(event.getSource() == bConsultaServico) {
-            JFrame fConsultaServicos = new TelaOrdemTecnicoServiços();
+            JFrame fConsultaServicos = new TelaOrdemTecnicoServiços(this.t);
         }
 
         else if(event.getSource() == bExcluirTecnico) {

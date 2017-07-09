@@ -4,11 +4,13 @@ import javafx.embed.swing.JFXPanel;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 public class TelaOrdemTecnicoServiços extends Tela {
-    private JComboBox cbOrdem;
+    private JComboBox<Ordem> cbOrdem;
     private JLabel jlOrdem;
 
+    private Tecnico tecnico;
     private  JTextField[] tCampos;
     private JLabel[] jlCampos;
     private String[] sCampos = {"ID", "Habilidade", "Descrição"};
@@ -16,11 +18,12 @@ public class TelaOrdemTecnicoServiços extends Tela {
     private Container boxSuper;
     private Container boxCampos[];
 
-    public TelaOrdemTecnicoServiços(){
+    public TelaOrdemTecnicoServiços(Tecnico tecnico){
         super("Ordens Disponiveis!", 500, 150);
+        this.tecnico = tecnico;
         Container container = getContentPane();
 
-        cbOrdem = new JComboBox(getOrdens());
+        cbOrdem = new JComboBox<Ordem>(getOrdens());
         jlOrdem = new JLabel("Orçamento");
 
         tCampos = new JTextField[sCampos.length];
@@ -48,8 +51,27 @@ public class TelaOrdemTecnicoServiços extends Tela {
         setVisible(true);
     }
 
-    public String[] getOrdens(){
-        String[] s = {"a","b"};
-        return s;
-    };
+    private Ordem[] getOrdens(){
+        ArrayList<Ordem> aS = new ArrayList<>();
+
+        for (Ordem o:oList)
+        {
+            System.out.println(o.getHabilidades() + " == " + this.tecnico.getHabilidade());
+            if(o.getStatus() == "Cadastrada" && o.getHabilidades() == this.tecnico.getHabilidade())
+            {
+                aS.add(o);
+            }
+        }
+
+        int tam = aS.size()+1;
+        Ordem[] S = new Ordem[tam];
+        int i = 0;
+        for (Ordem s: aS)
+        {
+            S[i++] = s;
+        }
+
+        return S;
+    }
+
 }
