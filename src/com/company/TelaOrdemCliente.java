@@ -39,11 +39,8 @@ public class TelaOrdemCliente extends Tela {
 
         container.add(boxSuper);
 
-        boxCampos[0] = Box.createHorizontalBox();
         jlCampos[0] = new JLabel(jlsCampos[0]);
-        boxCampos[0].add(jlCampos[0]);
-        boxCampos[0].add(cbHabilidades);
-
+        boxCampos[0] = novoBoxHorizontal(jlCampos[0], cbHabilidades);
         boxCampos[1] = Box.createHorizontalBox();
         jlCampos[1] = new JLabel(jlsCampos[1]);
 
@@ -89,6 +86,8 @@ public class TelaOrdemCliente extends Tela {
         }
         else{ //Cancelar
             this.dispose();
+            setButton(TelaMainCliente.bNovaSolicitacao,true);
+            setButton(TelaMainCliente.bConsultarSolicitacao,true);
             System.out.println("Fechando tela de nova solicitação!");
         }
     }

@@ -4,9 +4,6 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-/**
- * Created by edvil on 01/07/2017.
- */
 
 public class Ordem {
     private Cliente cliente;
@@ -41,6 +38,7 @@ public class Ordem {
     public Ordem(Cliente cliente, String descricao, String habilidade, String data_pedido) {
         this(cliente, descricao, habilidade);
         this.data_pedido = data_pedido;
+        this.descricao = descricao;
         verificaValidade();
     }
 
@@ -89,10 +87,9 @@ public class Ordem {
     private Date Date_pedido() {
 
         Calendar cal = Calendar.getInstance();
-        Data dCal = new Data(this.data_pedido);
-        cal.set(Calendar.YEAR, dCal.Ano);
-        cal.set(Calendar.MONTH, dCal.Mes-1);
-        cal.set(Calendar.DAY_OF_MONTH, dCal.Dia);
+        cal.set(Calendar.YEAR, Integer.parseInt(this.data_pedido.substring(6,10)));
+        cal.set(Calendar.MONTH, Integer.parseInt(this.data_pedido.substring(3,5)) - 1);
+        cal.set(Calendar.DAY_OF_MONTH, Integer.parseInt(this.data_pedido.substring(0,2)));
         Date d = cal.getTime();
 
         return d;
@@ -141,6 +138,6 @@ public class Ordem {
         Date hoje = new Date();
         SimpleDateFormat df;
         df = new SimpleDateFormat("dd/MM/yyyy");
-        return new Data(df.format(hoje)).toString();
+        return (df.format(hoje));
     }
 }

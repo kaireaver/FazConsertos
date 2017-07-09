@@ -20,8 +20,9 @@ public class TelaClienteConsulta extends Tela {
     private JLabel jlOrdem;
 
     private  JTextField[] tCampos;
+    private  JTextArea tCampoDescr;
     private JLabel[] jlCampos;
-    private String[] sCampos = {"ID: ", "Tecnico: ", "Status: "};
+    private String[] sCampos = {"Descrição:    ", "Tecnico:       ", "Status:          "};
 
     private Container boxSuper;
     private Container boxCampos[];
@@ -29,7 +30,7 @@ public class TelaClienteConsulta extends Tela {
 
     public TelaClienteConsulta(Cliente cliente)
     {
-        super("Suas Ordens ativas!", 500, 220);
+        super("Suas Ordens ativas!", 500, 190);
         this.cliente = cliente;
         Container container = getContentPane();
 
@@ -46,7 +47,7 @@ public class TelaClienteConsulta extends Tela {
         boxCampos[3] = novoBoxHorizontal(jlOrdem, cbOrdem);
         boxSuper.add(boxCampos[3]);
 
-        for (int i = 0; i<sCampos.length; i++){
+        for (int i = 1; i<sCampos.length; i++){
             tCampos[i] = new JTextField(20);
             jlCampos[i] = new JLabel(sCampos[i]);
             this.tCampos[i].setEditable(false);
@@ -54,6 +55,13 @@ public class TelaClienteConsulta extends Tela {
             boxCampos[i] = novoBoxHorizontal(jlCampos[i], tCampos[i]);
             boxSuper.add(boxCampos[i]);
         }
+
+        tCampoDescr = new JTextArea(5,7);
+            jlCampos[0] = new JLabel(sCampos[0]);
+            this.tCampoDescr.setEditable(false);
+            boxCampos[0] = novoBoxHorizontal(jlCampos[0], tCampoDescr);
+            boxSuper.add(boxCampos[0]);
+
         boBotoes = Box.createHorizontalBox();
             bAtualizar = new JButton("ATUALIZAR");
             bAtualizar.addActionListener(this);
@@ -69,7 +77,7 @@ public class TelaClienteConsulta extends Tela {
         setVisible(true);
     }
 
-    public Ordem[] getOrdens(){
+    private Ordem[] getOrdens(){
         ArrayList<Ordem> aS = new ArrayList<>();
 
         for (Ordem o:oList)
@@ -113,7 +121,7 @@ public class TelaClienteConsulta extends Tela {
     {
         this.ordem = (Ordem) cbOrdem.getSelectedItem();
         if(this.ordem == null) return;
-        this.tCampos[0].setText(String.valueOf(this.ordem.getId()));
+        this.tCampoDescr.setText(this.ordem.getDescricao());
         this.tCampos[1].setText(String.valueOf(this.ordem.gettID()));
         this.tCampos[2].setText(String.valueOf(this.ordem.getStatus()));
         if(this.ordem.getStatus().equals("Cadastrada"))
