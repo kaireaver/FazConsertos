@@ -16,7 +16,7 @@ public class Database {
 
     public static Connection Connection () throws SQLException {
         conn = null;
-        System.out.println("Iniciando conexão...");
+        System.out.println("\n----------------\n\nIniciando conexão...");
         try {
             Class.forName("com.mysql.jdbc.Driver");
             conn = DriverManager.getConnection(URL, USERNAME, PASSWORD);
@@ -34,6 +34,6 @@ public class Database {
         catch(Exception e){
             e.printStackTrace();
         }
-        System.out.println("Conexão encerrada com sucesso!");
+        System.out.println("Conexão encerrada com sucesso!\n\n-----------------\n");
     }
 }

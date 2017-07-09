@@ -32,6 +32,7 @@ public class Ordem {
         this.descricao = descricao;
         habilidades = habilidade;
         this.id = i++;
+        this.tID = 0;
     }
 
     public void setHora(int hora){

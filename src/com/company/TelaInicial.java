@@ -30,6 +30,7 @@ public class TelaInicial extends Tela {
                 Statement stmt = conn.createStatement();
                 ResultSet rs = stmt.executeQuery(query);
                 int i=0;//Controlar para preencherCliente.
+                System.out.println("\n----------------------\n\nCarregando arquivos do banco de dados\n\n------------------");
                 while(rs.next()) {
                     cList.add(new Cliente(rs.getString("nome"), rs.getString("cpf"), rs.getString("telefone")));
                     cList.get(i).preencheCliente(rs.getString("RG"),rs.getString("Email"),rs.getString("Endereco"),rs.getString("DataNascimento"));
@@ -55,6 +56,7 @@ public class TelaInicial extends Tela {
                     //Preencher com o resto dos itens de ordem que não vêm do construtor. oList.get(i);
                     i++;
                 }
+                System.out.println("\n-------------\n\nCarregamento efetuado com sucesso\n\n---------------------\n");
             }
         }
         catch(Exception e){
@@ -103,6 +105,7 @@ public class TelaInicial extends Tela {
             Connection conn = data.Connection();
             String query;
             PreparedStatement pps;
+            System.out.println("\n-------------\n\nArmazenando arquivos no banco de dados!\n\n---------------------\n");
             for(Cliente c : cList){
                 query = "Insert IGNORE INTO Cliente (nome,telefone,cpf,rg,endereco,email,DataNascimento) VALUES (" + "'" + c.Nome + "'" + "," + "'" + c.Telefone + "'" + "," + "'" + c.getCPF()+ "'" + "," + "'" + c.RG + "'" + "," + "'" + c.Endereco + "'" + "," + "'" + c.Email + "'" + "," + "'" + c.DataNascimento + "'" + ")";
                 pps = conn.prepareStatement(query);
@@ -125,6 +128,7 @@ public class TelaInicial extends Tela {
             e.printStackTrace();
         }
         finally {
+            System.out.println("\n-------------\n\nArmazenamento efetuado com sucesso\n\n---------------------\n");
             super.windowClosing(evnt);
         }
     }

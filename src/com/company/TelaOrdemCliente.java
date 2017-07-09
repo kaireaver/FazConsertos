@@ -71,13 +71,21 @@ public class TelaOrdemCliente extends Tela {
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()== bOrdemCliente[0])
         { //Confirmar
-            System.out.println(String.valueOf(cbHabilidades.getSelectedItem()));
-            Ordem o = new Ordem(this.cliente,tDescricao.getText(),(String) cbHabilidades.getSelectedItem());
-            oList.add(o);
-            JOptionPane.showMessageDialog(this, "Sua solicitação foi confirmada e será processada em breve! ");
-            setButton(TelaMainCliente.bNovaSolicitacao,true);
-            setButton(TelaMainCliente.bConsultarSolicitacao,true);
-            this.dispose();
+            if(!String.valueOf(cbHabilidades.getSelectedItem()).equals("Técnico"))
+            {
+                System.out.println(String.valueOf(cbHabilidades.getSelectedItem()));
+                Ordem o = new Ordem(this.cliente,tDescricao.getText(),(String) cbHabilidades.getSelectedItem());
+                oList.add(o);
+                JOptionPane.showMessageDialog(this, "Sua solicitação foi confirmada e será processada em breve! ");
+                setButton(TelaMainCliente.bNovaSolicitacao,true);
+                setButton(TelaMainCliente.bConsultarSolicitacao,true);
+                this.dispose();
+            }
+            else
+            {
+                JOptionPane.showMessageDialog(this, "Por favor, selecione uma habilidade.");
+            }
+
         }
         else{ //Cancelar
             this.dispose();

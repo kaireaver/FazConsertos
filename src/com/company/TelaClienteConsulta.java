@@ -14,6 +14,7 @@ public class TelaClienteConsulta extends Tela {
 
     private final Box boBotoes;
     private final JButton bAtualizar;
+    private final JButton bAprovar;
     private Cliente cliente;
     private JComboBox<Ordem> cbOrdem;
     private JLabel jlOrdem;
@@ -28,7 +29,7 @@ public class TelaClienteConsulta extends Tela {
 
     public TelaClienteConsulta(Cliente cliente)
     {
-        super("Suas Ordens ativas!", 500, 200);
+        super("Suas Ordens ativas!", 500, 220);
         this.cliente = cliente;
         Container container = getContentPane();
 
@@ -48,6 +49,7 @@ public class TelaClienteConsulta extends Tela {
         for (int i = 0; i<sCampos.length; i++){
             tCampos[i] = new JTextField(20);
             jlCampos[i] = new JLabel(sCampos[i]);
+            this.tCampos[i].setEditable(false);
 
             boxCampos[i] = novoBoxHorizontal(jlCampos[i], tCampos[i]);
             boxSuper.add(boxCampos[i]);
@@ -55,7 +57,11 @@ public class TelaClienteConsulta extends Tela {
         boBotoes = Box.createHorizontalBox();
             bAtualizar = new JButton("ATUALIZAR");
             bAtualizar.addActionListener(this);
+            bAprovar = new JButton("ORÇAMENTO");
+            setButton(bAprovar, false);
+            bAprovar.addActionListener(this);
             boBotoes.add(bAtualizar);
+            boBotoes.add(bAprovar);
 
         boxSuper.add(boBotoes);
 
@@ -95,18 +101,24 @@ public class TelaClienteConsulta extends Tela {
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == bAtualizar)
         {
-            this.ordem = (Ordem) cbOrdem.getSelectedItem();
             atualizaOrdemNaTela();
+        }
+        if(e.getSource() == bAprovar)
+        {
+            JOptionPane.showMessageDialog(null, "NÃO EXISTE ORÇAMENTO AINDA!");
         }
     }
 
-    private void atualizaOrdemNaTela() {
+    private void atualizaOrdemNaTela()
+    {
+        this.ordem = (Ordem) cbOrdem.getSelectedItem();
         if(this.ordem == null) return;
         this.tCampos[0].setText(String.valueOf(this.ordem.getId()));
-        this.tCampos[1].setText(String.valueOf(this.ordem.getHabilidades()));
+        this.tCampos[1].setText(String.valueOf(this.ordem.gettID()));
         this.tCampos[2].setText(String.valueOf(this.ordem.getStatus()));
-        this.tCampos[0].setEditable(false);
-        this.tCampos[2].setEditable(false);
-        this.tCampos[1].setEditable(false);
+        if(this.ordem.getStatus().equals("Cadastrada"))
+        {
+            setButton(bAprovar, true);
+        }
     }
 }

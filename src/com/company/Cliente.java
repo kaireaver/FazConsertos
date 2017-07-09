@@ -19,11 +19,11 @@ public class Cliente {
 
     public Cliente(String Nome, String CPF, String Telefone)
     {
-        System.out.println("Criando novo cliente:");
+        System.out.println("Criando novo cliente:\n");
         this.Nome = Nome;
         this.CPF =  CPF;
         this.Telefone = Telefone;
-        System.out.println("\n"+this.toString() + "\n-------------\n");
+        System.out.println(this.toString());
 
     }
     public void preencheCliente(String RG, String Email, String Endereco, String DataNascimento)
