@@ -1,6 +1,7 @@
 package com.company;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -32,7 +33,7 @@ public class Ordem {
         this.status = "Cadastrada";
         this.descricao = descricao;
         this.habilidades = habilidade;
-        this.data_pedido = DataAtual();
+        this.data_pedido = DataDeHoje();
         this.id = i++;
         this.tID = 0;
     }
@@ -45,9 +46,13 @@ public class Ordem {
 
     private void verificaValidade()
     {
-        Date hoje = new Date();
-        Date pedido = new Date(data_pedido.Ano, data_pedido.Mes, data_pedido.Dia);
-        this.validade = ( hoje.compareTo(pedido) < VALIDADE);
+        Calendar hoje = Calendar.getInstance();
+        Calendar pedido = Calendar.getInstance();
+        pedido.set(Calendar.YEAR, data_pedido.Ano);
+        pedido.set(Calendar.MONTH, data_pedido.Mes-1);
+        pedido.set(Calendar.DAY_OF_MONTH, data_pedido.Dia);
+        long dt = (hoje.getTime().getTime() - pedido.getTime().getTime()) + 3600000; // 1 hora para compensar horário de verão
+        this.validade = ( dt < VALIDADE + 1 );
     }
 
     public void setHora(int hora){
@@ -117,10 +122,11 @@ public class Ordem {
 
     @Override
     public String toString() {
+        verificaValidade();
         return this.getData_pedido() + " - " + this.getHabilidades();
     }
 
-    public Data DataAtual()
+    public Data DataDeHoje()
     {
         Date hoje = new Date();
         SimpleDateFormat df;
