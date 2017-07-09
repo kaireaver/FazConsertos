@@ -11,9 +11,9 @@ public class Cliente {
     String Nome;
     String Telefone;
 
-    String CPF;
-    String RG;
-    String Endereco;
+    private String CPF;
+    private String RG;
+    private String Endereco;
     String Email;
     String DataNascimento;
 
@@ -36,6 +36,12 @@ public class Cliente {
 
     public String getCPF() {
         return this.CPF;
+    }
+    public String getRG() {
+        return this.RG;
+    }
+    public String getEndereco() {
+        return this.Endereco;
     }
 
     @Override

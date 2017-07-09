@@ -169,13 +169,13 @@ public class TelaCliente extends Tela {
         cadastraNovoCliente();
         this.setTitle("CONFIRME SEUS DADOS CADASTRAIS:");
         System.out.println("Abrindo tela de confirmação de cliente.");
-        tRG.setText(cliente.RG);
+        tRG.setText(cliente.getRG());
         tRG.setEditable(false);
 
         tEmail.setText(cliente.Email);
         tEmail.setEditable(false);
 
-        tEndereco.setText(cliente.Endereco);
+        tEndereco.setText(cliente.getEndereco());
         tEndereco.setEditable(false);
 
         tDataNascimento.setText(cliente.DataNascimento);
@@ -193,7 +193,7 @@ public class TelaCliente extends Tela {
         System.out.println("Abrindo tela de cadastro.");
         tNome.setText(this.cliente.Nome);
         tNome.setEditable(false);
-        tCPF.setText(this.cliente.CPF);
+        tCPF.setText(this.cliente.getCPF());
         tCPF.setEditable(false);
         tTelefone.setText(this.cliente.Telefone);
         tTelefone.setEditable(false);
@@ -231,11 +231,11 @@ public class TelaCliente extends Tela {
         this.cliente = new Cliente(tNome.getText(), sCPF, tTelefone.getText());
 
         System.out.println("Procurando na lista com  "+ String.valueOf(cList.size()) + " clientes cadastrados.");
-        System.out.println("Procurando pelo cliente: " + String.valueOf(cliente.CPF) + ".");
+        System.out.println("Procurando pelo cliente: " + String.valueOf(cliente.getCPF()) + ".");
         for (Cliente c : Tela.cList )
         {
-            System.out.println("Encontrado cliente: " + String.valueOf(c.CPF) + ".");
-            if(c.CPF.equals(this.cliente.CPF) )
+            System.out.println("Encontrado cliente: " + String.valueOf(c.getCPF()) + ".");
+            if(c.getCPF().equals(this.cliente.getCPF()) )
             {
                 System.out.println(String.valueOf(cList.remove(cList.indexOf(c))));
                 System.out.println("Cliente " + cliente.Nome + " encontrado!\n--------------------\n");

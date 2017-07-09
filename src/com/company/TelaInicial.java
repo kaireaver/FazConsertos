@@ -107,7 +107,7 @@ public class TelaInicial extends Tela {
             PreparedStatement pps;
             System.out.println("\n-------------\n\nArmazenando arquivos no banco de dados!\n\n---------------------\n");
             for(Cliente c : cList){
-                query = "Insert IGNORE INTO Cliente (nome,telefone,cpf,rg,endereco,email,DataNascimento) VALUES (" + "'" + c.Nome + "'" + "," + "'" + c.Telefone + "'" + "," + "'" + c.getCPF()+ "'" + "," + "'" + c.RG + "'" + "," + "'" + c.Endereco + "'" + "," + "'" + c.Email + "'" + "," + "'" + c.DataNascimento + "'" + ")";
+                query = "Insert IGNORE INTO Cliente (nome,telefone,cpf,rg,endereco,email,DataNascimento) VALUES (" + "'" + c.Nome + "'" + "," + "'" + c.Telefone + "'" + "," + "'" + c.getCPF()+ "'" + "," + "'" + c.getRG() + "'" + "," + "'" + c.getEndereco() + "'" + "," + "'" + c.Email + "'" + "," + "'" + c.DataNascimento + "'" + ")";
                 pps = conn.prepareStatement(query);
                 pps.execute();
             }
