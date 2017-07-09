@@ -84,7 +84,7 @@ public class TelaDadosTecnico extends Tela {
 
                 combBox.setEnabled(false);
                 String str = (String) combBox.getSelectedItem();
-                t.AlteraDados(dados[0], dados[1], dados[2], str);
+                t.AlteraDados(dados[0], dados[2], dados[1], str);
                 buttons[0].setText("Editar");
                 buttons[1].setText("Sair");
             }
