@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48d4db42-c530-4046-bdc2-3405940f09ba" name="Default" comment="bora que o maluco tá doente">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/33ee025d-30c8-4c75-9a31-05d4b37223f6.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/33ee025d-30c8-4c75-9a31-05d4b37223f6.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/TelaInicial.java" afterPath="$PROJECT_DIR$/src/com/company/TelaInicial.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,10 +49,6 @@
         <option name="myItemId" value="clini357_poo" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="Tecnico" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
     </PATH>
     <PATH>
       <PATH_ELEMENT>
@@ -96,35 +90,54 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TelaCliente.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/TelaCliente.java">
+      <file leaf-file-name="Tecnico.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Tecnico.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3510">
-              <caret line="237" column="25" lean-forward="false" selection-start-line="237" selection-start-column="25" selection-end-line="237" selection-end-column="25" />
+            <state relative-caret-position="68">
+              <caret line="13" column="16" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+              <folding>
+                <element signature="e#813#814#0" expanded="true" />
+                <element signature="e#851#852#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TelaInicial.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/TelaInicial.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="121" column="170" lean-forward="false" selection-start-line="121" selection-start-column="170" selection-end-line="121" selection-end-column="170" />
+              <folding>
+                <marker date="1499641932402" expanded="true" signature="931:952" ph="SELECT * FRO... Cliente" />
+                <marker date="1499641932402" expanded="true" signature="1620:1641" ph="SELECT * FRO... Tecnico" />
+                <marker date="1499641932402" expanded="true" signature="1909:1928" ph="SELECT * FRO... Ordem" />
+                <marker date="1499641932402" expanded="true" signature="4338:4930" ph="Insert INTO Cliente... " />
+                <marker date="1499641932402" expanded="true" signature="5141:6109" ph="Insert INTO Ordem... " />
+                <marker date="1499641932402" expanded="true" signature="6270:6672" ph="Insert INTO Tecnico... " />
+                <marker date="1499641932402" expanded="true" signature="6503:6672" ph="UPDATE nome " />
+                <marker date="1499641932402" expanded="true" signature="6673:7173" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TelaOrdemTecnicoServiços.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/TelaOrdemTecnicoServiços.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="125">
+              <caret line="104" column="73" lean-forward="false" selection-start-line="104" selection-start-column="73" selection-end-line="104" selection-end-column="73" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TelaInicial.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/company/TelaInicial.java">
+      <file leaf-file-name="CriaTecnico.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/company/CriaTecnico.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="582">
-              <caret line="119" column="124" lean-forward="false" selection-start-line="119" selection-start-column="124" selection-end-line="119" selection-end-column="124" />
-              <folding>
-                <marker date="1499639998000" expanded="true" signature="931:952" ph="SELECT * FRO... Cliente" />
-                <marker date="1499639998000" expanded="true" signature="1620:1641" ph="SELECT * FRO... Tecnico" />
-                <marker date="1499639998000" expanded="true" signature="1909:1928" ph="SELECT * FRO... Ordem" />
-                <marker date="1499639998000" expanded="true" signature="4460:5052" ph="Insert INTO Cliente... " />
-                <marker date="1499639998000" expanded="true" signature="5263:5490" ph="Insert INTO Ordem... " />
-                <marker date="1499639998000" expanded="true" signature="5263:5517" ph="Insert INTO Ordem... " />
-                <marker date="1499639998000" expanded="true" signature="5263:5997" ph="Insert INTO Ordem... " />
-                <marker date="1499639998000" expanded="true" signature="5263:6027" ph="Insert INTO Ordem... " />
-                <marker date="1499639998000" expanded="true" signature="5263:6231" ph="Insert INTO Ordem... " />
-                <marker date="1499639998000" expanded="true" signature="6675:6688" ph="UPDATE nome " />
-                <marker date="1499639998000" expanded="true" signature="6675:6844" ph="UPDATE nome " />
-                <marker date="1499639998000" expanded="true" signature="6675:6847" ph="UPDATE nome " />
-              </folding>
+            <state relative-caret-position="259">
+              <caret line="102" column="41" lean-forward="false" selection-start-line="102" selection-start-column="41" selection-end-line="102" selection-end-column="41" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -132,54 +145,42 @@
       <file leaf-file-name="Ordem.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Ordem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="617">
-              <caret line="164" column="5" lean-forward="false" selection-start-line="164" selection-start-column="5" selection-end-line="164" selection-end-column="5" />
+            <state relative-caret-position="208">
+              <caret line="168" column="28" lean-forward="false" selection-start-line="168" selection-start-column="28" selection-end-line="168" selection-end-column="28" />
               <folding>
-                <element signature="e#1907#1908#0" expanded="true" />
-                <element signature="e#1939#1940#0" expanded="true" />
-                <element signature="e#1985#1986#0" expanded="true" />
-                <element signature="e#2029#2030#0" expanded="true" />
-                <element signature="e#2232#2233#0" expanded="true" />
-                <element signature="e#2272#2273#0" expanded="true" />
-                <element signature="e#2314#2315#0" expanded="true" />
-                <element signature="e#2350#2351#0" expanded="true" />
-                <element signature="e#2378#2379#0" expanded="true" />
-                <element signature="e#2405#2406#0" expanded="true" />
-                <element signature="e#2441#2442#0" expanded="true" />
-                <element signature="e#2474#2475#0" expanded="true" />
-                <element signature="e#2509#2510#0" expanded="true" />
-                <element signature="e#2539#2540#0" expanded="true" />
-                <element signature="e#2581#2582#0" expanded="true" />
-                <element signature="e#2620#2621#0" expanded="true" />
-                <element signature="e#3049#3050#0" expanded="true" />
-                <element signature="e#3074#3075#0" expanded="true" />
-                <element signature="e#3114#3115#0" expanded="true" />
-                <element signature="e#3151#3152#0" expanded="true" />
-                <element signature="e#3187#3188#0" expanded="true" />
-                <element signature="e#3219#3220#0" expanded="true" />
-                <element signature="e#3252#3253#0" expanded="true" />
-                <element signature="e#3281#3282#0" expanded="true" />
-                <element signature="e#3317#3318#0" expanded="true" />
-                <element signature="e#3349#3350#0" expanded="true" />
-                <element signature="e#3516#3517#0" expanded="true" />
-                <element signature="e#3550#3551#0" expanded="true" />
-                <element signature="e#3948#3949#0" expanded="true" />
-                <element signature="e#4035#4036#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#4184#4185#0" expanded="true" />
+                <element signature="e#4220#4221#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="clini357_poo.Ordem" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/e1c8c69/33ee025d-30c8-4c75-9a31-05d4b37223f6/clini357_poo.Ordem">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
+      <file leaf-file-name="TelaOrdemTecnicoInicial.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/TelaOrdemTecnicoInicial.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+              <folding />
             </state>
           </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </entry>
+      </file>
+      <file leaf-file-name="TelaCriaOrcamentoTecnico.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/TelaCriaOrcamentoTecnico.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="205">
+              <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TelaOrdemTecnicoOrçamentos.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/TelaOrdemTecnicoOrçamentos.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="137">
+              <caret line="13" column="15" lean-forward="false" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -188,20 +189,8 @@
       <file leaf-file-name="TelaClienteConsulta.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/TelaClienteConsulta.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
-              <folding>
-                <marker date="1499639821000" expanded="true" signature="4072:4091" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TelaMainCliente.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/TelaMainCliente.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+            <state relative-caret-position="61">
+              <caret line="127" column="8" lean-forward="false" selection-start-line="127" selection-start-column="8" selection-end-line="143" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -218,36 +207,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>adicionado</find>
-      <find>preenchend</find>
-      <find>p</find>
-      <find>bOk.setText</find>
-      <find>CONFIRMAR</find>
-      <find>editaCl</find>
-      <find>confir</find>
-      <find>edita</find>
-      <find>editaC</find>
-      <find>confirmar</find>
-      <find>actionp</find>
-      <find>clist.add</find>
-      <find>adicionaCliente</find>
-      <find>procuraCliente</find>
-      <find>adiciona</find>
-      <find>cliente.preencheCliente(tRG.getText(), tEmail.getText(), tEndereco.getText(), dataNascimento);</find>
-      <find>operation</find>
-      <find>cbsH</find>
-      <find>add</find>
-      <find>ordem</find>
-      <find>cb</find>
-      <find>-</find>
-      <find>-----</find>
-      <find>c</find>
-      <find>criando</find>
-      <find>i</find>
-      <find>inician</find>
+      <find>descr</find>
+      <find>vali</find>
+      <find>Hora</find>
+      <find>Data</find>
+      <find>JLabel</find>
       <find>iniciando</find>
-      <find>new or</find>
-      <find>cliente adicionado</find>
+      <find>n</find>
+      <find>nenh</find>
+      <find>nenhu</find>
+      <find>nenhum</find>
+      <find>this.getContentPane()</find>
+      <find>bAprova</find>
+      <find>bA</find>
+      <find>Preco</find>
+      <find>getO</find>
+      <find>getOr</find>
+      <find>tecnico</find>
+      <find>cons</find>
+      <find>bRecusar</find>
+      <find>getID</find>
+      <find>private</find>
+      <find>getOrd</find>
+      <find>s</find>
+      <find>suas</find>
+      <find>suas</find>
+      <find>suas or</find>
+      <find>g</find>
+      <find>get</find>
+      <find>geto</find>
+      <find>getor</find>
     </findStrings>
     <replaceStrings>
       <replace>fClientes</replace>
@@ -259,6 +248,15 @@
       <replace>confirmaClienteExistente</replace>
       <replace>adicionaCliente</replace>
       <replace>procuraCliente</replace>
+      <replace>Preco</replace>
+      <replace>Data</replace>
+      <replace>Materiais</replace>
+      <replace>final JLabel</replace>
+      <replace>boV</replace>
+      <replace>bAprovar</replace>
+      <replace>Materiais_Valor</replace>
+      <replace>bOrcar</replace>
+      <replace>protected</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\Users\Deivison Silva\IdeaProjects\FazConsertosRealOficial\src\com\company</dir>
@@ -291,24 +289,28 @@
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
         <option value="$PROJECT_DIR$/src/com/company/TelaOrdem.java" />
         <option value="$PROJECT_DIR$/src/com/company/TelaTecnico.java" />
-        <option value="$PROJECT_DIR$/src/com/company/CriaTecnico.java" />
         <option value="$PROJECT_DIR$/src/com/company/TelaOrdemTecnicoInicial.java" />
         <option value="$PROJECT_DIR$/src/com/company/TelaOrdemTecnicoOrçamentos.java" />
-        <option value="$PROJECT_DIR$/src/com/company/TelaOrdemTecnicoServiços.java" />
         <option value="$PROJECT_DIR$/src/com/company/TelaServicos.java" />
         <option value="$PROJECT_DIR$/src/com/company/CPF.java" />
         <option value="$PROJECT_DIR$/src/com/company/LogaTecnico.java" />
         <option value="$PROJECT_DIR$/src/com/company/MainCliente.java" />
         <option value="$PROJECT_DIR$/src/com/company/Data.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Tela.java" />
         <option value="$PROJECT_DIR$/src/com/company/TelaMainCliente.java" />
-        <option value="$PROJECT_DIR$/src/com/company/TelaClienteConsulta.java" />
-        <option value="$PROJECT_DIR$/src/com/company/TelaOrdemCliente.java" />
         <option value="$PROJECT_DIR$/src/com/company/Database.java" />
         <option value="$PROJECT_DIR$/src/com/company/Cliente.java" />
         <option value="$PROJECT_DIR$/src/com/company/TelaCliente.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Ordem.java" />
+        <option value="$PROJECT_DIR$/src/com/company/TelaOrdemCliente.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Tela.java" />
+        <option value="$PROJECT_DIR$/src/com/company/TelaClienteConsulta.java" />
         <option value="$PROJECT_DIR$/src/com/company/TelaInicial.java" />
+        <option value="$PROJECT_DIR$/src/com/company/TelaDadosTecnico.java" />
+        <option value="$PROJECT_DIR$/src/com/company/MainTecnico.java" />
+        <option value="$PROJECT_DIR$/src/com/company/CriaTecnico.java" />
+        <option value="$PROJECT_DIR$/src/com/company/TelaOrdemClienteOrcamento.java" />
+        <option value="$PROJECT_DIR$/src/com/company/TelaOrdemTecnicoServiços.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Ordem.java" />
+        <option value="$PROJECT_DIR$/src/com/company/TelaCriaOrcamentoTecnico.java" />
       </list>
     </option>
   </component>
@@ -319,9 +321,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1280" />
-    <option name="height" value="1323" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="false" id="Update" />
@@ -374,8 +377,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -403,8 +406,7 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/company/Ordem.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/company/TelaClienteConsulta.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/com/company/TelaInicial.java</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -936,133 +938,7 @@
       <workItem from="1499099338770" duration="354000" />
       <workItem from="1499298392733" duration="11623000" />
       <workItem from="1499522652246" duration="5872000" />
-      <workItem from="1499544217658" duration="28753000" />
-    </task>
-    <task id="LOCAL-00014" summary="bora que o maluco tá doente">
-      <created>1498954926535</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1498954926535</updated>
-    </task>
-    <task id="LOCAL-00015" summary="bora que o maluco tá doente">
-      <created>1498955661469</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1498955661469</updated>
-    </task>
-    <task id="LOCAL-00016" summary="bora que o maluco tá doente">
-      <created>1498956066615</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1498956066615</updated>
-    </task>
-    <task id="LOCAL-00017" summary="bora que o maluco tá doente">
-      <created>1498956747886</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1498956747886</updated>
-    </task>
-    <task id="LOCAL-00018" summary="bora que o maluco tá doente">
-      <created>1499096798651</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1499096798651</updated>
-    </task>
-    <task id="LOCAL-00019" summary="bora que o maluco tá doente">
-      <created>1499097807886</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1499097807886</updated>
-    </task>
-    <task id="LOCAL-00020" summary="bora que o maluco tá doente">
-      <created>1499098069215</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1499098069215</updated>
-    </task>
-    <task id="LOCAL-00021" summary="bora que o maluco tá doente">
-      <created>1499098727229</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1499098727229</updated>
-    </task>
-    <task id="LOCAL-00022" summary="bora que o maluco tá doente">
-      <created>1499099483806</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1499099483806</updated>
-    </task>
-    <task id="LOCAL-00023" summary="bora que o maluco tá doente">
-      <created>1499105638969</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1499105638969</updated>
-    </task>
-    <task id="LOCAL-00024" summary="bora que o maluco tá doente">
-      <created>1499264811276</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1499264811276</updated>
-    </task>
-    <task id="LOCAL-00025" summary="bora que o maluco tá doente">
-      <created>1499264896388</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1499264896388</updated>
-    </task>
-    <task id="LOCAL-00026" summary="bora que o maluco tá doente">
-      <created>1499265364280</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1499265364280</updated>
-    </task>
-    <task id="LOCAL-00027" summary="bora que o maluco tá doente">
-      <created>1499267514020</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1499267514020</updated>
-    </task>
-    <task id="LOCAL-00028" summary="bora que o maluco tá doente">
-      <created>1499267783993</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1499267783993</updated>
-    </task>
-    <task id="LOCAL-00029" summary="bora que o maluco tá doente">
-      <created>1499267846097</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1499267846097</updated>
-    </task>
-    <task id="LOCAL-00030" summary="bora que o maluco tá doente">
-      <created>1499271838806</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1499271838806</updated>
-    </task>
-    <task id="LOCAL-00031" summary="bora que o maluco tá doente">
-      <created>1499272324539</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1499272324539</updated>
+      <workItem from="1499544217658" duration="50249000" />
     </task>
     <task id="LOCAL-00032" summary="bora que o maluco tá doente">
       <created>1499273151389</created>
@@ -1261,92 +1137,194 @@
       <updated>1499620429973</updated>
     </task>
     <task id="LOCAL-00060" summary="bora que o maluco tá doente">
-      <created>1499637956007</created>
+      <created>1499621621327</created>
       <option name="number" value="00060" />
       <option name="presentableId" value="LOCAL-00060" />
       <option name="project" value="LOCAL" />
-      <updated>1499637956008</updated>
+      <updated>1499621621328</updated>
     </task>
     <task id="LOCAL-00061" summary="bora que o maluco tá doente">
-      <created>1499638363676</created>
+      <created>1499622411962</created>
       <option name="number" value="00061" />
       <option name="presentableId" value="LOCAL-00061" />
       <option name="project" value="LOCAL" />
-      <updated>1499638363677</updated>
+      <updated>1499622411962</updated>
     </task>
     <task id="LOCAL-00062" summary="bora que o maluco tá doente">
-      <created>1499639849466</created>
+      <created>1499623080038</created>
       <option name="number" value="00062" />
       <option name="presentableId" value="LOCAL-00062" />
       <option name="project" value="LOCAL" />
-      <updated>1499639849466</updated>
+      <updated>1499623080038</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="bora que o maluco tá doente">
+      <created>1499623526187</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1499623526187</updated>
+    </task>
+    <task id="LOCAL-00064" summary="bora que o maluco tá doente">
+      <created>1499626270159</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1499626270160</updated>
+    </task>
+    <task id="LOCAL-00065" summary="bora que o maluco tá doente">
+      <created>1499628550306</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1499628550306</updated>
+    </task>
+    <task id="LOCAL-00066" summary="bora que o maluco tá doente">
+      <created>1499629447271</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1499629447271</updated>
+    </task>
+    <task id="LOCAL-00067" summary="bora que o maluco tá doente">
+      <created>1499636064193</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1499636064194</updated>
+    </task>
+    <task id="LOCAL-00068" summary="bora que o maluco tá doente">
+      <created>1499636385820</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1499636385820</updated>
+    </task>
+    <task id="LOCAL-00069" summary="bora que o maluco tá doente">
+      <created>1499636986455</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1499636986455</updated>
+    </task>
+    <task id="LOCAL-00070" summary="bora que o maluco tá doente">
+      <created>1499637663814</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1499637663814</updated>
+    </task>
+    <task id="LOCAL-00071" summary="bora que o maluco tá doente">
+      <created>1499638033697</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1499638033697</updated>
+    </task>
+    <task id="LOCAL-00072" summary="bora que o maluco tá doente">
+      <created>1499639333097</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1499639333097</updated>
+    </task>
+    <task id="LOCAL-00073" summary="bora que o maluco tá doente">
+      <created>1499639746122</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1499639746122</updated>
+    </task>
+    <task id="LOCAL-00074" summary="bora que o maluco tá doente">
+      <created>1499640023460</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1499640023460</updated>
+    </task>
+    <task id="LOCAL-00075" summary="bora que o maluco tá doente">
+      <created>1499641081947</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1499641081947</updated>
+    </task>
+    <task id="LOCAL-00076" summary="bora que o maluco tá doente">
+      <created>1499641204286</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1499641204286</updated>
+    </task>
+    <task id="LOCAL-00077" summary="bora que o maluco tá doente">
+      <created>1499641919491</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1499641919491</updated>
+    </task>
+    <task id="LOCAL-00078" summary="bora que o maluco tá doente">
+      <created>1499642506336</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1499642506336</updated>
+    </task>
+    <task id="LOCAL-00079" summary="bora que o maluco tá doente">
+      <created>1499643298118</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1499643298118</updated>
+    </task>
+    <task id="LOCAL-00080" summary="bora que o maluco tá doente">
+      <created>1499644695513</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1499644695513</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99559000" />
+    <option name="totallyTimeSpent" value="116816000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="1323" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32981315" sideWeight="0.50646204" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32334384" sideWeight="0.5263543" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19789983" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39905363" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32981315" sideWeight="0.49676898" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.4941435" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290008" sideWeight="0.49030694" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33549958" sideWeight="0.49121523" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Floobits" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290008" sideWeight="0.49676898" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32981315" sideWeight="0.49353796" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17851374" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3248" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32334384" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19838946" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39905363" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.48243046" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32334384" sideWeight="0.49121523" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.4941435" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32334384" sideWeight="0.4736457" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Floobits" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32937685" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.49707174" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17349927" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32334384" sideWeight="0.49707174" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.49707174" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21010248" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32334384" sideWeight="0.4941435" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1367,6 +1345,16 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/com/company/TelaInicial.java</url>
+          <line>84</line>
+          <properties class="com.company.TelaInicial" method="actionPerformed">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
       <option name="time" value="15" />
     </breakpoint-manager>
     <watches-manager />
@@ -1376,62 +1364,12 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/company/TelaOrdemCliente.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="8" lean-forward="false" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Database.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="70" lean-forward="false" selection-start-line="9" selection-start-column="70" selection-end-line="9" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/TelaOrdemCliente.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.floorc.json" />
-    <entry file="file://$PROJECT_DIR$/FazConsertos.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/6983d90d-df89-4151-92ec-8fc12ed72195/console.sql" />
     <entry file="dbDummy://dbtable:/afe4802d/6983d90d-df89-4151-92ec-8fc12ed72195/TEST.PUBLIC.TBL" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/awt/event/ActionListener.java" />
     <entry file="file://$PROJECT_DIR$/src/com/company/Clients.java" />
     <entry file="file://$PROJECT_DIR$/src/com/company/clientsScreen.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/awt/event/ActionListener.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/company/Tecnico.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://JAVA/com.company.TelaCliente">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -1474,36 +1412,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/TelaOrdemTecnicoOrçamentos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="52" lean-forward="false" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/TelaOrdemTecnicoServiços.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="50" lean-forward="false" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/TelaServicos.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="8" column="38" lean-forward="false" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/TelaTecnico.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="29" lean-forward="true" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -1518,14 +1430,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/CriaTecnico.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/CPF.java" />
     <entry file="file://$PROJECT_DIR$/src/com/company/LogaTecnico.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1537,19 +1441,166 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/MainTecnico.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/awt/Container.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        <state relative-caret-position="3706">
+          <caret line="282" column="0" lean-forward="false" selection-start-line="282" selection-start-column="0" selection-end-line="282" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/javax/swing/JComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3077">
+          <caret line="245" column="0" lean-forward="false" selection-start-line="245" selection-start-column="0" selection-end-line="245" selection-end-column="0" />
           <folding>
+            <element signature="e#0#210622#0" expanded="false" />
             <element signature="imports" expanded="false" />
+            <element signature="e#14577#14578#0" expanded="false" />
+            <element signature="e#14647#14648#0" expanded="false" />
+            <element signature="e#18657#18658#0" expanded="false" />
+            <element signature="e#18708#18709#0" expanded="false" />
+            <element signature="e#26196#26197#0" expanded="false" />
+            <element signature="e#26228#26229#0" expanded="false" />
+            <element signature="e#36313#36314#0" expanded="false" />
+            <element signature="e#36337#36338#0" expanded="false" />
+            <element signature="e#45507#45508#0" expanded="false" />
+            <element signature="e#45540#45541#0" expanded="false" />
+            <element signature="e#45921#45922#0" expanded="false" />
+            <element signature="e#45953#45954#0" expanded="false" />
+            <element signature="e#46330#46331#0" expanded="false" />
+            <element signature="e#46360#46361#0" expanded="false" />
+            <element signature="e#46851#46852#0" expanded="false" />
+            <element signature="e#46899#46900#0" expanded="false" />
+            <element signature="e#48355#48356#0" expanded="false" />
+            <element signature="e#48398#48399#0" expanded="false" />
+            <element signature="e#49282#49283#0" expanded="false" />
+            <element signature="e#49310#49311#0" expanded="false" />
+            <element signature="e#49363#49364#0" expanded="false" />
+            <element signature="e#49438#49439#0" expanded="false" />
+            <element signature="e#53033#53034#0" expanded="false" />
+            <element signature="e#53096#53097#0" expanded="false" />
+            <element signature="e#55213#55214#0" expanded="false" />
+            <element signature="e#55268#55269#0" expanded="false" />
+            <element signature="e#56110#56111#0" expanded="false" />
+            <element signature="e#56146#56147#0" expanded="false" />
+            <element signature="e#57264#57265#0" expanded="false" />
+            <element signature="e#57316#57317#0" expanded="false" />
+            <element signature="e#58129#58130#0" expanded="false" />
+            <element signature="e#58180#58181#0" expanded="false" />
+            <element signature="e#59103#59104#0" expanded="false" />
+            <element signature="e#59163#59164#0" expanded="false" />
+            <element signature="e#59683#59684#0" expanded="false" />
+            <element signature="e#59713#59714#0" expanded="false" />
+            <element signature="e#61485#61486#0" expanded="false" />
+            <element signature="e#61534#61535#0" expanded="false" />
+            <element signature="e#61910#61911#0" expanded="false" />
+            <element signature="e#61975#61976#0" expanded="false" />
+            <element signature="e#62338#62339#0" expanded="false" />
+            <element signature="e#62391#62392#0" expanded="false" />
+            <element signature="e#63792#63793#0" expanded="false" />
+            <element signature="e#63841#63842#0" expanded="false" />
+            <element signature="e#65158#65159#0" expanded="false" />
+            <element signature="e#65207#65208#0" expanded="false" />
+            <element signature="e#66280#66281#0" expanded="false" />
+            <element signature="e#66364#66365#0" expanded="false" />
+            <element signature="e#68454#68455#0" expanded="false" />
+            <element signature="e#68483#68484#0" expanded="false" />
+            <element signature="e#72731#72732#0" expanded="false" />
+            <element signature="e#72813#72814#0" expanded="false" />
+            <element signature="e#74725#74726#0" expanded="false" />
+            <element signature="e#74790#74791#0" expanded="false" />
+            <element signature="e#75524#75525#0" expanded="false" />
+            <element signature="e#75582#75583#0" expanded="false" />
+            <element signature="e#75747#75748#0" expanded="false" />
+            <element signature="e#75810#75811#0" expanded="false" />
+            <element signature="e#91813#91814#0" expanded="false" />
+            <element signature="e#91864#91865#0" expanded="false" />
+            <element signature="e#92192#92193#0" expanded="false" />
+            <element signature="e#92246#92247#0" expanded="false" />
+            <element signature="e#93143#93144#0" expanded="false" />
+            <element signature="e#93184#93185#0" expanded="false" />
+            <element signature="e#106006#106007#0" expanded="false" />
+            <element signature="e#106068#106069#0" expanded="false" />
+            <element signature="e#114346#114347#0" expanded="false" />
+            <element signature="e#114413#114414#0" expanded="false" />
+            <element signature="e#114788#114789#0" expanded="false" />
+            <element signature="e#114827#114828#0" expanded="false" />
+            <element signature="e#115291#115292#0" expanded="false" />
+            <element signature="e#115318#115319#0" expanded="false" />
+            <element signature="e#115953#115954#0" expanded="false" />
+            <element signature="e#115980#115981#0" expanded="false" />
+            <element signature="e#120330#120331#0" expanded="false" />
+            <element signature="e#120364#120365#0" expanded="false" />
+            <element signature="e#123636#123637#0" expanded="false" />
+            <element signature="e#123663#123664#0" expanded="false" />
+            <element signature="e#127379#127380#0" expanded="false" />
+            <element signature="e#127427#127428#0" expanded="false" />
+            <element signature="e#127711#127712#0" expanded="false" />
+            <element signature="e#127767#127768#0" expanded="false" />
+            <element signature="e#128025#128026#0" expanded="false" />
+            <element signature="e#128078#128079#0" expanded="false" />
+            <element signature="e#130768#130769#0" expanded="false" />
+            <element signature="e#130804#130805#0" expanded="false" />
+            <element signature="e#130840#130841#0" expanded="false" />
+            <element signature="e#130883#130884#0" expanded="false" />
+            <element signature="e#131321#131322#0" expanded="false" />
+            <element signature="e#131365#131366#0" expanded="false" />
+            <element signature="e#138707#138708#0" expanded="false" />
+            <element signature="e#138738#138739#0" expanded="false" />
+            <element signature="e#147549#147550#0" expanded="false" />
+            <element signature="e#147610#147611#0" expanded="false" />
+            <element signature="e#148486#148487#0" expanded="false" />
+            <element signature="e#148551#148552#0" expanded="false" />
+            <element signature="e#148804#148805#0" expanded="false" />
+            <element signature="e#148862#148863#0" expanded="false" />
+            <element signature="e#149117#149118#0" expanded="false" />
+            <element signature="e#149152#149153#0" expanded="false" />
+            <element signature="e#149382#149383#0" expanded="false" />
+            <element signature="e#149445#149446#0" expanded="false" />
+            <element signature="e#158808#158809#0" expanded="false" />
+            <element signature="e#158869#158870#0" expanded="false" />
+            <element signature="e#159313#159314#0" expanded="false" />
+            <element signature="e#159354#159355#0" expanded="false" />
+            <element signature="e#163960#163961#0" expanded="false" />
+            <element signature="e#164001#164002#0" expanded="false" />
+            <element signature="e#168546#168547#0" expanded="false" />
+            <element signature="e#168599#168600#0" expanded="false" />
+            <element signature="e#181529#181530#0" expanded="false" />
+            <element signature="e#181580#181581#0" expanded="false" />
+            <element signature="e#184486#184487#0" expanded="false" />
+            <element signature="e#184514#184515#0" expanded="false" />
+            <element signature="e#185007#185008#0" expanded="false" />
+            <element signature="e#185034#185035#0" expanded="false" />
+            <element signature="e#185851#185852#0" expanded="false" />
+            <element signature="e#185879#185880#0" expanded="false" />
+            <element signature="e#188029#188030#0" expanded="false" />
+            <element signature="e#188087#188088#0" expanded="false" />
+            <element signature="e#188490#188491#0" expanded="false" />
+            <element signature="e#188518#188519#0" expanded="false" />
+            <element signature="e#188572#188573#0" expanded="false" />
+            <element signature="e#188622#188623#0" expanded="false" />
+            <element signature="e#200027#200028#0" expanded="false" />
+            <element signature="e#200054#200055#0" expanded="false" />
+            <element signature="e#200835#200836#0" expanded="false" />
+            <element signature="e#200912#200913#0" expanded="false" />
+            <element signature="e#201467#201468#0" expanded="false" />
+            <element signature="e#201516#201517#0" expanded="false" />
+            <element signature="e#201722#201723#0" expanded="false" />
+            <element signature="e#201772#201773#0" expanded="false" />
+            <element signature="e#202051#202052#0" expanded="false" />
+            <element signature="e#202106#202107#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/awt/Container.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/javax/swing/JComponent.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/function/Predicate.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/function/Predicate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="48" column="12" lean-forward="false" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/TelaExcluiTecnico.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1560,31 +1611,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/javax/swing/JLabel.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/lang/String.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/awt/Window.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/lang/Object.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/javax/swing/JLabel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="193" column="34" lean-forward="false" selection-start-line="193" selection-start-column="34" selection-end-line="193" selection-end-column="34" />
+          <folding>
+            <element signature="e#6096#6097#0" expanded="false" />
+            <element signature="e#6137#6138#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1957" column="18" lean-forward="false" selection-start-line="1957" selection-start-column="18" selection-end-line="1957" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/awt/Window.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="1146" column="14" lean-forward="false" selection-start-line="1146" selection-start-column="8" selection-end-line="1146" selection-end-column="17" />
+          <folding>
+            <element signature="e#40240#40241#0" expanded="false" />
+            <element signature="e#40267#40268#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="234" column="18" lean-forward="false" selection-start-line="234" selection-start-column="18" selection-end-line="234" selection-end-column="18" />
+          <folding>
+            <element signature="e#10065#10066#0" expanded="false" />
+            <element signature="e#10148#10149#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/ClientsDatabase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/TelaOrdemTecnicoInicial.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="17" column="38" lean-forward="false" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Cliente.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="43" column="28" lean-forward="false" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
-          <folding />
+          <folding>
+            <marker date="1499024091875" expanded="true" signature="330:411" ph="select count... Clientewhere" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1600,32 +1674,19 @@
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="0.9066666666666666" x="253.0" y="252.0" />
+          <settings layout="Hierarchic Group" zoom="0.9066666666666666" x="252.5" y="251.5" />
           <SelectedNodes />
           <Categories>
-            <Category>Columns</Category>
             <Category>Key columns</Category>
+            <Category>Columns</Category>
           </Categories>
-          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/awt/event/WindowListener.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/company/Tela.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/awt/event/WindowListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="102" column="16" lean-forward="false" selection-start-line="102" selection-start-column="16" selection-end-line="102" selection-end-column="16" />
-          <folding>
-            <element signature="e#3351#3352#0" expanded="true" />
-            <element signature="e#3382#3383#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/TelaOrdemCliente.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="85" column="92" lean-forward="false" selection-start-line="85" selection-start-column="92" selection-end-line="85" selection-end-column="92" />
+        <state relative-caret-position="203">
+          <caret line="101" column="16" lean-forward="false" selection-start-line="101" selection-start-column="16" selection-end-line="101" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -1642,108 +1703,263 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="63" lean-forward="false" selection-start-line="0" selection-start-column="63" selection-end-line="0" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/TelaMainCliente.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/TelaCliente.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/sql/ResultSet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3510">
-          <caret line="237" column="25" lean-forward="false" selection-start-line="237" selection-start-column="25" selection-end-line="237" selection-end-column="25" />
+        <state relative-caret-position="132">
+          <caret line="524" column="11" lean-forward="false" selection-start-line="524" selection-start-column="11" selection-end-line="524" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/6d02ecaa/33ee025d-30c8-4c75-9a31-05d4b37223f6/clini357_poo.Cliente" />
-    <entry file="dbDummy://dbtable:/6d02ecaa/33ee025d-30c8-4c75-9a31-05d4b37223f6/clini357_poo.Ordem" />
-    <entry file="file://$PROJECT_DIR$/src/com/company/Data.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/company/TelaClienteConsulta.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
-          <folding>
-            <marker date="1499639821000" expanded="true" signature="4072:4091" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/e1c8c69/33ee025d-30c8-4c75-9a31-05d4b37223f6/clini357_poo.Ordem">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
+    <entry file="dbDummy://dbtable:/6d02ecaa/33ee025d-30c8-4c75-9a31-05d4b37223f6/clini357_poo.Cliente">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Ordem.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Cliente.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="617">
-          <caret line="164" column="5" lean-forward="false" selection-start-line="164" selection-start-column="5" selection-end-line="164" selection-end-column="5" />
+        <state relative-caret-position="323">
+          <caret line="33" column="44" lean-forward="false" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="44" />
           <folding>
-            <element signature="e#1907#1908#0" expanded="true" />
-            <element signature="e#1939#1940#0" expanded="true" />
-            <element signature="e#1985#1986#0" expanded="true" />
-            <element signature="e#2029#2030#0" expanded="true" />
-            <element signature="e#2232#2233#0" expanded="true" />
-            <element signature="e#2272#2273#0" expanded="true" />
-            <element signature="e#2314#2315#0" expanded="true" />
-            <element signature="e#2350#2351#0" expanded="true" />
-            <element signature="e#2378#2379#0" expanded="true" />
-            <element signature="e#2405#2406#0" expanded="true" />
-            <element signature="e#2441#2442#0" expanded="true" />
-            <element signature="e#2474#2475#0" expanded="true" />
-            <element signature="e#2509#2510#0" expanded="true" />
-            <element signature="e#2539#2540#0" expanded="true" />
-            <element signature="e#2581#2582#0" expanded="true" />
-            <element signature="e#2620#2621#0" expanded="true" />
-            <element signature="e#3049#3050#0" expanded="true" />
-            <element signature="e#3074#3075#0" expanded="true" />
-            <element signature="e#3114#3115#0" expanded="true" />
-            <element signature="e#3151#3152#0" expanded="true" />
-            <element signature="e#3187#3188#0" expanded="true" />
-            <element signature="e#3219#3220#0" expanded="true" />
-            <element signature="e#3252#3253#0" expanded="true" />
-            <element signature="e#3281#3282#0" expanded="true" />
-            <element signature="e#3317#3318#0" expanded="true" />
-            <element signature="e#3349#3350#0" expanded="true" />
-            <element signature="e#3516#3517#0" expanded="true" />
-            <element signature="e#3550#3551#0" expanded="true" />
-            <element signature="e#3948#3949#0" expanded="true" />
-            <element signature="e#4035#4036#0" expanded="true" />
+            <element signature="e#970#971#0" expanded="true" />
+            <element signature="e#1006#1007#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Data.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/javax/swing/JTextArea.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="138" column="16" lean-forward="true" selection-start-line="138" selection-start-column="16" selection-end-line="138" selection-end-column="16" />
+          <folding>
+            <element signature="e#4796#4797#0" expanded="false" />
+            <element signature="e#4834#4835#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/javax/swing/JTextField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="196" column="11" lean-forward="false" selection-start-line="196" selection-start-column="11" selection-end-line="196" selection-end-column="11" />
+          <folding>
+            <element signature="e#6952#6953#0" expanded="false" />
+            <element signature="e#6993#6994#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TelaOrdemCliente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="75" column="95" lean-forward="false" selection-start-line="75" selection-start-column="95" selection-end-line="75" selection-end-column="95" />
+          <folding>
+            <marker date="1499629081088" expanded="true" signature="3110:3116" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/src/com/company/mysql-connector-java-5.1.42-bin.jar!/com/mysql/jdbc/PreparedStatement.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="935" column="0" lean-forward="true" selection-start-line="935" selection-start-column="0" selection-end-line="935" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/6d02ecaa/33ee025d-30c8-4c75-9a31-05d4b37223f6/clini357_poo.Ordem">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TelaCliente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1347">
+          <caret line="213" column="39" lean-forward="false" selection-start-line="213" selection-start-column="39" selection-end-line="213" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TelaMainCliente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="47" column="57" lean-forward="true" selection-start-line="47" selection-start-column="57" selection-end-line="47" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TelaTecnico.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="36" column="43" lean-forward="false" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Tela.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-130">
+          <caret line="41" column="23" lean-forward="true" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TelaDadosTecnico.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="95" column="32" lean-forward="false" selection-start-line="95" selection-start-column="32" selection-end-line="95" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/MainTecnico.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="49" column="56" lean-forward="true" selection-start-line="49" selection-start-column="56" selection-end-line="49" selection-end-column="56" />
+          <folding>
+            <marker date="1499641632735" expanded="true" signature="2189:2195" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/TelaInicial.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="119" column="124" lean-forward="false" selection-start-line="119" selection-start-column="124" selection-end-line="119" selection-end-column="124" />
+        <state relative-caret-position="140">
+          <caret line="121" column="170" lean-forward="false" selection-start-line="121" selection-start-column="170" selection-end-line="121" selection-end-column="170" />
           <folding>
-            <marker date="1499639998000" expanded="true" signature="931:952" ph="SELECT * FRO... Cliente" />
-            <marker date="1499639998000" expanded="true" signature="1620:1641" ph="SELECT * FRO... Tecnico" />
-            <marker date="1499639998000" expanded="true" signature="1909:1928" ph="SELECT * FRO... Ordem" />
-            <marker date="1499639998000" expanded="true" signature="4460:5052" ph="Insert INTO Cliente... " />
-            <marker date="1499639998000" expanded="true" signature="5263:5490" ph="Insert INTO Ordem... " />
-            <marker date="1499639998000" expanded="true" signature="5263:5517" ph="Insert INTO Ordem... " />
-            <marker date="1499639998000" expanded="true" signature="5263:5997" ph="Insert INTO Ordem... " />
-            <marker date="1499639998000" expanded="true" signature="5263:6027" ph="Insert INTO Ordem... " />
-            <marker date="1499639998000" expanded="true" signature="5263:6231" ph="Insert INTO Ordem... " />
-            <marker date="1499639998000" expanded="true" signature="6675:6688" ph="UPDATE nome " />
-            <marker date="1499639998000" expanded="true" signature="6675:6844" ph="UPDATE nome " />
-            <marker date="1499639998000" expanded="true" signature="6675:6847" ph="UPDATE nome " />
+            <marker date="1499641932402" expanded="true" signature="931:952" ph="SELECT * FRO... Cliente" />
+            <marker date="1499641932402" expanded="true" signature="1620:1641" ph="SELECT * FRO... Tecnico" />
+            <marker date="1499641932402" expanded="true" signature="1909:1928" ph="SELECT * FRO... Ordem" />
+            <marker date="1499641932402" expanded="true" signature="4338:4930" ph="Insert INTO Cliente... " />
+            <marker date="1499641932402" expanded="true" signature="5141:6109" ph="Insert INTO Ordem... " />
+            <marker date="1499641932402" expanded="true" signature="6270:6672" ph="Insert INTO Tecnico... " />
+            <marker date="1499641932402" expanded="true" signature="6503:6672" ph="UPDATE nome " />
+            <marker date="1499641932402" expanded="true" signature="6673:7173" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Tecnico.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="13" column="16" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+          <folding>
+            <element signature="e#813#814#0" expanded="true" />
+            <element signature="e#851#852#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TelaClienteConsulta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="127" column="8" lean-forward="false" selection-start-line="127" selection-start-column="8" selection-end-line="143" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TelaOrdemClienteOrcamento.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-271">
+          <caret line="60" column="63" lean-forward="true" selection-start-line="60" selection-start-column="63" selection-end-line="60" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TelaOrdemTecnicoOrçamentos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="13" column="15" lean-forward="false" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TelaOrdemTecnicoServiços.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="104" column="73" lean-forward="false" selection-start-line="104" selection-start-column="73" selection-end-line="104" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TelaOrdemTecnicoInicial.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Ordem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="168" column="28" lean-forward="false" selection-start-line="168" selection-start-column="28" selection-end-line="168" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4184#4185#0" expanded="true" />
+            <element signature="e#4220#4221#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/6d02ecaa/33ee025d-30c8-4c75-9a31-05d4b37223f6/clini357_poo.Tecnico">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TelaCriaOrcamentoTecnico.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/CriaTecnico.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="102" column="41" lean-forward="false" selection-start-line="102" selection-start-column="41" selection-end-line="102" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>
