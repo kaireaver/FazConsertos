@@ -44,7 +44,6 @@ public class TelaInicial extends Tela {
                 query  = "SELECT * FROM Ordem";
                 rs = stmt.executeQuery(query);
                 Cliente client = null;
-                i=0;
                 while(rs.next()){
                     for(Cliente c : cList){
                         if(rs.getString("cId").equals(c.getCPF())){
@@ -55,8 +54,6 @@ public class TelaInicial extends Tela {
                     Ordem o = new Ordem(client,rs.getString("descricao"),rs.getString("Habilidade"), rs.getString("DataPedido"), rs.getString("tID"), rs.getString("Status"));
                     o.preencheOrcamento(rs.getString("Qnt_Horas"), rs.getString("ValorHora"), rs.getString("Materiais"), rs.getString("Materiais_Valor"));
                     oList.add(o);//Preencher com o resto dos itens de ordem que não vêm do construtor. oList.get(i);
-                    i++;
-                    System.out.println(oList.get(i).getCliente().getCPF());
                 }
                 System.out.println("\n-------------\n\nCarregamento efetuado com sucesso\n\n---------------------\n");
             }
