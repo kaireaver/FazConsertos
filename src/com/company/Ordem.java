@@ -7,7 +7,7 @@ import java.util.Date;
 
 public class Ordem {
     private Cliente cliente;
-    private static final int VALIDADE = 14;
+    private static final int VALIDADE = 90;
     private int hora;
     private float valor_hora;
     private String data_pedido;
@@ -119,8 +119,9 @@ public class Ordem {
         return materiais;
     }
 
-    public int gettID() {
-        return tID;
+    public String gettID() {
+        if(this.tID == 0) return "Nenhum até o momento!";
+        return String.valueOf(tID);
     }
 
     public String getHabilidades() {

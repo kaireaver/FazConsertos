@@ -5,6 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.WindowEvent;
 import java.util.ArrayList;
+import java.util.Base64;
 
 /**
  * Created by edvil on 05/07/2017.
@@ -113,7 +114,14 @@ public class TelaClienteConsulta extends Tela {
         }
         if(e.getSource() == bAprovar)
         {
-            JOptionPane.showMessageDialog(null, "NÃO EXISTE ORÇAMENTO AINDA!");
+            if(bAprovar.getText() == "ORÇAMENTO")
+            {
+                JOptionPane.showMessageDialog(null, "MOMENTO DE VISUALIZAR O ORÇAMENTO");
+            }else if (bAprovar.getText() == "PAGAR")
+            {
+                JOptionPane.showMessageDialog(null, "MOMENTO DE VISUALIZAR A FATURA");
+
+            }
         }
     }
 
@@ -124,8 +132,14 @@ public class TelaClienteConsulta extends Tela {
         this.tCampoDescr.setText(this.ordem.getDescricao());
         this.tCampos[1].setText(String.valueOf(this.ordem.gettID()));
         this.tCampos[2].setText(String.valueOf(this.ordem.getStatus()));
-        if(this.ordem.getStatus().equals("Cadastrada"))
+        if(this.ordem.getStatus().equals("Aguardando Aprovação do Cliente"))
         {
+            bAprovar.setText("ORÇAMENTO");
+            setButton(bAprovar, true);
+        }
+        else if(this.ordem.getStatus().equals("Em cobrança"))
+        {
+            bAprovar.setText("PAGAR");
             setButton(bAprovar, true);
         }
     }

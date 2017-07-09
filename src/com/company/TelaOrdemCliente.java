@@ -73,7 +73,7 @@ public class TelaOrdemCliente extends Tela {
                 System.out.println(String.valueOf(cbHabilidades.getSelectedItem()));
                 Ordem o = new Ordem(this.cliente,tDescricao.getText(),(String) cbHabilidades.getSelectedItem());
                 oList.add(o);
-                JOptionPane.showMessageDialog(this, "Sua solicitação foi confirmada e será processada em breve! ");
+                JOptionPane.showMessageDialog(this, "SUA SOLICITAÇÃO FOI REALIZADA COM SUCESSO!");
                 setButton(TelaMainCliente.bNovaSolicitacao,true);
                 setButton(TelaMainCliente.bConsultarSolicitacao,true);
                 this.dispose();
