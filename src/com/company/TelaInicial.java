@@ -117,12 +117,11 @@ public class TelaInicial extends Tela {
                 System.out.println(o.getCliente());
                 query = "Insert INTO Ordem (Qnt_Horas,id,ValorHora,DataPedido,Preco,Materiais,tID,Descricao,Habilidade,cID,Status) VALUES (" + o.getHora() + "," + o.getId() + "," + o.getValor_hora() + "," + "'" + o.getData_pedido() + "'" + "," + o.getMaterial_valor() + "," + "'" + o.getMateriais() + "'" + "," + o.gettID() + "," + "'" + o.getDescricao() + "'" + "," + "'" + o.getHabilidades() + "'" + "," + "'" + o.getCliente().getCPF() + "'" + "," + "'" + o.getStatus() + "'" + ") ON DUPLICATE KEY UPDATE Qnt_Horas = " + o.getHora() + "," + "id = " + "'" + o.getId() + "'," + "ValorHora = " + o.getValor_hora() + "," + "DataPedido = " + "'" + o.getData_pedido() + "'," + "Preco = " + o.getPreco() +  "," +
                         "Materiais = " + "'" + o.getMateriais() + "'," + "tID = " + o.gettID() + "," + "Descricao = '" + o.getDescricao() + "'," + "Habilidade = '" + o.getHabilidades() + "'," + "cID = '" + o.getCliente().getCPF() + "'," + "Status = '" + o.getStatus() + "'";
-                System.out.println(query);
                 pps = conn.prepareStatement(query);
                 pps.execute();
             }
             for(Tecnico t : tList){
-                query = "Insert IGNORE INTO Tecnico (nome,email,habilidade,numMatricula,Telefone) VALUES ('" + t.getNome() + "'," + "'" + t.getEmail() + "'" + ",'" + t.getHabilidade() + "'," + t.getNumMatricula() + ",'" + t.getTelefone() + "')";
+                query = "Insert IGNORE INTO Tecnico (nome,email,habilidade,numMatricula,Telefone) VALUES ('" + t.getNome() + "'," + "'" + t.getEmail() + "'" + ",'" + t.getHabilidade() + "'," + t.getNumMatricula() + ",'" + t.getTelefone() + "')" + "ON DUPLICATE KEY UPDATE nome = '" + t.getNome() + "'," + "email = " + "'" + t.getEmail() + "'," + "habilidade = " + t.getNumMatricula() + "," + "Telefone = " + "'" + t.getTelefone() + "'";
                 pps = conn.prepareStatement(query);
                 pps.execute();
             }
