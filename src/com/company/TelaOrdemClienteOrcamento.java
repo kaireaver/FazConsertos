@@ -113,6 +113,7 @@ public class TelaOrdemClienteOrcamento extends Tela {
                 oList.remove(ord);
                 oList.add(this.o);
                 System.out.println("ACHEI!");
+                setButton(TelaClienteConsulta.bAprovar, false);
                 break;
             }
         }

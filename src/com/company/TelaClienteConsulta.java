@@ -15,7 +15,7 @@ public class TelaClienteConsulta extends Tela {
 
     private final Box boBotoes;
     private final JButton bAtualizar;
-    private final JButton bAprovar;
+    static JButton bAprovar;
     private Cliente cliente;
     private JComboBox<Ordem> cbOrdem;
     private JLabel jlOrdem;
@@ -117,6 +117,7 @@ public class TelaClienteConsulta extends Tela {
             if(bAprovar.getText() == "ORÇAMENTO")
             {
                 Tela Orcamento = new TelaOrdemClienteOrcamento(this.ordem);
+                atualizaOrdemNaTela();
                // JOptionPane.showMessageDialog(null, "MOMENTO DE VISUALIZAR O ORÇAMENTO");
             }else if (bAprovar.getText() == "PAGAR")
             {
@@ -125,7 +126,7 @@ public class TelaClienteConsulta extends Tela {
         }
     }
 
-    private void atualizaOrdemNaTela()
+    public void atualizaOrdemNaTela()
     {
         this.ordem = (Ordem) cbOrdem.getSelectedItem();
         if(this.ordem == null) return;
