@@ -5,6 +5,7 @@ import javafx.embed.swing.JFXPanel;
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class TelaOrdemTecnicoServiços extends Tela {
     private JComboBox<Ordem> cbOrdem;
@@ -57,8 +58,9 @@ public class TelaOrdemTecnicoServiços extends Tela {
         for (Ordem o:oList)
         {
             System.out.println(o.getHabilidades() + " == " + this.tecnico.getHabilidade());
-            if(o.getStatus() == "Cadastrada" && o.getHabilidades() == this.tecnico.getHabilidade())
+            if(Objects.equals(o.getStatus(), "Cadastrada") && Objects.equals(o.getHabilidades(), this.tecnico.getHabilidade()))
             {
+                System.out.println("CHEGUEI!");
                 aS.add(o);
             }
         }

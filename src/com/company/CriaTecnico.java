@@ -14,7 +14,7 @@ public class CriaTecnico extends Tela {
     private Container[] boxCampos;
     private  Container boxSuper;
 
-    private JComboBox cbHabilidades;
+    private JComboBox<String> cbHabilidades;
 
     private JButton[] bCriaTecnico;
     private String[] bsCriaTecnico = {"Criar", "Cancelar"};
@@ -93,11 +93,22 @@ public class CriaTecnico extends Tela {
                 cbHabilidades.setEnabled(false);
             }
             else if(bCriaTecnico[0].getText() == "Confirmar") {
+
                 String str = (String)cbHabilidades.getSelectedItem();
-                Tecnico t = new Tecnico(tCampos[0].getText(), tCampos[1].getText(), tCampos[2].getText(), str);
-                tList.add(t);
-                JOptionPane.showMessageDialog(this,"Técnico gerado, seu número de matrícula é: " + t.getId());
-                fechaTela(true);
+                System.out.println("STR = "+str);
+                if(str != "Técnico")
+                {
+                    Tecnico t = new Tecnico(tCampos[0].getText(), tCampos[1].getText(), tCampos[2].getText(), str);
+                    tList.add(t);
+                    JOptionPane.showMessageDialog(this,"Técnico gerado, seu número de matrícula é: " + t.getId());
+                    fechaTela(true);
+                }
+                else
+                {
+                    JOptionPane.showMessageDialog(this, "SELECIONE UMA HABILIDADE!");
+                }
+
+
             }
         }
     }
