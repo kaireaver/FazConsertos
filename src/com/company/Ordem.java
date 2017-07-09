@@ -139,7 +139,7 @@ public class Ordem {
     @Override
     public String toString() {
         verificaValidade();
-        return this.data_pedido + " - " + this.getHabilidades();
+        return String.valueOf(this.id) + " - " + this.data_pedido + " - " + this.getHabilidades();
     }
 
     public String DataDeHoje()
