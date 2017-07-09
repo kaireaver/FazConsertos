@@ -38,9 +38,9 @@ public class Ordem {
         this.tID = 0;
     }
 
-    public Ordem(Cliente cliente, String descricao, String habilidade, Data data_pedido) {
+    public Ordem(Cliente cliente, String descricao, String habilidade, String data_pedido) {
         this(cliente, descricao, habilidade);
-        this.data_pedido = data_pedido;
+        this.data_pedido = new Data(data_pedido);
         verificaValidade();
     }
 
