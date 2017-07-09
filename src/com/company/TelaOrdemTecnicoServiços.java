@@ -102,7 +102,7 @@ public class TelaOrdemTecnicoServiços extends Tela {
         else
         {
             Ordem o = (Ordem) cbOrdem.getSelectedItem();
-            o.realizarOrcamento(tecnico);
+            Tela criarOrcamento = new TelaCriaOrcamentoTecnico(o, tecnico);
         }
     }
 

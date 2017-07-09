@@ -8,29 +8,29 @@ import java.awt.event.ActionEvent;
  */
 public class TelaOrdemClienteOrcamento extends Tela {
 
-    private Ordem o;
+    protected Ordem o;
 
     Box boHora;
-    private final JLabel lHora;
-    private JTextField tHora;
-    private final JLabel lValHora;
-    private JTextField tValHora;
+    protected final JLabel lHora;
+    protected JTextField tHora;
+    protected final JLabel lValHora;
+    protected JTextField tValHora;
 
     Box boOutros;
-    private final JLabel lData;
-    private JTextField tData;
-    private final JLabel lValMateriais;
-    private JTextField tValMateriais;
+    protected final JLabel lData;
+    protected JTextField tData;
+    protected final JLabel lValMateriais;
+    protected JTextField tValMateriais;
 
-    private final JLabel lMateriais;
-    private JTextArea tMateriais;
+    protected final JLabel lMateriais;
+    protected JTextArea tMateriais;
     Box boPreco;
-    private final JLabel lPreco;
-    private JTextField tPreco;
+    protected final JLabel lPreco;
+    protected JTextField tPreco;
 
     Box boBtn;
-    private final JButton bAprovar;
-    private final JButton bRecusar;
+    protected final JButton bAprovar;
+    protected final JButton bRecusar;
 
     Box boV;
 

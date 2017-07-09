@@ -164,6 +164,8 @@ public class Ordem {
         return;
     }
 
-    public void realizarOrcamento(Tecnico tecnico) {
+
+    public void settID(Tecnico t) {
+        this.tID = t.getId();
     }
 }
