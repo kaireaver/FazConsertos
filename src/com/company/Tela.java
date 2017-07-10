@@ -108,6 +108,19 @@ public class Tela extends JFrame implements WindowListener, ActionListener {
         return b;
     }
 
+    public void atualizaLista(Ordem o) {
+        for (Ordem ord:oList)
+        {
+            if(ord.getId()== o.getId())
+            {
+                oList.remove(ord);
+                oList.add(o);
+                System.out.println("ACHEI!");
+                setButton(TelaClienteConsulta.bAprovar, false);
+                break;
+            }
+        }
+    }
     public void actionPerformed(ActionEvent e){}
     public void windowClosing(WindowEvent e) {
         fechaTela(true);

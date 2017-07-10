@@ -39,6 +39,7 @@ public class TelaOrdemTecnicoServiços extends Tela {
         boxSuper = Box.createVerticalBox();
         boxCampos = new Container[sCampos.length + 1];
 
+
         boxCampos[3] = Box.createHorizontalBox();
         boxCampos[3].add(jlOrdem);
         boxCampos[3].add(cbOrdem);
@@ -51,6 +52,7 @@ public class TelaOrdemTecnicoServiços extends Tela {
             boxCampos[i] = Box.createHorizontalBox();
             boxCampos[i].add(jlCampos[i]);
             boxCampos[i].add(tCampos[i]);
+            tCampos[i].setEditable(false);
             boxSuper.add(boxCampos[i]);
         }
 
@@ -112,6 +114,13 @@ public class TelaOrdemTecnicoServiços extends Tela {
         this.tCampos[2].setText(this.ordem.getDescricao());
         this.tCampos[0].setText(String.valueOf(this.ordem.getId()));
         this.tCampos[1].setText(String.valueOf(this.ordem.getHabilidades()));
-        setButton(bOrcar, true);
+        if(this.ordem.getStatus() == "Cadastrada")
+        {
+            setButton(bOrcar, true);
+        }
+        else
+        {
+            setButton(bOrcar, false);
+        }
     }
 }

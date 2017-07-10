@@ -30,6 +30,7 @@ public class TelaCriaOrcamentoTecnico extends TelaOrdemClienteOrcamento {
             this.o.setValorHora(Float.parseFloat(tValHora.getText()));
             this.o.settID(this.tecnico);
             this.o.setStatus("Aguardando Aprovação do Cliente");
+            atualizaLista(this.o);
             this.dispose();
 
         }

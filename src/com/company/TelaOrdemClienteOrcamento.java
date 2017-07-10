@@ -94,28 +94,16 @@ public class TelaOrdemClienteOrcamento extends Tela {
         if(e.getSource() == bAprovar)
         {
             o.aprova(true);
-            atualizaLista();
+            atualizaLista(this.o);
             this.dispose();
         }
         else
         {
             o.aprova(false);
-            atualizaLista();
+            atualizaLista(this.o);
             this.dispose();
         }
     }
 
-    public void atualizaLista() {
-        for (Ordem ord:oList)
-        {
-            if(ord.getId()== this.o.getId())
-            {
-                oList.remove(ord);
-                oList.add(this.o);
-                System.out.println("ACHEI!");
-                setButton(TelaClienteConsulta.bAprovar, false);
-                break;
-            }
-        }
-    }
+
 }
