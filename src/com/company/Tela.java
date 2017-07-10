@@ -121,6 +121,22 @@ public class Tela extends JFrame implements WindowListener, ActionListener {
             }
         }
     }
+
+    public void atualizaLista(Tecnico t)
+    {
+        for (Tecnico tec : Tela.tList )
+        {
+            System.out.println("Encontrando Técnico: " + String.valueOf(t.getId()) + ".");
+            if(tec.getId() == (t.getId()) )
+            {
+                tList.remove(tList.indexOf(tec));
+                tList.add(tec);
+                System.out.println("Tecnico " + t.getId() + " encontrado!\n--------------------\n");
+            }
+        }
+    }
+
+
     public void actionPerformed(ActionEvent e){}
     public void windowClosing(WindowEvent e) {
         fechaTela(true);

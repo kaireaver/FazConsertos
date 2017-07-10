@@ -91,17 +91,7 @@ public class TelaDadosTecnico extends Tela {
         }
 
         else if(e.getSource() == buttons[1]) {
-
-            for (Tecnico tec : Tela.tList )
-            {
-                System.out.println("Encontrando Técnico: " + String.valueOf(t.getId()) + ".");
-                if(tec.getId() == (this.t.getId()) )
-                {
-                    tList.remove(tList.indexOf(tec));
-                    tList.add(tec);
-                    System.out.println("Tecnico " + t.getId() + " encontrado!\n--------------------\n");
-                }
-            }
+            atualizaLista(this.t);
             if(buttons[1].getText() == "Sair") {
                 setButton(MainTecnico.bAlteraDados,true);
                 setButton(MainTecnico.bConsultaServico,true);
