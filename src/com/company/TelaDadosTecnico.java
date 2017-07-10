@@ -83,7 +83,7 @@ public class TelaDadosTecnico extends Tela {
                 }
 
                 combBox.setEnabled(false);
-                String str = (String) combBox.getSelectedItem();
+                String str = combBox.getItemAt(combBox.getSelectedIndex()).toString();
                 t.AlteraDados(dados[0], dados[2], dados[1], str);
                 buttons[0].setText("Editar");
                 buttons[1].setText("Sair");
@@ -97,7 +97,6 @@ public class TelaDadosTecnico extends Tela {
                 setButton(MainTecnico.bConsultaServico,true);
                 setButton(MainTecnico.bExcluirTecnico,true);
                 setButton(MainTecnico.bSair,true);
-
                 this.dispose();
             }
             else if(buttons[1].getText() == "Cancelar") {

@@ -58,7 +58,7 @@ public class TelaOrdemClienteOrcamento extends Tela {
         boOutros = novoBoxHorizontal(lData, tData,  lValMateriais, tValMateriais );
 
         this.lMateriais = new JLabel("Lista de Materiais: ");
-        this.tMateriais = new JTextArea(this.o.getMateriais());
+        this.tMateriais = new JTextArea(this.o.getMateriais().toString());
         this.tMateriais.setEditable(false);
         
         this.lPreco = new JLabel("Preço total (R$) : ");

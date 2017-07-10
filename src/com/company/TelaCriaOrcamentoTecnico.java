@@ -26,9 +26,9 @@ public class TelaCriaOrcamentoTecnico extends TelaOrdemClienteOrcamento {
         if(e.getSource() == bAprovar)
         {
             this.o.setHora(Integer.parseInt(tHora.getText()));
-            this.o.setMateriais(tMateriais.getText(), Float.parseFloat(tValMateriais.getText()));
+            //this.o.setMateriais(tMateriais.getText(), Float.parseFloat(tValMateriais.getText()));
             this.o.setValorHora(Float.parseFloat(tValHora.getText()));
-            this.o.settID(this.tecnico);
+            this.o.settID(this.tecnico.getId());
             this.o.setStatus("Aguardando Aprovação do Cliente");
             atualizaLista(this.o);
             this.dispose();

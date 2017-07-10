@@ -21,6 +21,17 @@ public class Tecnico {
         this.habilidade = habilidade;
     }
 
+    public Tecnico(String nome, String email, String telefone, String habilidade, int numMatricula){
+        i++;
+        this.numMatricula = i;
+
+        this.nome = nome;
+        this.email = email;
+        this.telefone = telefone;
+        this.habilidade = habilidade;
+        this.numMatricula = numMatricula;
+    }
+
     public String getNome(){
         return this.nome;
     }
@@ -46,10 +57,11 @@ public class Tecnico {
     public static int getNumTecnicos() { return i; }
 
     public void AlteraDados(String nome, String telefone, String email, String habilidade){
+        if(habilidade != null)
+            this.habilidade = habilidade;
         this.nome = nome;
         this.email = email;
         this.telefone = telefone;
-        this.habilidade = habilidade;
     }
 
     public int getNumMatricula() {

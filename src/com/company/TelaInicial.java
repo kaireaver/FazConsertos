@@ -39,7 +39,7 @@ public class TelaInicial extends Tela {
                 query  = "SELECT * FROM Tecnico";
                 rs = stmt.executeQuery(query);
                 while(rs.next()){
-                    tList.add(new Tecnico(rs.getString("nome"),rs.getString("email"),rs.getString("telefone"),rs.getString("habilidade")));
+                    tList.add(new Tecnico(rs.getString("nome"),rs.getString("email"),rs.getString("telefone"),rs.getString("habilidade"),rs.getInt("numMatricula")));
                 }
                 query  = "SELECT * FROM Ordem";
                 rs = stmt.executeQuery(query);
@@ -52,8 +52,24 @@ public class TelaInicial extends Tela {
                         }
                     }
                     Ordem o = new Ordem(client,rs.getString("descricao"),rs.getString("Habilidade"), rs.getString("DataPedido"), rs.getString("tID"), rs.getString("Status"));
-                    o.preencheOrcamento(rs.getString("Qnt_Horas"), rs.getString("ValorHora"), rs.getString("Materiais"), rs.getString("Materiais_Valor"));
-                    oList.add(o);//Preencher com o resto dos itens de ordem que não vêm do construtor. oList.get(i);
+                    oList.add(o);
+                    o.preencheOrcamento(rs.getString("Qnt_Horas"), rs.getString("ValorHora"));
+                }
+                //Query materiais.
+                query = "SELECT COUNT(DISTINCT Ordem) AS total FROM Materiais";
+                ResultSet aux = stmt.executeQuery(query);
+                aux.next();
+                int total = aux.getInt("total");
+                String Mat[] = new String[10];
+                float MatVal[] = new float[10];
+                for(int iter = 0;iter<total;iter++){
+                    query = "Select * FROM Materiais" + " WHERE Ordem = " + iter;
+                    aux = stmt.executeQuery(query);
+                    while (aux.next()){//Retornar todos os materiais e valores para cada ordem.
+                        Mat[iter] = aux.getString("Material");
+                        MatVal[iter] = aux.getFloat("Material_Valor");
+                    }
+                    oList.get(iter).setMateriais(Mat,MatVal);
                 }
                 System.out.println("\n-------------\n\nCarregamento efetuado com sucesso\n\n---------------------\n");
             }
@@ -113,13 +129,25 @@ public class TelaInicial extends Tela {
             }
             for(Ordem o : oList){
                 System.out.println(o.getCliente());
-                query = "Insert INTO Ordem (Qnt_Horas,id,ValorHora,DataPedido,Materiais,Materiais_Valor,tID,Descricao,Habilidade,cID,Status) VALUES (" + o.getHora() + "," + o.getId() + "," + o.getValor_hora() + "," + "'" + o.getData_pedido() + "'" + ",'" + o.getMateriais() + "'," + o.getMaterial_valor() + "," + o.gettID() + "," + "'" + o.getDescricao() + "'" + "," + "'" + o.getHabilidades() + "'" + "," + "'" + o.getCliente().getCPF() + "'" + "," + "'" + o.getStatus() + "'" + ") ON DUPLICATE KEY UPDATE Qnt_Horas = " + o.getHora() + "," + "id = " + o.getId() + "," + "ValorHora = " + o.getValor_hora() + "," + "DataPedido = " + "'" + o.getData_pedido() + "'," +
-                        "Materiais = " + "'" + o.getMateriais() + "'," + "Materiais_Valor = '" + o.getMaterial_valor() + "'," + "tID = " + o.gettID() + "," + "Descricao = '" + o.getDescricao() + "'," + "Habilidade = '" + o.getHabilidades() + "'," + "cID = '" + o.getCliente().getCPF() + "'," + "Status = '" + o.getStatus() + "'";
+                query = "Insert INTO Ordem (Qnt_Horas,id,ValorHora,DataPedido,tID,Descricao,Habilidade,cID,Status) VALUES (" + o.getHora() + "," + o.getId() + "," + o.getValor_hora() + "," + "'" + o.getData_pedido() + "'" + "," + o.gettID() + "," + "'" + o.getDescricao() + "'" + "," + "'" + o.getHabilidades() + "'" + "," + "'" + o.getCliente().getCPF() + "'" + "," + "'" + o.getStatus() + "'" + ") ON DUPLICATE KEY UPDATE Qnt_Horas = " + o.getHora() + "," + "id = " + o.getId() + "," + "ValorHora = " + o.getValor_hora() + "," + "DataPedido = " + "'" + o.getData_pedido() + "'," +
+                        "tID = " + o.gettID() + "," + "Descricao = '" + o.getDescricao() + "'," + "Habilidade = '" + o.getHabilidades() + "'," + "cID = '" + o.getCliente().getCPF() + "'," + "Status = '" + o.getStatus() + "'";
                 pps = conn.prepareStatement(query);
                 pps.execute();
+
+                //Materiais table.
+                query = "TRUNCATE TABLE Materiais";
+                pps = conn.prepareStatement(query);
+                pps.execute();
+                for(int loading = 0; loading<o.getMateriais().length;loading++){
+                    if(o.getMaterial_valor()[loading]!=0){
+                        query = "INSERT INTO Materiais(Ordem,Material,Material_Valor) VALUES (" + o.getId() + ",'" + o.getMateriais()[loading] + "'," + o.getMaterial_valor()[loading] + ")";
+                        pps = conn.prepareStatement(query);
+                        pps.execute();
+                    }
+                }
             }
             for(Tecnico t : tList){
-                query = "Insert INTO Tecnico (nome,email,habilidade,numMatricula,Telefone) VALUES ('" + t.getNome() + "'," + "'" + t.getEmail() + "'" + ",'" + t.getHabilidade() + "'," + t.getNumMatricula() + ",'" + t.getTelefone() + "')" + "ON DUPLICATE KEY UPDATE nome = '" + t.getNome() + "'," + "email = " + "'" + t.getEmail() + "'," + "habilidade = " + t.getNumMatricula() + "," + "Telefone = " + "'" + t.getTelefone() + "'";
+                query = "Insert INTO Tecnico (nome,email,habilidade,numMatricula,Telefone) VALUES ('" + t.getNome() + "'," + "'" + t.getEmail() + "'" + ",'" + t.getHabilidade() + "'," + t.getNumMatricula() + ",'" + t.getTelefone() + "')" + "ON DUPLICATE KEY UPDATE nome = '" + t.getNome() + "'," + "email = " + "'" + t.getEmail() + "'," + "habilidade = '" + t.getHabilidade() + "'," + "Telefone = " + "'" + t.getTelefone() + "'";
                 pps = conn.prepareStatement(query);
                 pps.execute();
             }

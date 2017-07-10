@@ -13,8 +13,9 @@ public class Ordem {
     private float valor_hora;
     private String data_pedido;
     private int LIM_VALIDADE = 90;
-    private String materiais;
-    private float material_valor;
+    private String[] materiais;
+    private float[] material_valor;
+    private float preco;
 
 
     private String descricao;
@@ -45,12 +46,10 @@ public class Ordem {
         verificaValidade();
     }
 
-    public void preencheOrcamento(String H, String vH, String m, String vM)
+    public void preencheOrcamento(String H, String vH)
     {
         this.valor_hora = Float.parseFloat(vH);
         this.hora = Integer.parseInt(H);
-        this.materiais = m;
-        this.material_valor = Float.parseFloat(vM);
     }
 
     private void verificaValidade()
@@ -67,7 +66,7 @@ public class Ordem {
     public void setValorHora(float valor_hora){
         this.valor_hora = valor_hora;
     }
-    public void setMateriais(String materiais, float material_valor){
+    public void setMateriais(String[] materiais, float[] material_valor){
         this.materiais = materiais;
         this.material_valor = material_valor;
     }
@@ -111,7 +110,7 @@ public class Ordem {
         return id;
     }
 
-    public float getMaterial_valor() {
+    public float[] getMaterial_valor() {
         return material_valor;
     }
 
@@ -123,7 +122,7 @@ public class Ordem {
         return status;
     }
 
-    public String getMateriais() {
+    public String[] getMateriais() {
         return materiais;
     }
 
@@ -151,7 +150,16 @@ public class Ordem {
     }
 
     public float getPreco() {
-        return (float) ((this.material_valor + this.valor_hora*this.hora)*1.05);
+        return preco;
+    }
+
+    public void setPreco(float preco) {
+        float sum = 0;
+        int iter;
+        for (iter=0;i<material_valor.length;i++){
+            sum += material_valor[iter];
+        }
+        preco = sum;
     }
 
     public void aprova(boolean b) {
@@ -164,8 +172,10 @@ public class Ordem {
         return;
     }
 
+    public void realizarOrcamento(Tecnico tecnico) {
+    }
 
-    public void settID(Tecnico t) {
-        this.tID = t.getId();
+    public void settID(int tID) {
+        this.tID = tID;
     }
 }
