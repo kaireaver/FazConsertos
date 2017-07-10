@@ -64,10 +64,10 @@ public class Ordem {
     public void setHora(int hora){
         this.hora = hora;
     }
-    public void setValorHora(int valor_hora){
+    public void setValorHora(float valor_hora){
         this.valor_hora = valor_hora;
     }
-    public void setMateriais(String materiais, int material_valor){
+    public void setMateriais(String materiais, float material_valor){
         this.materiais = materiais;
         this.material_valor = material_valor;
     }
